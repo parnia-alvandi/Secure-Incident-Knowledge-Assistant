@@ -1,0 +1,330 @@
+[
+  {
+    "id": "NEG-01",
+    "doc": null,
+    "question": "Which post-quantum cryptographic algorithms should AIT adopt to protect archived incident reports?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "post-quantum",
+      "quantum computing",
+      "quantum-resistant"
+    ]
+  },
+  {
+    "id": "NEG-02",
+    "doc": null,
+    "question": "How does AIT use user behavior analytics to detect an employee who is copying research data to a personal cloud account?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "user behavior analytics",
+      "user and entity behavior analytics",
+      "behavioral analytics platform"
+    ]
+  },
+  {
+    "id": "NEG-03",
+    "doc": null,
+    "question": "What is the procedure for investigating an employee suspected of deliberate sabotage of AIT systems?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "deliberate sabotage",
+      "disgruntled employee",
+      "sabotage"
+    ]
+  },
+  {
+    "id": "NEG-04",
+    "doc": null,
+    "question": "What fines does the GDPR impose when a university fails to report a personal data breach?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "gdpr fine",
+      "general data protection regulation"
+    ]
+  },
+  {
+    "id": "NEG-05",
+    "doc": null,
+    "question": "What does the California Consumer Privacy Act require an organization to do after a breach?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "california consumer privacy act",
+      "ccpa compliance"
+    ]
+  },
+  {
+    "id": "NEG-06",
+    "doc": null,
+    "question": "What is a data subject's right to erasure after a security incident?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "right to erasure",
+      "right to be forgotten",
+      "data subject"
+    ]
+  },
+  {
+    "id": "NEG-07",
+    "doc": null,
+    "question": "How should AIT respond to a compromised Kubernetes cluster?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "kubernetes",
+      "kubectl"
+    ]
+  },
+  {
+    "id": "NEG-08",
+    "doc": null,
+    "question": "How should AIT revoke a leaked Google Cloud service account key?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "google cloud platform",
+      "service account key",
+      "cloud iam policy"
+    ]
+  },
+  {
+    "id": "NEG-09",
+    "doc": null,
+    "question": "How can blockchain be used to protect the integrity of AIT security logs?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "blockchain",
+      "distributed ledger"
+    ]
+  },
+  {
+    "id": "NEG-10",
+    "doc": null,
+    "question": "How should AIT respond to a deepfake video call that impersonates an executive?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "deepfake",
+      "synthetic media"
+    ]
+  },
+  {
+    "id": "NEG-11",
+    "doc": null,
+    "question": "How should AIT protect a large language model chatbot against prompt injection?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "prompt injection",
+      "large language model"
+    ]
+  },
+  {
+    "id": "NEG-12",
+    "doc": null,
+    "question": "How does AIT enroll staff smartphones into mobile device management?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "mobile device management",
+      "mobile application management"
+    ]
+  },
+  {
+    "id": "NEG-13",
+    "doc": null,
+    "question": "How does AIT secure network slicing on its campus 5G network?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "network slicing",
+      "5g core"
+    ]
+  },
+  {
+    "id": "NEG-14",
+    "doc": null,
+    "question": "How should AIT configure trusted execution environments to protect incident evidence?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "trusted execution environment",
+      "confidential computing",
+      "sgx enclave"
+    ]
+  },
+  {
+    "id": "NEG-15",
+    "doc": null,
+    "question": "What reward amounts does AIT pay in its bug bounty program?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "bug bounty",
+      "bounty program"
+    ]
+  },
+  {
+    "id": "NEG-16",
+    "doc": null,
+    "question": "How should AIT respond to GPS spoofing against its satellite time sources?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "gps spoofing",
+      "satellite time"
+    ]
+  },
+  {
+    "id": "NEG-17",
+    "doc": null,
+    "question": "How does AIT secure Modbus communications on its laboratory control systems?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "modbus",
+      "profibus"
+    ]
+  },
+  {
+    "id": "NEG-18",
+    "doc": null,
+    "question": "How does AIT apply homomorphic encryption to analyze incident data without decrypting it?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "homomorphic encryption",
+      "homomorphic",
+      "privacy-preserving computation"
+    ]
+  },
+  {
+    "id": "NEG-19",
+    "doc": null,
+    "question": "What are the rules for mantraps and turnstiles at the AIT data center entrance?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "mantrap",
+      "turnstile",
+      "tailgating"
+    ]
+  },
+  {
+    "id": "NEG-20",
+    "doc": null,
+    "question": "How should AIT respond to a compromised smart building HVAC controller?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "hvac controller",
+      "building automation"
+    ]
+  }
+]

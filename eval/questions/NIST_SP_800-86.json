@@ -1,0 +1,112 @@
+[
+  {
+    "id": "N86-01",
+    "doc": "nistspecialpublication800-86.pdf",
+    "question": "How does NIST SP 800-86 describe digital forensics in general terms?",
+    "answer": "The application of science to the identification, collection, examination, and analysis of data while preserving the integrity of the information and maintaining a strict chain of custody for the data.",
+    "evidence_quote": "application of science to the identification, collection, examination, and analysis of data while preserving the integrity of the information and maintaining a strict chain of custody for the data",
+    "evidence_page": 9,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N86-02",
+    "doc": "nistspecialpublication800-86.pdf",
+    "question": "Which basic phases does NIST SP 800-86 list for the digital forensics process?",
+    "answer": "Collection, Examination, Analysis, and Reporting.",
+    "evidence_quote": "The process for performing digital forensics comprises the following basic phases",
+    "evidence_page": 9,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N86-03",
+    "doc": "nistspecialpublication800-86.pdf",
+    "question": "How does NIST SP 800-86 define the Collection phase?",
+    "answer": "Identifying, labeling, recording, and acquiring data from the possible sources of relevant data, while following procedures that preserve the integrity of the data.",
+    "evidence_quote": "Collection: identifying, labeling, recording, and acquiring data from the possible sources of relevant data, while following procedures that preserve the integrity of the data.",
+    "evidence_page": 9,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N86-04",
+    "doc": "nistspecialpublication800-86.pdf",
+    "question": "How does NIST SP 800-86 define the Examination phase?",
+    "answer": "Forensically processing collected data using a combination of automated and manual methods, and assessing and extracting data of particular interest, while preserving the integrity of the data.",
+    "evidence_quote": "forensically processing collected data using a combination of automated and manual methods",
+    "evidence_page": 9,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N86-05",
+    "doc": "nistspecialpublication800-86.pdf",
+    "question": "How does NIST SP 800-86 define the Analysis phase?",
+    "answer": "Analyzing the results of the examination, using legally justifiable methods and techniques, to derive useful information that addresses the questions that were the impetus for the collection and examination.",
+    "evidence_quote": "analyzing the results of the examination, using legally justifiable methods and techniques",
+    "evidence_page": 9,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N86-06",
+    "doc": "nistspecialpublication800-86.pdf",
+    "question": "Which four major categories of data sources does NIST SP 800-86 provide detailed information about?",
+    "answer": "Files, operating systems, network traffic, and applications.",
+    "evidence_quote": "It also provides detailed information about using the analysis process with four major categories of data sources: files",
+    "evidence_page": 9,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N86-07",
+    "doc": "nistspecialpublication800-86.pdf",
+    "question": "Can NIST SP 800-86 be used as a guide to executing a digital forensic investigation or as legal advice?",
+    "answer": "No. Because organizations are subject to different laws and regulations, it should not be used as a guide to executing a digital forensic investigation, construed as legal advice, or used as the basis for investigations of criminal activity.",
+    "evidence_quote": "should not be used as a guide to executing a digital forensic investigation, construed as legal advice, or used as the basis for investigations of criminal activity",
+    "evidence_page": 9,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N86-08",
+    "doc": "nistspecialpublication800-86.pdf",
+    "question": "What are the recommended steps of the standard data collection process in NIST SP 800-86?",
+    "answer": "Identifying sources of data, developing a plan to acquire the data, acquiring the data, and verifying the integrity of the data.",
+    "evidence_quote": "The recommended steps in this process are identifying sources of data, developing a plan to acquire the data, acquiring the data, and verifying the integrity of the data.",
+    "evidence_page": 32,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N86-09",
+    "doc": "nistspecialpublication800-86.pdf",
+    "question": "On what basis should the data collection plan in NIST SP 800-86 prioritize data sources?",
+    "answer": "On the likely value of the data, the volatility of the data, and the amount of effort required.",
+    "evidence_quote": "establishing the order in which the data should be acquired based on the likely value of the data, the volatility of the data, and the amount of effort required",
+    "evidence_page": 32,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N86-10",
+    "doc": "nistspecialpublication800-86.pdf",
+    "question": "What does NIST SP 800-86 say to do if it is unclear whether evidence needs to be preserved?",
+    "answer": "By default it generally should be preserved.",
+    "evidence_quote": "If it is unclear whether or not evidence needs to be preserved, by default it generally should be preserved.",
+    "evidence_page": 32,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  }
+]

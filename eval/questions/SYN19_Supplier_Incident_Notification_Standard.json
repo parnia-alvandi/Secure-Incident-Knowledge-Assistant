@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SYN19-01",
+    "doc": "syn_19_supplier_incident_notification_standard.docx",
+    "question": "Within how many hours must a Tier 1 supplier notify AIT of an incident, according to the Supplier Incident Notification Standard (AIT-SEC-STD-019)?",
+    "answer": "Within 12 hours of becoming aware.",
+    "evidence_quote": "A Tier 1 supplier must notify AIT within 12 hours of becoming aware of an incident",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN19-02",
+    "doc": "syn_19_supplier_incident_notification_standard.docx",
+    "question": "What is the notification deadline for Tier 2 and Tier 3 suppliers, according to the Supplier Incident Notification Standard (AIT-SEC-STD-019)?",
+    "answer": "Within 24 hours.",
+    "evidence_quote": "Tier 2 and Tier 3 suppliers must notify AIT within 24 hours",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN19-03",
+    "doc": "syn_19_supplier_incident_notification_standard.docx",
+    "question": "How must a supplier notify AIT of an incident, according to the Supplier Incident Notification Standard (AIT-SEC-STD-019)?",
+    "answer": "By phone to the SOC duty line and by email to the SOC mailbox.",
+    "evidence_quote": "by phone to the SOC duty line and by email to the SOC mailbox",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN19-04",
+    "doc": "syn_19_supplier_incident_notification_standard.docx",
+    "question": "Does notifying an account manager or help desk satisfy the notification duty, according to the Supplier Incident Notification Standard (AIT-SEC-STD-019)?",
+    "answer": "No.",
+    "evidence_quote": "A notification to an account manager or a help desk does not count",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN19-05",
+    "doc": "syn_19_supplier_incident_notification_standard.docx",
+    "question": "Which suppliers are classified as Tier 1, according to the Supplier Incident Notification Standard (AIT-SEC-STD-019)?",
+    "answer": "Suppliers that process student records, host production systems or hold administrator access to AIT networks.",
+    "evidence_quote": "suppliers that process student records, host production systems or hold administrator access to AIT networks",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN19-06",
+    "doc": "syn_19_supplier_incident_notification_standard.docx",
+    "question": "How often must a supplier send updates during an incident, according to the Supplier Incident Notification Standard (AIT-SEC-STD-019)?",
+    "answer": "Every 2 business days until the incident is closed.",
+    "evidence_quote": "The supplier sends an update every 2 business days until the incident is closed",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN19-07",
+    "doc": "syn_19_supplier_incident_notification_standard.docx",
+    "question": "When is the supplier's final report due, according to the Supplier Incident Notification Standard (AIT-SEC-STD-019)?",
+    "answer": "Within 30 days of closure, with root cause and corrective actions.",
+    "evidence_quote": "A final report with root cause and corrective actions is due within 30 days of closure",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN19-08",
+    "doc": "syn_19_supplier_incident_notification_standard.docx",
+    "question": "How does the SOC rate a supplier-reported incident, according to the Supplier Incident Notification Standard (AIT-SEC-STD-019)?",
+    "answer": "Using the Severity and Escalation Matrix as if it had occurred inside AIT.",
+    "evidence_quote": "as if the incident had occurred inside AIT",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN19-09",
+    "doc": "syn_19_supplier_incident_notification_standard.docx",
+    "question": "What do Tier 1 suppliers sign each year, according to the Supplier Incident Notification Standard (AIT-SEC-STD-019)?",
+    "answer": "An attestation that they can meet the notification deadlines.",
+    "evidence_quote": "Tier 1 suppliers sign an annual attestation that they can meet them",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN19-10",
+    "doc": "syn_19_supplier_incident_notification_standard.docx",
+    "question": "What happens to a supplier that misses a notification deadline, according to the Supplier Incident Notification Standard (AIT-SEC-STD-019)?",
+    "answer": "It is reported to Procurement for review as a possible breach of contract.",
+    "evidence_quote": "is reported to Procurement for review as a possible breach of contract",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  }
+]

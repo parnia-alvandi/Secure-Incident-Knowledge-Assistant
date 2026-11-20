@@ -1,0 +1,112 @@
+[
+  {
+    "id": "L4S-01",
+    "doc": "AA21_356A_Joint_CSA_Mitigating_Log4Shell_and_Other_Log4j_Related.pdf",
+    "question": "When was Log4Shell disclosed, and which Log4j versions does it affect, according to AA21-356A?",
+    "answer": "It was disclosed on December 10, 2021, and affects Apache Log4j versions 2.0-beta9 to 2.14.1.",
+    "evidence_quote": "Log4Shell, disclosed on December 10, 2021, is a remote code execution (RCE) vulnerability affecting Apache's Log4j library, versions 2.0-beta9 to 2.14.1.",
+    "evidence_page": 2,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "L4S-02",
+    "doc": "AA21_356A_Joint_CSA_Mitigating_Log4Shell_and_Other_Log4j_Related.pdf",
+    "question": "Why are affected versions of Log4j vulnerable to Log4Shell, according to AA21-356A?",
+    "answer": "They contain JNDI features, such as message lookup substitution, that do not protect against adversary-controlled LDAP, DNS, and other JNDI related endpoints.",
+    "evidence_quote": "Affected versions of Log4j contain JNDI features",
+    "evidence_page": 3,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "L4S-03",
+    "doc": "AA21_356A_Joint_CSA_Mitigating_Log4Shell_and_Other_Log4j_Related.pdf",
+    "question": "What does CVE-2021-45046 enable, and when was it disclosed, according to AA21-356A?",
+    "answer": "It was disclosed on December 13, 2021, and enables a remote attacker to cause RCE, a denial-of-service condition, or other effects in certain non-default configurations.",
+    "evidence_quote": "CVE-2021-45046, disclosed on December 13, 2021, enables a remote attacker to cause RCE, a denial-of-service (DoS) condition",
+    "evidence_page": 3,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "L4S-04",
+    "doc": "AA21_356A_Joint_CSA_Mitigating_Log4Shell_and_Other_Log4j_Related.pdf",
+    "question": "What does CVE-2021-45105 enable, and when was it disclosed, according to AA21-356A?",
+    "answer": "It was disclosed on December 16, 2021, and enables a remote attacker to cause a denial-of-service condition or other effects in certain non-default configurations.",
+    "evidence_quote": "CVE-2021-45105, disclosed on December 16, 2021, enables a remote attacker to cause a DoS condition",
+    "evidence_page": 3,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "L4S-05",
+    "doc": "AA21_356A_Joint_CSA_Mitigating_Log4Shell_and_Other_Log4j_Related.pdf",
+    "question": "When did exploitation of Log4Shell begin, according to public reporting cited in AA21-356A?",
+    "answer": "On or around December 1, 2021.",
+    "evidence_quote": "exploitation of Log4Shell began on or around December 1, 2021",
+    "evidence_page": 3,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "L4S-06",
+    "doc": "AA21_356A_Joint_CSA_Mitigating_Log4Shell_and_Other_Log4j_Related.pdf",
+    "question": "Which Log4j version should vendors in environments using Java 8 or later upgrade to, according to AA21-356A?",
+    "answer": "Log4j version 2.17.0 (released December 17, 2021) or newer.",
+    "evidence_quote": "For environments using Java 8 or later, upgrade to Log4j version 2.17.0 (released December 17, 2021) or newer.",
+    "evidence_page": 4,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "L4S-07",
+    "doc": "AA21_356A_Joint_CSA_Mitigating_Log4Shell_and_Other_Log4j_Related.pdf",
+    "question": "Which Log4j version should vendors in environments using Java 7 upgrade to, according to AA21-356A?",
+    "answer": "Log4j version 2.12.3 (released December 21, 2021); Java 7 is end of life and organizations should upgrade to Java 8.",
+    "evidence_quote": "For environments using Java 7, upgrade to Log4j version 2.12.3 (released December 21, 2021).",
+    "evidence_page": 4,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "L4S-08",
+    "doc": "AA21_356A_Joint_CSA_Mitigating_Log4Shell_and_Other_Log4j_Related.pdf",
+    "question": "What has the FBI observed regarding the Log4j vulnerability, according to AA21-356A?",
+    "answer": "Attempted exploitation and widespread scanning of the Log4j vulnerability to gain access to networks in order to deploy cryptomining and botnet malware.",
+    "evidence_quote": "The FBI has observed attempted exploitation and widespread scanning of the Log4j vulnerability",
+    "evidence_page": 3,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "L4S-09",
+    "doc": "AA21_356A_Joint_CSA_Mitigating_Log4Shell_and_Other_Log4j_Related.pdf",
+    "question": "What does AA21-356A advise about which versions of Java and Log4j to include in the asset inventory?",
+    "answer": "Assume all versions of Java and Log4j are vulnerable and include them in the inventory.",
+    "evidence_quote": "Assume all versions of Java and Log4j are vulnerable and include them in the inventory.",
+    "evidence_page": 4,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "L4S-10",
+    "doc": "AA21_356A_Joint_CSA_Mitigating_Log4Shell_and_Other_Log4j_Related.pdf",
+    "question": "How does AA21-356A say known and suspected vulnerable assets should be treated?",
+    "answer": "As compromised; they should be isolated until they are mitigated and verified, for example by unplugging the network cable or moving them to a jail VLAN with heightened monitoring.",
+    "evidence_quote": "Treat known and suspected vulnerable assets as compromised.",
+    "evidence_page": 5,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SYN12-01",
+    "doc": "syn_12_incident_communications_plan.docx",
+    "question": "Who is the only person allowed to speak to the media during an incident, according to the AIT Incident Communications Plan (AIT-IR-PLN-012)?",
+    "answer": "The Director of Communications.",
+    "evidence_quote": "the only person permitted to speak to the media",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN12-02",
+    "doc": "syn_12_incident_communications_plan.docx",
+    "question": "What is the name of the response team's chat channel and how fast must it be opened, according to the AIT Incident Communications Plan (AIT-IR-PLN-012)?",
+    "answer": "ir-bridge, within 10 minutes of a Severity 1 or 2 declaration.",
+    "evidence_quote": "opens the dedicated chat channel named ir-bridge within 10 minutes",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN12-03",
+    "doc": "syn_12_incident_communications_plan.docx",
+    "question": "What four elements must every notice to affected users contain, according to the AIT Incident Communications Plan (AIT-IR-PLN-012)?",
+    "answer": "What happened, what is affected, what users should do, and when the next update will be sent.",
+    "evidence_quote": "what happened, what is affected, what users should do and when the next update will be sent",
+    "evidence_page": null,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN12-04",
+    "doc": "syn_12_incident_communications_plan.docx",
+    "question": "Within what time must the supervisory authority be notified of a personal data breach, according to the AIT Incident Communications Plan (AIT-IR-PLN-012)?",
+    "answer": "Within 72 hours of AIT becoming aware of the breach.",
+    "evidence_quote": "within 72 hours of AIT becoming aware of the breach",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN12-05",
+    "doc": "syn_12_incident_communications_plan.docx",
+    "question": "Who decides whether an incident is a personal data breach that must be notified, according to the AIT Incident Communications Plan (AIT-IR-PLN-012)?",
+    "answer": "The Data Protection Officer (DPO).",
+    "evidence_quote": "decides whether an incident is a personal data breach that must be notified",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN12-06",
+    "doc": "syn_12_incident_communications_plan.docx",
+    "question": "Who must approve a message before it leaves AIT, according to the AIT Incident Communications Plan (AIT-IR-PLN-012)?",
+    "answer": "Both the Communications Lead and Legal Counsel.",
+    "evidence_quote": "requires approval from both the Communications Lead and Legal Counsel",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN12-07",
+    "doc": "syn_12_incident_communications_plan.docx",
+    "question": "How often are executives briefed during a Severity 1 incident after the first briefing, according to the AIT Incident Communications Plan (AIT-IR-PLN-012)?",
+    "answer": "Every 4 hours until containment.",
+    "evidence_quote": "followed by briefings every 4 hours until containment",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN12-08",
+    "doc": "syn_12_incident_communications_plan.docx",
+    "question": "What is the out-of-band bridge used when corporate email or chat may be compromised, according to the AIT Incident Communications Plan (AIT-IR-PLN-012)?",
+    "answer": "A pre-registered phone conference line listed in the on-call directory.",
+    "evidence_quote": "a pre-registered phone conference line listed in the on-call directory",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN12-09",
+    "doc": "syn_12_incident_communications_plan.docx",
+    "question": "How long is the communications log retained, according to the AIT Incident Communications Plan (AIT-IR-PLN-012)?",
+    "answer": "5 years, with the incident file.",
+    "evidence_quote": "retained with the incident file for 5 years",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN12-10",
+    "doc": "syn_12_incident_communications_plan.docx",
+    "question": "Who notifies affected suppliers and partners, and what is required first, according to the AIT Incident Communications Plan (AIT-IR-PLN-012)?",
+    "answer": "The Vendor Manager, after approval from Legal Counsel.",
+    "evidence_quote": "the Vendor Manager notifies affected third parties after approval from Legal Counsel",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  }
+]

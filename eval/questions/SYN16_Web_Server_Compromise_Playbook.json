@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SYN16-01",
+    "doc": "syn_16_web_server_compromise_playbook.docx",
+    "question": "What is a webshell, according to the Web Server Compromise and Webshell Response Playbook (AIT-IR-PBK-016)?",
+    "answer": "A script uploaded to a web server that lets an attacker run commands through a web request.",
+    "evidence_quote": "a script uploaded to a web server that lets an attacker run commands through a web request",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN16-02",
+    "doc": "syn_16_web_server_compromise_playbook.docx",
+    "question": "What severity is a confirmed webshell on an internet-facing server, according to the Web Server Compromise and Webshell Response Playbook (AIT-IR-PBK-016)?",
+    "answer": "Severity 2.",
+    "evidence_quote": "A confirmed webshell on any internet-facing server is rated Severity 2",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN16-03",
+    "doc": "syn_16_web_server_compromise_playbook.docx",
+    "question": "When is a webshell incident raised to Severity 1, according to the Web Server Compromise and Webshell Response Playbook (AIT-IR-PBK-016)?",
+    "answer": "If the server holds or can reach the student records system.",
+    "evidence_quote": "It is raised to Severity 1 if the server holds or can reach the student records system",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN16-04",
+    "doc": "syn_16_web_server_compromise_playbook.docx",
+    "question": "How quickly and how must a compromised web server be isolated, according to the Web Server Compromise and Webshell Response Playbook (AIT-IR-PBK-016)?",
+    "answer": "Within 60 minutes of confirmation, by removing it from the load balancer pool and moving it to the quarantine VLAN.",
+    "evidence_quote": "The web server is isolated within 60 minutes of confirmation by removing it from the load balancer pool and moving it to the quarantine VLAN",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN16-05",
+    "doc": "syn_16_web_server_compromise_playbook.docx",
+    "question": "Why must a compromised web server not be powered off, according to the Web Server Compromise and Webshell Response Playbook (AIT-IR-PBK-016)?",
+    "answer": "Because memory evidence would be lost.",
+    "evidence_quote": "The server must not be powered off, because memory evidence would be lost",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN16-06",
+    "doc": "syn_16_web_server_compromise_playbook.docx",
+    "question": "When may the webshell file be deleted, according to the Web Server Compromise and Webshell Response Playbook (AIT-IR-PBK-016)?",
+    "answer": "Not until the Forensics Analyst has copied the web root and captured memory.",
+    "evidence_quote": "The webshell must not be deleted until the Forensics Analyst has copied the web root and captured memory",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN16-07",
+    "doc": "syn_16_web_server_compromise_playbook.docx",
+    "question": "May a compromised web server be cleaned in place, according to the Web Server Compromise and Webshell Response Playbook (AIT-IR-PBK-016)?",
+    "answer": "No; it must be rebuilt from a known-good image.",
+    "evidence_quote": "cleaning a compromised server in place is not permitted",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN16-08",
+    "doc": "syn_16_web_server_compromise_playbook.docx",
+    "question": "Which credentials and keys must be rotated after a web server compromise, according to the Web Server Compromise and Webshell Response Playbook (AIT-IR-PBK-016)?",
+    "answer": "Every credential and key the server could read, including database passwords, API tokens and TLS private keys.",
+    "evidence_quote": "including database passwords, API tokens and TLS private keys",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN16-09",
+    "doc": "syn_16_web_server_compromise_playbook.docx",
+    "question": "How long is a recovered web server monitored with enhanced logging, according to the Web Server Compromise and Webshell Response Playbook (AIT-IR-PBK-016)?",
+    "answer": "30 days.",
+    "evidence_quote": "monitors it with enhanced logging for 30 days",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN16-10",
+    "doc": "syn_16_web_server_compromise_playbook.docx",
+    "question": "Which backup may be used to restore website content, according to the Web Server Compromise and Webshell Response Playbook (AIT-IR-PBK-016)?",
+    "answer": "One taken before the earliest confirmed compromise time.",
+    "evidence_quote": "a backup taken before the earliest confirmed compromise time",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  }
+]

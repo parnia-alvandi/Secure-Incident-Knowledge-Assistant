@@ -1,0 +1,112 @@
+[
+  {
+    "id": "RH-01",
+    "doc": "240829.pdf",
+    "question": "What was RansomHub formerly known as, according to advisory AA24-242A?",
+    "answer": "Cyclops and Knight.",
+    "evidence_quote": "RansomHub is a ransomware-as-a-service variant-formerly known as Cyclops and Knight",
+    "evidence_page": 1,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "RH-02",
+    "doc": "240829.pdf",
+    "question": "How many victims had RansomHub encrypted and exfiltrated data from since February 2024, according to AA24-242A?",
+    "answer": "At least 210 victims.",
+    "evidence_quote": "Since its inception in February 2024, RansomHub has encrypted and exfiltrated data from at least 210 victims",
+    "evidence_page": 1,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "RH-03",
+    "doc": "240829.pdf",
+    "question": "Which organizations authored the RansomHub advisory AA24-242A?",
+    "answer": "The FBI, CISA, the MS-ISAC, and the Department of Health and Human Services (HHS).",
+    "evidence_quote": "the Multi-State Information Sharing and Analysis Center (MS-ISAC), and the Department of Health and Human Services (HHS) (hereafter referred to as the authoring organizations)",
+    "evidence_page": 1,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "RH-04",
+    "doc": "240829.pdf",
+    "question": "How much time does the RansomHub ransom note typically give victims to pay before data is published?",
+    "answer": "Between three and 90 days, depending on the affiliate.",
+    "evidence_quote": "The ransom note typically gives victims between three and 90 days to pay the ransom",
+    "evidence_page": 2,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "RH-05",
+    "doc": "240829.pdf",
+    "question": "What does the RansomHub ransom note provide to victims, according to AA24-242A?",
+    "answer": "A client ID and instructions to contact the ransomware group via a unique .onion URL (reachable through the Tor browser); it does not generally include an initial ransom demand or payment instructions.",
+    "evidence_quote": "the note provides victims with a client ID and instructs them to contact the ransomware group via a unique .onion URL",
+    "evidence_page": 2,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "RH-06",
+    "doc": "240829.pdf",
+    "question": "How do RansomHub affiliates typically compromise internet facing systems and user endpoints?",
+    "answer": "Through phishing emails, exploitation of known vulnerabilities, and password spraying.",
+    "evidence_quote": "such as phishing emails [T1566], exploitation of known vulnerabilities [T1190], and password spraying [T1110.003]",
+    "evidence_page": 4,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "RH-07",
+    "doc": "240829.pdf",
+    "question": "Which encryption algorithm has RansomHub ransomware typically used to encrypt user accessible files?",
+    "answer": "An Elliptic Curve Encryption algorithm called Curve 25519, with a public/private key unique to each victim organization.",
+    "evidence_quote": "Elliptic Curve Encryption algorithm called Curve 25519",
+    "evidence_page": 6,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "RH-08",
+    "doc": "240829.pdf",
+    "question": "How does RansomHub treat files smaller than 0x100000 bytes?",
+    "answer": "They are completely encrypted.",
+    "evidence_quote": "Files smaller than 0x100000 bytes in size are completely encrypted.",
+    "evidence_page": 7,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "RH-09",
+    "doc": "240829.pdf",
+    "question": "What is the first incident response step listed in AA24-242A if RansomHub compromise is detected?",
+    "answer": "Quarantine or take potentially affected hosts offline (followed by reimaging hosts, provisioning new credentials, collecting artifacts, and reporting to CISA).",
+    "evidence_quote": "Quarantine or take potentially affected hosts offline.",
+    "evidence_page": 20,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "RH-10",
+    "doc": "240829.pdf",
+    "question": "What password length does the RansomHub advisory AA24-242A recommend?",
+    "answer": "Passwords of at least 8 characters and no more than 64 characters.",
+    "evidence_quote": "Use longer passwords consisting of at least 8 characters and no more than 64 characters in length",
+    "evidence_page": 21,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  }
+]

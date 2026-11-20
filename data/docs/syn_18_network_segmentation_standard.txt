@@ -1,0 +1,73 @@
+AIT NETWORK SEGMENTATION STANDARD
+=================================
+
+Document ID: AIT-SEC-STD-018 | Version: 1.2 | Owner: Network Security Manager | Effective date: 20 September 2026
+
+
+1. Purpose
+----------
+
+This standard defines the network zones of the Aurelian Institute of Technology (AIT) and the rules for traffic between them, so that a compromise in one zone does not spread freely to others.
+
+
+2. Zones
+--------
+
+- DMZ: internet-facing web, mail gateway and reverse proxy servers.
+- Corporate: staff workstations and office printers.
+- Student: student devices and campus Wi-Fi.
+- Research: research clusters and lab equipment.
+- Server: production application and database servers, including the student records system.
+- Management: hypervisors, backup servers and network device management interfaces.
+- Building: building control and physical access systems.
+
+3. Traffic Rules
+----------------
+
+- Traffic between zones is denied by default; only flows listed in the firewall rule base are allowed.
+- DMZ servers may not initiate connections into the Corporate or Student zones.
+- The Student zone has no direct access to the Server zone.
+- The Management zone is reachable only from the jump hosts, and jump host logins require multi-factor authentication.
+- Servers may initiate outbound internet connections only to destinations on an approved allow list.
+- The Building zone has no route to the internet.
+
+4. Rule Governance
+------------------
+
+Every firewall rule has a named owner, a written justification and an expiry date. Temporary rules last at most 30 days. Research zone exceptions last at most 12 months.
+
+All rules are reviewed every 6 months, and rules that are not re-approved at the review are removed.
+
+
+5. Emergency Isolation
+----------------------
+
+During an incident the SOC may move a host to the quarantine VLAN, VLAN 999, without prior approval. The SOC informs the Incident Commander within 30 minutes of the move.
+
+VLAN 999 permits traffic only to the SOC investigation host.
+
+
+6. Definitions
+--------------
+
+- Zone: a group of systems with a similar level of trust and function, separated from other groups by a firewall.
+- Jump host: a hardened server that is the only path administrators may use to reach the Management zone.
+- Firewall rule base: the complete list of permitted flows between zones, maintained by the Network Security Team.
+- Quarantine VLAN: an isolated network segment used to contain a host that is suspected to be compromised.
+
+7. Roles and Exceptions
+-----------------------
+
+The Network Security Manager owns the firewall rule base. System owners request new rules and re-approve their own rules at each review. The SOC applies emergency isolation but does not change the rule base.
+
+Requests for exceptions to this standard are sent to the Network Security Manager and need the approval of the CISO. Every exception is recorded together with its expiry date.
+
+Emergency isolation is also used by the Web Server Compromise and Webshell Response Playbook.
+
+
+8. Version History
+------------------
+
+- 1.2 (20 September 2026): added emergency isolation and VLAN 999.
+- 1.1 (7 April 2026): added the Building zone.
+- 1.0 (15 January 2025): first release.

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SYN05-01",
+    "doc": "syn_05_ddos_response_procedure.txt",
+    "question": "What is the average normal traffic level in the AIT DDoS Response Procedure (AIT-IR-DD-005)?",
+    "answer": "2.4 Gbps.",
+    "evidence_quote": "Normal traffic averages 2.4 Gbps.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN05-02",
+    "doc": "syn_05_ddos_response_procedure.txt",
+    "question": "At what level is a warning alert raised according to AIT-IR-DD-005?",
+    "answer": "6 Gbps sustained for 5 minutes.",
+    "evidence_quote": "A warning alert is raised at 6 Gbps sustained for 5 minutes.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN05-03",
+    "doc": "syn_05_ddos_response_procedure.txt",
+    "question": "What is the critical traffic threshold in AIT-IR-DD-005?",
+    "answer": "12 Gbps.",
+    "evidence_quote": "The critical threshold is 12 Gbps.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN05-04",
+    "doc": "syn_05_ddos_response_procedure.txt",
+    "question": "How is the NorthLink ISP scrubbing service activated according to AIT-IR-DD-005?",
+    "answer": "By calling the 24x7 hotline at extension 7010.",
+    "evidence_quote": "The ISP scrubbing service from NorthLink is activated by calling the 24x7 hotline at extension 7010.",
+    "evidence_page": null,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN05-05",
+    "doc": "syn_05_ddos_response_procedure.txt",
+    "question": "To what value are DNS record TTLs lowered in preparation for traffic redirection in the AIT DDoS procedure?",
+    "answer": "300 seconds.",
+    "evidence_quote": "DNS record TTLs are lowered to 300 seconds in preparation for traffic redirection.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN05-06",
+    "doc": "syn_05_ddos_response_procedure.txt",
+    "question": "What rate limit applies to the login portal in AIT-IR-DD-005?",
+    "answer": "100 requests per second per client IP address.",
+    "evidence_quote": "The login portal is limited to 100 requests per second per client IP address.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN05-07",
+    "doc": "syn_05_ddos_response_procedure.txt",
+    "question": "What are the conditions for geo-blocking in AIT-IR-DD-005?",
+    "answer": "It requires CISO approval and may last at most 24 hours.",
+    "evidence_quote": "Geo-blocking requires CISO approval and may last at most 24 hours.",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN05-08",
+    "doc": "syn_05_ddos_response_procedure.txt",
+    "question": "In which order are services restored according to AIT-IR-DD-005?",
+    "answer": "The learning portal first, then email, then the library system.",
+    "evidence_quote": "Service restoration priority is the learning portal first, then email, then the library system.",
+    "evidence_page": null,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN05-09",
+    "doc": "syn_05_ddos_response_procedure.txt",
+    "question": "Within how long is the status page updated after a confirmed attack per AIT-IR-DD-005?",
+    "answer": "Within 20 minutes.",
+    "evidence_quote": "The status page is updated within 20 minutes of a confirmed attack.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN05-10",
+    "doc": "syn_05_ddos_response_procedure.txt",
+    "question": "Is retaliation against attacking systems allowed under AIT-IR-DD-005?",
+    "answer": "No. Hack-back is prohibited.",
+    "evidence_quote": "Retaliation against attacking systems, known as hack-back, is prohibited.",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  }
+]

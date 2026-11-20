@@ -1,0 +1,46 @@
+DDOS RESPONSE PROCEDURE (SYNTHETIC)
+===================================
+
+SYNTHETIC DOCUMENT: This document is fictional and was created for the APA Secure Incident Knowledge Assistant project. The Aurelian Institute of Technology (AIT) does not exist.
+
+1. DOCUMENT CONTROL
+
+This procedure has document ID AIT-IR-DD-005 and is at version 1.2.
+
+2. DETECTION THRESHOLDS
+
+Normal traffic averages 2.4 Gbps. A warning alert is raised at 6 Gbps sustained for 5 minutes. The critical threshold is 12 Gbps.
+
+3. MITIGATION
+
+Tier 2 enables WAF Under Attack mode when the warning threshold is reached. The ISP scrubbing service from NorthLink is activated by calling the 24x7 hotline at extension 7010.
+
+DNS record TTLs are lowered to 300 seconds in preparation for traffic redirection. The login portal is limited to 100 requests per second per client IP address. Geo-blocking requires CISO approval and may last at most 24 hours.
+
+4. PRIORITIES AND COMMUNICATION
+
+Service restoration priority is the learning portal first, then email, then the library system. The status page is updated within 20 minutes of a confirmed attack.
+
+5. ANALYSIS AND ESCALATION
+
+Analysts capture 15-minute packet samples for later analysis. The Incident Manager is engaged when an outage exceeds 30 minutes.
+
+6. RESTRICTIONS AND REPORTING
+
+Retaliation against attacking systems, known as hack-back, is prohibited. An after-action report is due within 5 business days.
+
+7. ROLES
+
+The Network Team operates the edge routers and requests traffic scrubbing from the ISP. Tier 2 analysts tune the web application firewall during an attack. The Communications Office publishes status page updates, and the Incident Manager decides on service restoration priorities when several services are affected.
+
+8. DEFINITIONS
+
+A distributed denial-of-service attack tries to make a service unavailable by overwhelming it with traffic from many sources. Scrubbing means filtering attack traffic away from legitimate traffic before it reaches the campus network. A web application firewall filters web requests and can challenge suspicious clients. Geo-blocking denies traffic based on the country of the source address.
+
+9. RELATED DOCUMENTS
+
+See also the Log Management and Retention Policy (AIT-IR-LG-006) and the EDR Alert Triage Procedure (AIT-IR-ED-010).
+
+10. REVISION HISTORY
+
+Version 1.1 (2025-07-01): added the NorthLink scrubbing hotline. Version 1.2 (2026-01-12): added the rate limit for the login portal and the hack-back prohibition.

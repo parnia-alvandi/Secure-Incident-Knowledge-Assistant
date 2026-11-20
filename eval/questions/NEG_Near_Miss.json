@@ -1,0 +1,400 @@
+[
+  {
+    "id": "NEG-21",
+    "doc": null,
+    "question": "What acknowledgement time does AIT require for Severity 5 incidents?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "near_miss",
+    "absent_terms": [
+      "severity 5",
+      "severity five"
+    ],
+    "related_docs": [
+      "syn_11_severity_and_escalation_matrix.docx"
+    ]
+  },
+  {
+    "id": "NEG-22",
+    "doc": null,
+    "question": "Within how many hours must AIT notify affected students after a Severity 2 incident?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "near_miss",
+    "absent_terms": [
+      "notify students",
+      "students must be notified",
+      "notify affected students"
+    ],
+    "related_docs": [
+      "syn_12_incident_communications_plan.docx"
+    ]
+  },
+  {
+    "id": "NEG-23",
+    "doc": null,
+    "question": "What is the maximum number of attendees allowed at a post-incident review meeting?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "near_miss",
+    "absent_terms": [
+      "maximum number of attendees",
+      "maximum attendance",
+      "attendees may not exceed"
+    ],
+    "related_docs": [
+      "syn_13_post_incident_review_template.txt"
+    ]
+  },
+  {
+    "id": "NEG-24",
+    "doc": null,
+    "question": "After how many days must a sealed evidence bag be re-inspected?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "near_miss",
+    "absent_terms": [
+      "re-inspected",
+      "reinspected",
+      "inspection interval"
+    ],
+    "related_docs": [
+      "syn_14_chain_of_custody_checklist.docx"
+    ]
+  },
+  {
+    "id": "NEG-25",
+    "doc": null,
+    "question": "How many analysts must be on duty during the 00:00 to 08:00 SOC shift?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "near_miss",
+    "absent_terms": [
+      "minimum staffing",
+      "minimum number of analysts",
+      "analysts per shift"
+    ],
+    "related_docs": [
+      "syn_15_oncall_and_shift_handover_procedure.txt"
+    ]
+  },
+  {
+    "id": "NEG-26",
+    "doc": null,
+    "question": "What is the maximum downtime allowed during a web server rebuild?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "near_miss",
+    "absent_terms": [
+      "maximum downtime",
+      "downtime allowed",
+      "allowed downtime"
+    ],
+    "related_docs": [
+      "syn_16_web_server_compromise_playbook.docx"
+    ]
+  },
+  {
+    "id": "NEG-27",
+    "doc": null,
+    "question": "What attachment size limit does the AIT email gateway enforce?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "near_miss",
+    "absent_terms": [
+      "attachment size limit",
+      "maximum attachment size",
+      "attachment size"
+    ],
+    "related_docs": [
+      "syn_17_email_security_standard.docx"
+    ]
+  },
+  {
+    "id": "NEG-28",
+    "doc": null,
+    "question": "How many VLAN IDs make up the AIT Student zone?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "near_miss",
+    "absent_terms": [
+      "student vlan",
+      "vlan ids"
+    ],
+    "related_docs": [
+      "syn_18_network_segmentation_standard.txt"
+    ]
+  },
+  {
+    "id": "NEG-29",
+    "doc": null,
+    "question": "What financial penalty applies when a supplier misses its incident notification deadline?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "near_miss",
+    "absent_terms": [
+      "financial penalty",
+      "liquidated damages",
+      "service credit"
+    ],
+    "related_docs": [
+      "syn_19_supplier_incident_notification_standard.docx"
+    ]
+  },
+  {
+    "id": "NEG-30",
+    "doc": null,
+    "question": "What is the pass mark for the core awareness course quiz?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "near_miss",
+    "absent_terms": [
+      "pass mark",
+      "passing score",
+      "passing grade"
+    ],
+    "related_docs": [
+      "syn_20_security_awareness_training_program.docx"
+    ]
+  },
+  {
+    "id": "NEG-31",
+    "doc": null,
+    "question": "At what traffic volume in Gbps does the CISA DDoS guide classify an attack as volumetric?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "near_miss",
+    "absent_terms": [
+      "gigabits per second",
+      "terabits per second",
+      "volumetric attack threshold"
+    ],
+    "related_docs": [
+      "understanding_and_responding_to_distributed_denial_of_service_attacks.pdf"
+    ]
+  },
+  {
+    "id": "NEG-32",
+    "doc": null,
+    "question": "What monthly price does the CISA DDoS guide give for a DDoS mitigation service?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "near_miss",
+    "absent_terms": [
+      "per month",
+      "monthly price",
+      "pricing"
+    ],
+    "related_docs": [
+      "understanding_and_responding_to_distributed_denial_of_service_attacks.pdf"
+    ]
+  },
+  {
+    "id": "NEG-33",
+    "doc": null,
+    "question": "What pass rate on the training check does the CISA phishing guide require before an employee is certified?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "near_miss",
+    "absent_terms": [
+      "training check pass rate",
+      "required pass rate",
+      "phishing training pass rate"
+    ],
+    "related_docs": [
+      "Phishing_Guidance_Stopping_the_Attack_Cycle_at_Phase_One_508c.pdf"
+    ]
+  },
+  {
+    "id": "NEG-34",
+    "doc": null,
+    "question": "Which commercial EDR product does the NSA recommend for detecting web shells?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "near_miss",
+    "absent_terms": [
+      "crowdstrike",
+      "sentinelone",
+      "carbon black"
+    ],
+    "related_docs": [
+      "CSI-DETECT-AND-PREVENT-WEB-SHELL-MALWARE-20200422.PDF.pdf"
+    ]
+  },
+  {
+    "id": "NEG-35",
+    "doc": null,
+    "question": "What is the hash of the China Chopper web shell sample discussed in the NSA sheet?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "near_miss",
+    "absent_terms": [
+      "china chopper hash",
+      "china chopper sample hash",
+      "md5 of china chopper"
+    ],
+    "related_docs": [
+      "CSI-DETECT-AND-PREVENT-WEB-SHELL-MALWARE-20200422.PDF.pdf"
+    ]
+  },
+  {
+    "id": "NEG-36",
+    "doc": null,
+    "question": "Within how many days does NIST SP 800-40r4 require emergency patches to be deployed?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "near_miss",
+    "absent_terms": [
+      "emergency patch deadline",
+      "emergency patches within",
+      "patch within 72 hours"
+    ],
+    "related_docs": [
+      "NIST.SP.800-40r4.pdf"
+    ]
+  },
+  {
+    "id": "NEG-37",
+    "doc": null,
+    "question": "Which patch management product does NIST SP 800-40r4 recommend?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "near_miss",
+    "absent_terms": [
+      "system center configuration manager",
+      "endpoint configuration manager",
+      "ivanti patch"
+    ],
+    "related_docs": [
+      "NIST.SP.800-40r4.pdf"
+    ]
+  },
+  {
+    "id": "NEG-38",
+    "doc": null,
+    "question": "For how many days does NIST SP 800-92 say security logs must be retained?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "near_miss",
+    "absent_terms": [
+      "retained for 90 days",
+      "retained for one year",
+      "retained for 1 year"
+    ],
+    "related_docs": [
+      "nistspecialpublication800-92.pdf"
+    ]
+  },
+  {
+    "id": "NEG-39",
+    "doc": null,
+    "question": "What maximum log file size in gigabytes does NIST SP 800-92 require before rotation?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "near_miss",
+    "absent_terms": [
+      "maximum log file size",
+      "gigabytes per day",
+      "log file size limit"
+    ],
+    "related_docs": [
+      "nistspecialpublication800-92.pdf"
+    ]
+  },
+  {
+    "id": "NEG-40",
+    "doc": null,
+    "question": "What ransom amount did WannaCry demand according to the NCCIC fact sheet?",
+    "answer": "Not stated in the document collection (insufficient evidence).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "en",
+    "category": "near_miss",
+    "absent_terms": [
+      "300 in bitcoin",
+      "three hundred dollars",
+      "wannacry ransom note"
+    ],
+    "related_docs": [
+      "NCCIC ICS_FactSheet_WannaCry_Ransomware_S508C.pdf"
+    ]
+  }
+]

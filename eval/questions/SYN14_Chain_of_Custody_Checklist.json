@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SYN14-01",
+    "doc": "syn_14_chain_of_custody_checklist.docx",
+    "question": "What format does an AIT evidence ID follow, according to the AIT Chain of Custody and Evidence Handling Checklist (AIT-IR-CHK-014)?",
+    "answer": "AIT-EV-YYYY-NNNN.",
+    "evidence_quote": "a unique evidence ID in the format AIT-EV-YYYY-NNNN",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN14-02",
+    "doc": "syn_14_chain_of_custody_checklist.docx",
+    "question": "When may a running system be powered off during evidence collection, according to the AIT Chain of Custody and Evidence Handling Checklist (AIT-IR-CHK-014)?",
+    "answer": "Only with the Incident Commander's approval.",
+    "evidence_quote": "A running system must not be powered off without this approval",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN14-03",
+    "doc": "syn_14_chain_of_custody_checklist.docx",
+    "question": "In what order is evidence collected, according to the AIT Chain of Custody and Evidence Handling Checklist (AIT-IR-CHK-014)?",
+    "answer": "Memory, then network connections and running processes, then disk, then logs and backups.",
+    "evidence_quote": "memory first, then network connections and running processes, then disk, and finally logs and backups",
+    "evidence_page": null,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN14-04",
+    "doc": "syn_14_chain_of_custody_checklist.docx",
+    "question": "Which hash is calculated before and after imaging, according to the AIT Chain of Custody and Evidence Handling Checklist (AIT-IR-CHK-014)?",
+    "answer": "SHA-256.",
+    "evidence_quote": "Calculate a SHA-256 hash before and after imaging",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN14-05",
+    "doc": "syn_14_chain_of_custody_checklist.docx",
+    "question": "What two copies are made of every image, according to the AIT Chain of Custody and Evidence Handling Checklist (AIT-IR-CHK-014)?",
+    "answer": "A master copy that is never opened and a working copy for analysis.",
+    "evidence_quote": "a master copy that is never opened, and a working copy used for analysis",
+    "evidence_page": null,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN14-06",
+    "doc": "syn_14_chain_of_custody_checklist.docx",
+    "question": "What must be recorded on the custody form for every transfer, according to the AIT Chain of Custody and Evidence Handling Checklist (AIT-IR-CHK-014)?",
+    "answer": "Names and signatures of both parties, date and time, and the reason for the transfer.",
+    "evidence_quote": "the names and signatures of both parties, the date and time, and the reason for the transfer",
+    "evidence_page": null,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN14-07",
+    "doc": "syn_14_chain_of_custody_checklist.docx",
+    "question": "How long is evidence retained after the incident is closed, according to the AIT Chain of Custody and Evidence Handling Checklist (AIT-IR-CHK-014)?",
+    "answer": "3 years.",
+    "evidence_quote": "retained for 3 years after the incident is closed",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN14-08",
+    "doc": "syn_14_chain_of_custody_checklist.docx",
+    "question": "When can evidence under a legal hold be destroyed, according to the AIT Chain of Custody and Evidence Handling Checklist (AIT-IR-CHK-014)?",
+    "answer": "Only after Legal Counsel releases the hold in writing.",
+    "evidence_quote": "until Legal Counsel releases the hold in writing",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN14-09",
+    "doc": "syn_14_chain_of_custody_checklist.docx",
+    "question": "Where is digital evidence stored, according to the AIT Chain of Custody and Evidence Handling Checklist (AIT-IR-CHK-014)?",
+    "answer": "On the dedicated encrypted evidence server.",
+    "evidence_quote": "dedicated encrypted evidence server",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN14-10",
+    "doc": "syn_14_chain_of_custody_checklist.docx",
+    "question": "What equipment is used when imaging a physical disk, according to the AIT Chain of Custody and Evidence Handling Checklist (AIT-IR-CHK-014)?",
+    "answer": "A hardware write blocker.",
+    "evidence_quote": "Use a hardware write blocker when imaging a physical disk",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  }
+]

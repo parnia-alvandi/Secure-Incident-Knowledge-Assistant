@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SYN20-01",
+    "doc": "syn_20_security_awareness_training_program.docx",
+    "question": "Within how many days of starting must new employees complete the core awareness course, according to the Security Awareness Training Program (AIT-SEC-PRG-020)?",
+    "answer": "Within 30 days of their start date.",
+    "evidence_quote": "complete the core awareness course within 30 days of their start date",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN20-02",
+    "doc": "syn_20_security_awareness_training_program.docx",
+    "question": "How often must all staff complete a refresher course, according to the Security Awareness Training Program (AIT-SEC-PRG-020)?",
+    "answer": "Every 12 months.",
+    "evidence_quote": "All staff complete a refresher course every 12 months",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN20-03",
+    "doc": "syn_20_security_awareness_training_program.docx",
+    "question": "What training do new students complete and when, according to the Security Awareness Training Program (AIT-SEC-PRG-020)?",
+    "answer": "A 20-minute orientation module in their first week.",
+    "evidence_quote": "New students complete a 20-minute orientation module in their first week",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN20-04",
+    "doc": "syn_20_security_awareness_training_program.docx",
+    "question": "How often are phishing simulations run for all staff, according to the Security Awareness Training Program (AIT-SEC-PRG-020)?",
+    "answer": "Every quarter.",
+    "evidence_quote": "runs a phishing simulation for all staff every quarter",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN20-05",
+    "doc": "syn_20_security_awareness_training_program.docx",
+    "question": "What is the target click rate for phishing simulations, according to the Security Awareness Training Program (AIT-SEC-PRG-020)?",
+    "answer": "Below 5 percent.",
+    "evidence_quote": "The target click rate is below 5 percent",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN20-06",
+    "doc": "syn_20_security_awareness_training_program.docx",
+    "question": "What is the target reporting rate for phishing simulations, according to the Security Awareness Training Program (AIT-SEC-PRG-020)?",
+    "answer": "Above 60 percent.",
+    "evidence_quote": "the target reporting rate is above 60 percent",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN20-07",
+    "doc": "syn_20_security_awareness_training_program.docx",
+    "question": "What happens to staff who click 3 simulated phishing emails within 12 months, according to the Security Awareness Training Program (AIT-SEC-PRG-020)?",
+    "answer": "They receive one-to-one coaching from the Security Awareness Manager.",
+    "evidence_quote": "Staff who click on 3 simulated phishing emails within 12 months receive one-to-one coaching",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN20-08",
+    "doc": "syn_20_security_awareness_training_program.docx",
+    "question": "Are phishing simulation results used for disciplinary action, according to the Security Awareness Training Program (AIT-SEC-PRG-020)?",
+    "answer": "No.",
+    "evidence_quote": "Simulation results are never used for disciplinary action",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN20-09",
+    "doc": "syn_20_security_awareness_training_program.docx",
+    "question": "When is overdue training escalated to the line manager, according to the Security Awareness Training Program (AIT-SEC-PRG-020)?",
+    "answer": "14 days after the deadline.",
+    "evidence_quote": "Overdue training is escalated to the line manager 14 days after the deadline",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN20-10",
+    "doc": "syn_20_security_awareness_training_program.docx",
+    "question": "How long are training records kept, according to the Security Awareness Training Program (AIT-SEC-PRG-020)?",
+    "answer": "4 years.",
+    "evidence_quote": "Training records are kept for 4 years",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  }
+]

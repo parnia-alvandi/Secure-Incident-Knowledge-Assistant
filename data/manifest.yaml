@@ -1,0 +1,581 @@
+documents:
+  - filename: "240229.pdf"
+    title: "#StopRansomware: Phobos Ransomware"
+    publisher: "Cybersecurity and Infrastructure Security Agency (CISA), Federal Bureau of Investigation (FBI), and Multi-State Information Sharing and Analysis Center (MS-ISAC)"
+    doc_kind: public
+    source_url: "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-060a"
+    license: "TLP:CLEAR; subject to standard copyright rules"
+    publication_date: "2024-02-29"
+    acquired_date: "2026-11-16"
+    language: en
+    topics:
+      - ransomware
+      - phobos
+      - indicators-of-compromise
+      - incident-response
+    description: "Joint cybersecurity advisory describing Phobos ransomware activity, tactics, techniques, procedures, and indicators of compromise."
+
+  - filename: "240829.pdf"
+    title: "#StopRansomware: RansomHub Ransomware"
+    publisher: "Cybersecurity and Infrastructure Security Agency (CISA) and Federal Bureau of Investigation (FBI), with other authoring partners"
+    doc_kind: public
+    source_url: "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-242a"
+    license: "TLP:CLEAR; subject to standard copyright rules"
+    publication_date: "2024-08-29"
+    acquired_date: "2026-11-16"
+    language: en
+    topics:
+      - ransomware
+      - ransomhub
+      - indicators-of-compromise
+      - incident-response
+    description: "Joint cybersecurity advisory on RansomHub ransomware, including observed activity and defensive guidance."
+
+  - filename: "AA21_356A_Joint_CSA_Mitigating_Log4Shell_and_Other_Log4j_Related.pdf"
+    title: "AA21-356A: Mitigating Log4Shell and Other Log4j-Related Vulnerabilities"
+    publisher: "CISA, FBI, NSA, ACSC, CCCS, CERT NZ, NZ NCSC, and NCSC-UK"
+    doc_kind: public
+    source_url: "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-356a"
+    license: "TLP:WHITE; subject to standard copyright rules"
+    publication_date: "2021-12-22"
+    acquired_date: "2026-11-16"
+    language: en
+    topics:
+      - log4shell
+      - log4j
+      - vulnerabilities
+      - vulnerability-mitigation
+    description: "Joint advisory providing mitigation guidance for Log4Shell and related Apache Log4j vulnerabilities."
+
+  - filename: "Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response.pdf"
+    title: "Cybersecurity Incident & Vulnerability Response Playbooks"
+    publisher: "Cybersecurity and Infrastructure Security Agency (CISA)"
+    doc_kind: public
+    source_url: "https://www.cisa.gov/resources-tools/resources/federal-government-cybersecurity-incident-and-vulnerability-response-playbooks"
+    license: "TLP:CLEAR; subject to standard copyright rules"
+    publication_date: "2021-11"
+    acquired_date: "2026-11-16"
+    language: en
+    topics:
+      - incident-response
+      - vulnerability-response
+      - playbooks
+      - federal-government
+    description: "Operational procedures for planning and conducting cybersecurity incident and vulnerability response activities in federal civilian executive branch information systems."
+
+  - filename: "NCCIC ICS_FactSheet_WannaCry_Ransomware_S508C.pdf"
+    title: "What Is WannaCry/WanaCrypt0r?"
+    publisher: "National Cybersecurity and Communications Integration Center (NCCIC), Industrial Control Systems (ICS)"
+    doc_kind: public
+    source_url: "https://www.cisa.gov/sites/default/files/FactSheets/NCCIC%20ICS_FactSheet_WannaCry_Ransomware_S508C.pdf"
+    license: "Verify reuse terms on the source page; the PDF does not establish a specific open license"
+    publication_date: "undated (not stated in the document)"
+    acquired_date: "2026-11-16"
+    language: en
+    topics:
+      - wannacry
+      - ransomware
+      - malware
+      - windows-smb
+      - mitigation
+    description: "Fact sheet explaining WannaCry ransomware behavior, affected systems, mitigation measures, and recovery considerations."
+
+  - filename: "NIST.SP.800-61r3.pdf"
+    title: "Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile"
+    publisher: "National Institute of Standards and Technology (NIST)"
+    doc_kind: public
+    source_url: "https://doi.org/10.6028/NIST.SP.800-61r3"
+    license: "NIST publication; verify applicable reuse terms"
+    publication_date: "2025-04"
+    acquired_date: "2026-11-16"
+    language: en
+    topics:
+      - incident-response
+      - cybersecurity-risk-management
+      - nist-csf
+      - preparation
+      - detection
+      - response
+      - recovery
+    description: "NIST guidance on integrating incident response recommendations throughout cybersecurity risk management using the Cybersecurity Framework 2.0."
+
+  - filename: "NIST.SP.800-83r1.pdf"
+    title: "Guide to Malware Incident Prevention and Handling for Desktops and Laptops"
+    publisher: "National Institute of Standards and Technology (NIST)"
+    doc_kind: public
+    source_url: "https://doi.org/10.6028/NIST.SP.800-83r1"
+    license: "NIST publication; verify applicable reuse terms"
+    publication_date: "2013-07"
+    acquired_date: "2026-11-16"
+    language: en
+    topics:
+      - malware
+      - malware-prevention
+      - incident-handling
+      - desktops
+      - laptops
+    description: "Recommendations for improving malware prevention and preparing organizations to handle malware incidents."
+
+  - filename: "nistspecialpublication800-86.pdf"
+    title: "Guide to Integrating Forensic Techniques into Incident Response"
+    publisher: "National Institute of Standards and Technology (NIST)"
+    doc_kind: public
+    source_url: "https://doi.org/10.6028/NIST.SP.800-86"
+    license: "NIST publication; verify applicable reuse terms"
+    publication_date: "2006-08"
+    acquired_date: "2026-11-16"
+    language: en
+    topics:
+      - digital-forensics
+      - incident-response
+      - evidence-collection
+      - forensic-techniques
+    description: "NIST guide describing how forensic techniques can be integrated into incident response."
+
+  - filename: "StopRansomware-Guide 508.pdf"
+    title: "#StopRansomware Guide"
+    publisher: "Cybersecurity and Infrastructure Security Agency (CISA) and National Security Agency (NSA), with contributing partners"
+    doc_kind: public
+    source_url: "https://www.cisa.gov/stopransomware/ransomware-guide"
+    license: "TLP:CLEAR; subject to standard copyright rules"
+    publication_date: "2023-10"
+    acquired_date: "2026-11-16"
+    language: en
+    topics:
+      - ransomware
+      - prevention
+      - mitigation
+      - incident-response
+      - recovery
+    description: "Guide covering ransomware and data extortion preparation, prevention, mitigation, and response practices."
+  
+  - filename: "Darkside CSA.pdf"
+    title: "Darkside Ransomware: Best Practices for Preventing Business Disruption from Ransomware Attacks"
+    publisher: "Cybersecurity and Infrastructure Security Agency (CISA) and Federal Bureau of Investigation (FBI)"
+    doc_kind: public
+    source_url: "https://www.cisa.gov/sites/default/files/publications/Darkside%20CSA.pdf"
+    license: "TLP:WHITE; disclosure is not limited, subject to standard copyright rules"
+    publication_date: "2021-05-11"
+    acquired_date: "2026-11-16"
+    language: en
+    topics:
+      - ransomware
+      - darkside
+      - critical-infrastructure
+      - it-ot-segmentation
+      - indicators-of-compromise
+      - incident-response
+      - mitigation
+    description: "Joint CISA and FBI advisory describing Darkside ransomware activity and defensive practices to prevent business disruption, including network segmentation, multifactor authentication, backups, and incident response."
+
+  - filename: syn_01_phishing_response_procedure.docx
+    title: Phishing Incident Response Procedure (SYNTHETIC)
+    publisher: APA Project (synthetic document)
+    doc_kind: synthetic
+    source_url: null
+    license: Created for this project; free to use
+    publication_date: '2026-11-17'
+    acquired_date: '2026-11-17'
+    language: en
+    topics:
+      - phishing
+      - triage
+      - reporting
+      - email-security
+    description: Fictional AIT procedure for handling reported phishing emails.
+
+
+  - filename: syn_02_malware_outbreak_playbook.docx
+    title: Malware Outbreak Playbook (SYNTHETIC)
+    publisher: APA Project (synthetic document)
+    doc_kind: synthetic
+    source_url: null
+    license: Created for this project; free to use
+    publication_date: '2026-11-17'
+    acquired_date: '2026-11-17'
+    language: en
+    topics:
+      - malware
+      - outbreak
+      - containment
+      - eradication
+    description: Fictional AIT playbook for declaring and handling malware outbreaks.
+
+
+  - filename: syn_03_ransomware_response_runbook.txt
+    title: Ransomware Response Runbook (SYNTHETIC)
+    publisher: APA Project (synthetic document)
+    doc_kind: synthetic
+    source_url: null
+    license: Created for this project; free to use
+    publication_date: '2026-11-17'
+    acquired_date: '2026-11-17'
+    language: en
+    topics:
+      - ransomware
+      - backups
+      - recovery
+      - decision-authority
+    description: Fictional AIT runbook for ransomware decision authority, backups and
+      recovery.
+
+
+  - filename: syn_04_account_compromise_procedure.docx
+    title: Account Compromise Response Procedure (SYNTHETIC)
+    publisher: APA Project (synthetic document)
+    doc_kind: synthetic
+    source_url: null
+    license: Created for this project; free to use
+    publication_date: '2026-11-17'
+    acquired_date: '2026-11-17'
+    language: en
+    topics:
+      - account-compromise
+      - identity
+      - mfa
+      - containment
+    description: Fictional AIT procedure for detecting and containing compromised accounts.
+
+
+  - filename: syn_05_ddos_response_procedure.txt
+    title: DDoS Response Procedure (SYNTHETIC)
+    publisher: APA Project (synthetic document)
+    doc_kind: synthetic
+    source_url: null
+    license: Created for this project; free to use
+    publication_date: '2026-11-17'
+    acquired_date: '2026-11-17'
+    language: en
+    topics:
+      - ddos
+      - availability
+      - mitigation
+      - traffic-thresholds
+    description: Fictional AIT procedure for detecting and mitigating DDoS attacks.
+
+  - filename: syn_06_log_management_policy.docx
+    title: Log Management and Retention Policy (SYNTHETIC)
+    publisher: APA Project (synthetic document)
+    doc_kind: synthetic
+    source_url: null
+    license: Created for this project; free to use
+    publication_date: '2026-11-18'
+    acquired_date: '2026-11-18'
+    language: en
+    topics:
+      - logging
+      - retention
+      - siem
+      - integrity
+    description: Fictional AIT policy for log collection, retention periods, integrity
+      and access.
+
+  - filename: syn_07_vulnerability_management_standard.docx
+    title: Vulnerability Management Standard (SYNTHETIC)
+    publisher: APA Project (synthetic document)
+    doc_kind: synthetic
+    source_url: null
+    license: Created for this project; free to use
+    publication_date: '2026-11-18'
+    acquired_date: '2026-11-18'
+    language: en
+    topics:
+      - vulnerability-management
+      - scanning
+      - remediation-sla
+      - cvss
+    description: Fictional AIT standard for vulnerability scanning and remediation deadlines.
+
+  - filename: syn_08_patch_management_policy.txt
+    title: Patch Management Policy (SYNTHETIC)
+    publisher: APA Project (synthetic document)
+    doc_kind: synthetic
+    source_url: null
+    license: Created for this project; free to use
+    publication_date: '2026-11-18'
+    acquired_date: '2026-11-18'
+    language: en
+    topics:
+      - patching
+      - change-management
+      - emergency-patches
+      - compliance
+    description: Fictional AIT policy for routine and emergency patching.
+
+  - filename: syn_09_backup_and_restore_standard.docx
+    title: Backup and Restore Standard (SYNTHETIC)
+    publisher: APA Project (synthetic document)
+    doc_kind: synthetic
+    source_url: null
+    license: Created for this project; free to use
+    publication_date: '2026-11-18'
+    acquired_date: '2026-11-18'
+    language: en
+    topics:
+      - backup
+      - restore
+      - rpo-rto
+      - immutability
+    description: Fictional AIT standard for backup schedules, retention, immutability
+      and restore testing.
+
+  - filename: syn_10_edr_alert_triage_procedure.docx
+    title: EDR Alert Triage Procedure (SYNTHETIC)
+    publisher: APA Project (synthetic document)
+    doc_kind: synthetic
+    source_url: null
+    license: Created for this project; free to use
+    publication_date: '2026-11-18'
+    acquired_date: '2026-11-18'
+    language: en
+    topics:
+      - edr
+      - alert-triage
+      - soc
+      - tuning
+    description: Fictional AIT procedure for triaging endpoint detection alerts.
+
+  - filename: syn_11_severity_and_escalation_matrix.docx
+    title: Incident Severity and Escalation Matrix (SYNTHETIC)
+    publisher: APA Project (synthetic document)
+    doc_kind: synthetic
+    source_url: null
+    license: Created for this project; free to use
+    publication_date: '2026-11-18'
+    acquired_date: '2026-11-18'
+    language: en
+    topics:
+      - severity
+      - escalation
+      - acknowledgement-times
+      - incident-commander
+    description: Fictional AIT standard for incident severity levels, response times and escalation.
+
+  - filename: syn_12_incident_communications_plan.docx
+    title: Incident Communications Plan (SYNTHETIC)
+    publisher: APA Project (synthetic document)
+    doc_kind: synthetic
+    source_url: null
+    license: Created for this project; free to use
+    publication_date: '2026-11-18'
+    acquired_date: '2026-11-18'
+    language: en
+    topics:
+      - communications
+      - breach-notification
+      - approvals
+      - stakeholders
+    description: Fictional AIT plan for who communicates what, to whom and by when during an incident.
+
+  - filename: syn_13_post_incident_review_template.txt
+    title: Post-Incident Review Template (SYNTHETIC)
+    publisher: APA Project (synthetic document)
+    doc_kind: synthetic
+    source_url: null
+    license: Created for this project; free to use
+    publication_date: '2026-11-18'
+    acquired_date: '2026-11-18'
+    language: en
+    topics:
+      - post-incident-review
+      - lessons-learned
+      - root-cause
+      - metrics
+    description: Fictional AIT template and ground rules for blameless post-incident reviews.
+
+  - filename: syn_14_chain_of_custody_checklist.docx
+    title: Chain of Custody and Evidence Handling Checklist (SYNTHETIC)
+    publisher: APA Project (synthetic document)
+    doc_kind: synthetic
+    source_url: null
+    license: Created for this project; free to use
+    publication_date: '2026-11-18'
+    acquired_date: '2026-11-18'
+    language: en
+    topics:
+      - chain-of-custody
+      - forensics
+      - evidence-handling
+      - legal-hold
+    description: Fictional AIT checklist for collecting, imaging, transferring, storing and retaining evidence.
+
+  - filename: syn_15_oncall_and_shift_handover_procedure.txt
+    title: On-Call and Shift Handover Procedure (SYNTHETIC)
+    publisher: APA Project (synthetic document)
+    doc_kind: synthetic
+    source_url: null
+    license: Created for this project; free to use
+    publication_date: '2026-11-18'
+    acquired_date: '2026-11-18'
+    language: en
+    topics:
+      - on-call
+      - shift-handover
+      - paging
+      - soc-operations
+    description: Fictional AIT procedure for SOC shifts, on-call rota, paging and handover notes.
+
+  - filename: syn_16_web_server_compromise_playbook.docx
+    title: Web Server Compromise and Webshell Response Playbook (SYNTHETIC)
+    publisher: APA Project (synthetic document)
+    doc_kind: synthetic
+    source_url: null
+    license: Created for this project; free to use
+    publication_date: '2026-11-18'
+    acquired_date: '2026-11-18'
+    language: en
+    topics:
+      - web-server
+      - webshell
+      - containment
+      - eradication
+    description: Fictional AIT playbook for responding to a compromised web server and webshell.
+
+  - filename: syn_17_email_security_standard.docx
+    title: Email Security Standard (SYNTHETIC)
+    publisher: APA Project (synthetic document)
+    doc_kind: synthetic
+    source_url: null
+    license: Created for this project; free to use
+    publication_date: '2026-11-18'
+    acquired_date: '2026-11-18'
+    language: en
+    topics:
+      - email-security
+      - spf-dkim-dmarc
+      - quarantine
+      - mail-filtering
+    description: Fictional AIT standard for technical email security controls.
+
+  - filename: syn_18_network_segmentation_standard.txt
+    title: Network Segmentation Standard (SYNTHETIC)
+    publisher: APA Project (synthetic document)
+    doc_kind: synthetic
+    source_url: null
+    license: Created for this project; free to use
+    publication_date: '2026-11-18'
+    acquired_date: '2026-11-18'
+    language: en
+    topics:
+      - network-segmentation
+      - firewall
+      - zones
+      - quarantine-vlan
+    description: Fictional AIT standard for network zones, firewall rules and emergency isolation.
+
+  - filename: syn_19_supplier_incident_notification_standard.docx
+    title: Supplier Incident Notification Standard (SYNTHETIC)
+    publisher: APA Project (synthetic document)
+    doc_kind: synthetic
+    source_url: null
+    license: Created for this project; free to use
+    publication_date: '2026-11-18'
+    acquired_date: '2026-11-18'
+    language: en
+    topics:
+      - suppliers
+      - third-party-risk
+      - notification
+      - contracts
+    description: Fictional AIT standard for supplier incident notification deadlines and obligations.
+
+  - filename: syn_20_security_awareness_training_program.docx
+    title: Security Awareness Training Program (SYNTHETIC)
+    publisher: APA Project (synthetic document)
+    doc_kind: synthetic
+    source_url: null
+    license: Created for this project; free to use
+    publication_date: '2026-11-18'
+    acquired_date: '2026-11-18'
+    language: en
+    topics:
+      - security-awareness
+      - training
+      - phishing-simulation
+      - compliance
+    description: Fictional AIT program for security awareness training and phishing simulations.
+
+  - filename: "CSI-DETECT-AND-PREVENT-WEB-SHELL-MALWARE-20200422.PDF.pdf"
+    title: "Detect and Prevent Web Shell Malware"
+    publisher: "National Security Agency (NSA) and Australian Signals Directorate (ASD)"
+    doc_kind: public
+    source_url: "https://media.defense.gov/2020/Jun/09/2002313081/-1/-1/0/CSI-DETECT-AND-PREVENT-WEB-SHELL-MALWARE-20200422.PDF"
+    license: "US Government publication; the PDF states no specific license, verify reuse terms on the source page"
+    publication_date: "2020-04"
+    acquired_date: "2026-11-19"
+    language: en
+    topics:
+      - web-shell
+      - web-servers
+      - detection
+      - prevention
+      - incident-response
+    description: "Joint cybersecurity information sheet on detecting, preventing and responding to web shell malware on web servers."
+
+  - filename: "Phishing_Guidance_Stopping_the_Attack_Cycle_at_Phase_One_508c.pdf"
+    title: "Phishing Guidance: Stopping the Attack Cycle at Phase One"
+    publisher: "Cybersecurity and Infrastructure Security Agency (CISA), National Security Agency (NSA), Federal Bureau of Investigation (FBI), and Multi-State Information Sharing and Analysis Center (MS-ISAC)"
+    doc_kind: public
+    source_url: "https://www.cisa.gov/resources-tools/resources/phishing-guidance-stopping-attack-cycle-phase-one"
+    license: "TLP:CLEAR; subject to standard copyright rules"
+    publication_date: "2023-10"
+    acquired_date: "2026-11-19"
+    language: en
+    topics:
+      - phishing
+      - social-engineering
+      - mfa
+      - dmarc
+      - incident-response
+    description: "Joint guide describing common phishing techniques and mitigations for network defenders, small and medium-sized businesses, and software manufacturers."
+
+  - filename: "understanding_and_responding_to_distributed_denial_of_service_attacks.pdf"
+    title: "Understanding and Responding to Distributed Denial-of-Service Attacks"
+    publisher: "Cybersecurity and Infrastructure Security Agency (CISA), Federal Bureau of Investigation (FBI), and Multi-State Information Sharing and Analysis Center (MS-ISAC)"
+    doc_kind: public
+    source_url: "https://www.cisa.gov/resources-tools/resources/understanding-and-responding-distributed-denial-service-attacks"
+    license: "TLP:CLEAR; subject to standard copyright rules"
+    publication_date: "2024-03-21"
+    acquired_date: "2026-11-19"
+    language: en
+    topics:
+      - ddos
+      - denial-of-service
+      - availability
+      - mitigation
+      - incident-response
+    description: "Joint guide on DoS and DDoS attack types, preparation steps, symptoms, response and recovery actions."
+
+  - filename: "NIST.SP.800-40r4.pdf"
+    title: "Guide to Enterprise Patch Management Planning: Preventive Maintenance for Technology"
+    publisher: "National Institute of Standards and Technology (NIST)"
+    doc_kind: public
+    source_url: "https://doi.org/10.6028/NIST.SP.800-40r4"
+    license: "NIST publication; verify applicable reuse terms"
+    publication_date: "2022-04"
+    acquired_date: "2026-11-19"
+    language: en
+    topics:
+      - patch-management
+      - vulnerability-management
+      - risk-response
+      - maintenance-groups
+    description: "NIST guidance on enterprise patch management planning, risk responses, maintenance groups and patching metrics."
+
+  - filename: "nistspecialpublication800-92.pdf"
+    title: "Guide to Computer Security Log Management"
+    publisher: "National Institute of Standards and Technology (NIST)"
+    doc_kind: public
+    source_url: "https://doi.org/10.6028/NIST.SP.800-92"
+    license: "NIST publication; verify applicable reuse terms"
+    publication_date: "2006-09"
+    acquired_date: "2026-11-19"
+    language: en
+    topics:
+      - log-management
+      - logging
+      - siem
+      - log-analysis
+      - forensics
+    description: "NIST guide to establishing log management policies, infrastructure and operational processes."
+

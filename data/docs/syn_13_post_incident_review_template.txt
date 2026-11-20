@@ -1,0 +1,61 @@
+AIT POST-INCIDENT REVIEW TEMPLATE
+=================================
+
+Document ID: AIT-IR-TPL-013 | Version: 1.2 | Owner: SOC Manager | Effective date: 12 February 2026
+
+
+1. Purpose
+----------
+
+A post-incident review (PIR) turns an incident into lasting improvement. This template standardises how the Aurelian Institute of Technology (AIT) records what happened, why it happened and what will change.
+
+
+2. Ground Rules
+---------------
+
+- Blameless: the review examines processes, tools and decisions, never the personal fault of individuals.
+- A PIR is mandatory for Severity 1 and Severity 2 incidents. For Severity 1 the review meeting is held within 5 business days of incident closure, and for Severity 2 within 10 business days.
+- The meeting is led by a facilitator who was not the Incident Commander for the incident.
+- Required attendees: the Incident Commander, the responders involved, the owner of each affected system and a representative of the Help Desk.
+
+3. Template Sections
+--------------------
+
+Section 1 - Summary: two to three sentences describing the incident, its severity and its outcome, written for a non-technical reader.
+
+Section 2 - Timeline: key events in UTC, including first malicious activity, detection, declaration, containment, eradication and recovery.
+
+Section 3 - Detection: how the incident was found and whether an existing control should have found it sooner.
+
+Section 4 - Impact: affected systems, number of users, data involved, downtime in hours and estimated cost.
+
+Section 5 - Root Cause: the underlying cause, found by asking why repeatedly until a process or control gap is identified; the 5 Whys method is recommended.
+
+Section 6 - What Went Well: practices and tools that worked and should be kept.
+
+Section 7 - What Went Poorly: delays, gaps and surprises.
+
+Section 8 - Action Items: each item has an owner, a due date and a priority.
+
+
+4. Metrics
+----------
+
+- MTTD (mean time to detect): time from first malicious activity to detection.
+- MTTC (mean time to contain): time from detection to containment.
+- MTTR (mean time to recover): time from detection to full restoration of service.
+
+5. Action Items and Publication
+-------------------------------
+
+Action items must be due within 30 days unless the SOC Manager approves a longer period. Overdue items are reported at the monthly security review.
+
+The final report is published within 15 business days of the meeting. It is stored in the restricted incident repository and retained for 7 years.
+
+
+6. Version History
+------------------
+
+- 1.2 (12 February 2026): added the metrics section.
+- 1.1 (18 September 2025): added the facilitator rule.
+- 1.0 (2 May 2024): first release.

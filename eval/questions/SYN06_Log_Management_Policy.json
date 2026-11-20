@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SYN06-01",
+    "doc": "syn_06_log_management_policy.docx",
+    "question": "How do in-scope systems forward logs to LogVault according to the AIT Log Management and Retention Policy (AIT-IR-LG-006)?",
+    "answer": "Using syslog over TLS on port 6514.",
+    "evidence_quote": "All in-scope systems forward logs to the LogVault SIEM using syslog over TLS on port 6514.",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN06-02",
+    "doc": "syn_06_log_management_policy.docx",
+    "question": "What is the maximum allowed clock drift in AIT-IR-LG-006?",
+    "answer": "2 seconds (clocks are synchronized with NTP).",
+    "evidence_quote": "must not drift by more than 2 seconds",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN06-03",
+    "doc": "syn_06_log_management_policy.docx",
+    "question": "In which time zone are timestamps recorded under AIT-IR-LG-006?",
+    "answer": "UTC.",
+    "evidence_quote": "All timestamps are recorded in UTC",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN06-04",
+    "doc": "syn_06_log_management_policy.docx",
+    "question": "How long are authentication logs kept in AIT-IR-LG-006?",
+    "answer": "12 months in hot storage and then 3 years in the archive.",
+    "evidence_quote": "Authentication logs are kept for 12 months in hot storage and then for 3 years in the archive.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN06-05",
+    "doc": "syn_06_log_management_policy.docx",
+    "question": "What are the retention periods for firewall, web proxy and DNS query logs in AIT-IR-LG-006?",
+    "answer": "Firewall logs 180 days, web proxy logs 120 days, and DNS query logs 90 days.",
+    "evidence_quote": "Firewall logs are kept for 180 days, web proxy logs for 120 days, and DNS query logs for 90 days.",
+    "evidence_page": null,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN06-06",
+    "doc": "syn_06_log_management_policy.docx",
+    "question": "How long are privileged access audit logs kept according to AIT-IR-LG-006?",
+    "answer": "5 years.",
+    "evidence_quote": "Privileged access audit logs are kept for 5 years.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN06-07",
+    "doc": "syn_06_log_management_policy.docx",
+    "question": "How are log files protected against later modification in AIT-IR-LG-006?",
+    "answer": "With SHA-256 hashes computed every hour.",
+    "evidence_quote": "Log files are protected with SHA-256 hashes computed every hour",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN06-08",
+    "doc": "syn_06_log_management_policy.docx",
+    "question": "Who approves access requests to raw logs, and how fast, under AIT-IR-LG-006?",
+    "answer": "The SOC Manager, within 2 business days.",
+    "evidence_quote": "The SOC Manager approves access requests within 2 business days.",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN06-09",
+    "doc": "syn_06_log_management_policy.docx",
+    "question": "What triggers a silent-source alert in AIT-IR-LG-006?",
+    "answer": "A log source that sends no events for 15 minutes.",
+    "evidence_quote": "A log source that sends no events for 15 minutes triggers a silent-source alert",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN06-10",
+    "doc": "syn_06_log_management_policy.docx",
+    "question": "How long are exceptions to the AIT log management policy valid, and who approves them?",
+    "answer": "At most 90 days, with written approval from the CISO.",
+    "evidence_quote": "Exceptions are valid for at most 90 days and require written approval from the CISO.",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  }
+]

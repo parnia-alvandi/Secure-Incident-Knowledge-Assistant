@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SYN15-01",
+    "doc": "syn_15_oncall_and_shift_handover_procedure.txt",
+    "question": "How many shifts does the SOC run each day and how long is each, according to the AIT On-Call and Shift Handover Procedure (AIT-IR-PRC-015)?",
+    "answer": "Three shifts of 8 hours.",
+    "evidence_quote": "operates 24 hours a day in three 8-hour shifts",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN15-02",
+    "doc": "syn_15_oncall_and_shift_handover_procedure.txt",
+    "question": "When does the weekly on-call rota change over, according to the AIT On-Call and Shift Handover Procedure (AIT-IR-PRC-015)?",
+    "answer": "Monday at 09:00 local time.",
+    "evidence_quote": "changes on Monday at 09:00 local time",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN15-03",
+    "doc": "syn_15_oncall_and_shift_handover_procedure.txt",
+    "question": "How quickly must an on-call analyst be able to reach a secure workstation, according to the AIT On-Call and Shift Handover Procedure (AIT-IR-PRC-015)?",
+    "answer": "Within 45 minutes.",
+    "evidence_quote": "reach a secure workstation within 45 minutes",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN15-04",
+    "doc": "syn_15_oncall_and_shift_handover_procedure.txt",
+    "question": "How often may an analyst be on call, according to the AIT On-Call and Shift Handover Procedure (AIT-IR-PRC-015)?",
+    "answer": "No more than one week in three.",
+    "evidence_quote": "No analyst is on call for more than one week in three",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN15-05",
+    "doc": "syn_15_oncall_and_shift_handover_procedure.txt",
+    "question": "How far in advance must rota swaps be agreed, according to the AIT On-Call and Shift Handover Procedure (AIT-IR-PRC-015)?",
+    "answer": "At least 48 hours.",
+    "evidence_quote": "agreed at least 48 hours in advance",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN15-06",
+    "doc": "syn_15_oncall_and_shift_handover_procedure.txt",
+    "question": "Within how long must the on-call analyst acknowledge a page, according to the AIT On-Call and Shift Handover Procedure (AIT-IR-PRC-015)?",
+    "answer": "Within 15 minutes.",
+    "evidence_quote": "must acknowledge a page within 15 minutes",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN15-07",
+    "doc": "syn_15_oncall_and_shift_handover_procedure.txt",
+    "question": "How much rest does an analyst get after a night call-out longer than 4 hours, according to the AIT On-Call and Shift Handover Procedure (AIT-IR-PRC-015)?",
+    "answer": "At least 11 hours before the next shift.",
+    "evidence_quote": "at least 11 hours of rest before the next shift",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN15-08",
+    "doc": "syn_15_oncall_and_shift_handover_procedure.txt",
+    "question": "Is a handover by message alone acceptable, according to the AIT On-Call and Shift Handover Procedure (AIT-IR-PRC-015)?",
+    "answer": "No, a live handover of about 15 minutes is required.",
+    "evidence_quote": "A handover by message alone is not accepted",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN15-09",
+    "doc": "syn_15_oncall_and_shift_handover_procedure.txt",
+    "question": "When may the outgoing analyst leave after handover, according to the AIT On-Call and Shift Handover Procedure (AIT-IR-PRC-015)?",
+    "answer": "Only after the incoming analyst replies Accepted in the ticket.",
+    "evidence_quote": "only after the incoming analyst replies Accepted in the ticket",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN15-10",
+    "doc": "syn_15_oncall_and_shift_handover_procedure.txt",
+    "question": "May credentials be written in handover notes, according to the AIT On-Call and Shift Handover Procedure (AIT-IR-PRC-015)?",
+    "answer": "No; passwords and recovery codes are never written there.",
+    "evidence_quote": "Passwords and recovery codes are never written in handover notes",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "DKS-01",
+    "doc": "Darkside CSA.pdf",
+    "question": "According to CISA/FBI advisory AA21-131A, what kind of organization was attacked with Darkside ransomware, and which of its networks was hit?",
+    "answer": "A pipeline company (a critical infrastructure entity in the United States); the ransomware was deployed against its information technology (IT) network.",
+    "evidence_quote": "deployed Darkside ransomware against the pipeline company's information technology (IT) network",
+    "evidence_page": 1,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "DKS-02",
+    "doc": "Darkside CSA.pdf",
+    "question": "How does advisory AA21-131A describe the business model of Darkside?",
+    "answer": "As ransomware-as-a-service (RaaS): the group develops the ransomware used by cybercriminal actors and receives a share of the proceeds.",
+    "evidence_quote": "Darkside is ransomware-as-a-service (RaaS).",
+    "evidence_page": 2,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "DKS-03",
+    "doc": "Darkside CSA.pdf",
+    "question": "Since when, according to open-source reporting cited in AA21-131A, have Darkside actors been targeting large, high-revenue organizations?",
+    "answer": "Since August 2020.",
+    "evidence_quote": "since August 2020, Darkside actors have been targeting multiple large, high-revenue organizations",
+    "evidence_page": 2,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "DKS-04",
+    "doc": "Darkside CSA.pdf",
+    "question": "Which encryption algorithms does the Darkside ransomware use, according to AA21-131A?",
+    "answer": "Salsa20 and RSA.",
+    "evidence_quote": "The Darkside ransomware uses Salsa20 and RSA encryption.",
+    "evidence_page": 2,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "DKS-05",
+    "doc": "Darkside CSA.pdf",
+    "question": "Which MITRE ATT&CK initial-access techniques does AA21-131A list for Darkside actors?",
+    "answer": "Phishing (T1566), Exploit Public-Facing Application (T1190), and External Remote Services (T1133).",
+    "evidence_quote": "Phishing [T1566], Exploit Public-Facing Application [T1190], External Remote Services [T1133]",
+    "evidence_page": 2,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "DKS-06",
+    "doc": "Darkside CSA.pdf",
+    "question": "What does AA21-131A say Darkside actors primarily use for command and control (C2)?",
+    "answer": "The Onion Router (TOR); Cobalt Strike has also been observed for C2.",
+    "evidence_quote": "Darkside actors primarily use The Onion Router (TOR) for Command and Control",
+    "evidence_page": 2,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "DKS-07",
+    "doc": "Darkside CSA.pdf",
+    "question": "What does AA21-131A recommend if Remote Desktop Protocol (RDP) is operationally necessary?",
+    "answer": "After assessing risks, restrict the originating sources and require multi-factor authentication.",
+    "evidence_quote": "if RDP is deemed operationally necessary, restrict the originating sources and require multi-factor authentication",
+    "evidence_page": 3,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "DKS-08",
+    "doc": "Darkside CSA.pdf",
+    "question": "How should backups be stored according to the Darkside advisory AA21-131A, and why?",
+    "answer": "Separately and isolated from network connections (offline), because many ransomware variants try to find and encrypt or delete accessible backups.",
+    "evidence_quote": "Backups should be isolated from network connections that could enable the spread of ransomware.",
+    "evidence_page": 3,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "DKS-09",
+    "doc": "Darkside CSA.pdf",
+    "question": "What should an organization do first with an infected system after a ransomware incident, per AA21-131A?",
+    "answer": "Isolate it: remove it from all networks, disable wireless, Bluetooth and any other networking capabilities, and disconnect shared and networked drives.",
+    "evidence_quote": "Remove the infected system from all networks, and disable the computer's wireless, Bluetooth, and any other potential networking capabilities.",
+    "evidence_page": 4,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "DKS-10",
+    "doc": "Darkside CSA.pdf",
+    "question": "Does AA21-131A encourage victims to pay the ransom?",
+    "answer": "No. CISA and the FBI do not encourage paying a ransom; it may embolden adversaries, encourage other criminals, fund illicit activities, and does not guarantee file recovery.",
+    "evidence_quote": "CISA and the FBI do not encourage paying a ransom to criminal actors.",
+    "evidence_page": 5,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  }
+]

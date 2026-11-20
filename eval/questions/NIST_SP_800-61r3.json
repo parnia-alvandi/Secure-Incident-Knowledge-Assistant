@@ -1,0 +1,112 @@
+[
+  {
+    "id": "N61-01",
+    "doc": "NIST.SP.800-61r3.pdf",
+    "question": "Which earlier NIST publication does SP 800-61r3 supersede?",
+    "answer": "SP 800-61 Revision 2, Computer Security Incident Handling Guide.",
+    "evidence_quote": "This publication supersedes SP 800-61r2 (Revision 2), Computer Security Incident Handling Guide",
+    "evidence_page": 11,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N61-02",
+    "doc": "NIST.SP.800-61r3.pdf",
+    "question": "How does NIST SP 800-61r3 define an event?",
+    "answer": "Any observable occurrence that involves computing assets, including physical and virtual platforms, networks, services, and cloud environments.",
+    "evidence_quote": "an event is any observable occurrence that involves computing assets, including physical and virtual platforms, networks, services, and cloud environments",
+    "evidence_page": 10,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N61-03",
+    "doc": "NIST.SP.800-61r3.pdf",
+    "question": "How does NIST SP 800-61r3 define a cybersecurity incident?",
+    "answer": "An occurrence that actually or imminently jeopardizes, without lawful authority, the integrity, confidentiality, or availability of information or an information system, or constitutes a violation or imminent threat of violation of law, security policies, security procedures, or acceptable use policies (quoting FISMA 2014).",
+    "evidence_quote": "an occurrence that actually or imminently jeopardizes, without lawful authority, the integrity, confidentiality, or availability of information or an information system",
+    "evidence_page": 10,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N61-04",
+    "doc": "NIST.SP.800-61r3.pdf",
+    "question": "Which six CSF 2.0 Functions form the incident response life cycle model in NIST SP 800-61r3?",
+    "answer": "Govern, Identify, Protect, Detect, Respond, and Recover.",
+    "evidence_quote": "Fig. 2 shows a high-level incident response life cycle model based on the six CSF 2.0 Functions",
+    "evidence_page": 13,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N61-05",
+    "doc": "NIST.SP.800-61r3.pdf",
+    "question": "Which CSF 2.0 Functions make up incident response itself in the life cycle model of NIST SP 800-61r3?",
+    "answer": "Detect, Respond, and Recover; the preparation activities of Govern, Identify, and Protect are broader cybersecurity risk management activities that support incident response.",
+    "evidence_quote": "Incident response is shown in the top level of the figure: Detect, Respond, and Recover.",
+    "evidence_page": 13,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N61-06",
+    "doc": "NIST.SP.800-61r3.pdf",
+    "question": "How does NIST SP 800-61r3 describe the Govern (GV) Function?",
+    "answer": "The organization's cybersecurity risk management strategy, expectations, and policy are established, communicated, and monitored.",
+    "evidence_quote": "Govern (GV): The organization's cybersecurity risk management strategy, expectations, and policy are established, communicated, and monitored.",
+    "evidence_page": 13,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N61-07",
+    "doc": "NIST.SP.800-61r3.pdf",
+    "question": "Which CSF 2.0 category represents continuous improvement in the incident response life cycle model of NIST SP 800-61r3?",
+    "answer": "The Improvement Category (ID.IM) within the Identify Function.",
+    "evidence_quote": "the need for continuous improvement is indicated as the middle level with the Improvement Category (ID.IM) within the Identify Function",
+    "evidence_page": 13,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N61-08",
+    "doc": "NIST.SP.800-61r3.pdf",
+    "question": "Why does NIST SP 800-61r3 no longer capture details of how to perform incident response activities?",
+    "answer": "Because those details change so often and vary so much across technologies, environments, and organizations that it is no longer feasible to capture and maintain them in a single static publication.",
+    "evidence_quote": "it is no longer feasible to capture and maintain that information in a single static publication",
+    "evidence_page": 11,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N61-09",
+    "doc": "NIST.SP.800-61r3.pdf",
+    "question": "Who is the target audience of NIST SP 800-61r3?",
+    "answer": "Cybersecurity program leadership, cybersecurity personnel, and others responsible for preparing for, detecting, responding to, or recovering from cybersecurity incidents.",
+    "evidence_quote": "The target audience for this publication includes cybersecurity program leadership, cybersecurity personnel, and others who are responsible for preparing for, detecting, responding to, or recovering from cybersecurity incidents.",
+    "evidence_page": 6,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N61-10",
+    "doc": "NIST.SP.800-61r3.pdf",
+    "question": "What does NIST SP 800-61r3 say about who participates in incident response today?",
+    "answer": "Most organizations recognize that success depends on the participation of many internal and external parties with a wide variety of roles and responsibilities, not only the organization's own incident handlers.",
+    "evidence_quote": "most organizations increasingly recognize that the success of their incident response efforts depend on the participation of many internal and external parties",
+    "evidence_page": 14,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  }
+]

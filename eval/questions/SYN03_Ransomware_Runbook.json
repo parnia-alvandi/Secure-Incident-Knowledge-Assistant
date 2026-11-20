@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SYN03-01",
+    "doc": "syn_03_ransomware_response_runbook.txt",
+    "question": "When may the CISO approve isolation of the entire campus network according to the AIT Ransomware Response Runbook (AIT-IR-RW-003)?",
+    "answer": "When 50 or more hosts show encryption activity or when any domain controller is affected.",
+    "evidence_quote": "The CISO may approve isolation of the entire campus network when 50 or more hosts show encryption activity or when any domain controller is affected.",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN03-02",
+    "doc": "syn_03_ransomware_response_runbook.txt",
+    "question": "Who may communicate with the attackers under AIT-IR-RW-003?",
+    "answer": "No staff member may contact the attackers; communication is handled only through legal counsel.",
+    "evidence_quote": "No staff member may contact the attackers; any communication is handled only through legal counsel.",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN03-03",
+    "doc": "syn_03_ransomware_response_runbook.txt",
+    "question": "What approval does a ransom payment require in AIT-IR-RW-003?",
+    "answer": "Written approval from both the Board Risk Committee and legal counsel.",
+    "evidence_quote": "A ransom payment requires written approval from both the Board Risk Committee and legal counsel.",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN03-04",
+    "doc": "syn_03_ransomware_response_runbook.txt",
+    "question": "Within how long does AIT-CSIRT notify law enforcement of a confirmed ransomware incident per AIT-IR-RW-003?",
+    "answer": "Within 24 hours.",
+    "evidence_quote": "AIT-CSIRT notifies law enforcement within 24 hours of confirming a ransomware incident.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN03-05",
+    "doc": "syn_03_ransomware_response_runbook.txt",
+    "question": "When does VaultSafe copy immutable backups to the offline vault in the AIT ransomware runbook?",
+    "answer": "Every night at 02:00.",
+    "evidence_quote": "VaultSafe copies immutable backups to the offline vault every night at 02:00.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN03-06",
+    "doc": "syn_03_ransomware_response_runbook.txt",
+    "question": "How long are backups in the offline vault retained according to AIT-IR-RW-003?",
+    "answer": "35 days.",
+    "evidence_quote": "Backups in the offline vault are retained for 35 days.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN03-07",
+    "doc": "syn_03_ransomware_response_runbook.txt",
+    "question": "What recovery time objective applies to Tier 0 identity services in AIT-IR-RW-003?",
+    "answer": "12 hours; Tier 0 identity services are restored first.",
+    "evidence_quote": "Tier 0 identity services are restored first, with a recovery time objective of 12 hours.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN03-08",
+    "doc": "syn_03_ransomware_response_runbook.txt",
+    "question": "How is the KRBTGT account password handled during credential reset in the AIT ransomware runbook?",
+    "answer": "It is reset twice, with at least 10 hours between the two resets.",
+    "evidence_quote": "The KRBTGT account password is reset twice, with at least 10 hours between the two resets.",
+    "evidence_page": null,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN03-09",
+    "doc": "syn_03_ransomware_response_runbook.txt",
+    "question": "Where is the war room and what is the out-of-band bridge extension in AIT-IR-RW-003?",
+    "answer": "Room B-204, and extension 7000.",
+    "evidence_quote": "The war room is Room B-204 and the out-of-band bridge is extension 7000.",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN03-10",
+    "doc": "syn_03_ransomware_response_runbook.txt",
+    "question": "After how many hours of continuous duty must an Incident Manager hand over according to AIT-IR-RW-003?",
+    "answer": "10 hours.",
+    "evidence_quote": "An Incident Manager must hand over after 10 hours of continuous duty.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  }
+]

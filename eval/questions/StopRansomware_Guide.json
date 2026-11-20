@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SRG-01",
+    "doc": "StopRansomware-Guide 508.pdf",
+    "question": "When was the initial release of the CISA/FBI Ransomware Guide, according to the #StopRansomware Guide?",
+    "answer": "September 2020.",
+    "evidence_quote": "Since the initial release of the Ransomware Guide in September 2020, ransomware actors have accelerated their tactics and techniques.",
+    "evidence_page": 4,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SRG-02",
+    "doc": "StopRansomware-Guide 508.pdf",
+    "question": "What backup practice does the #StopRansomware Guide recommend for critical data, and why must backups be kept offline?",
+    "answer": "Maintain offline, encrypted backups of critical data and regularly test their availability and integrity; most ransomware actors try to find and delete or encrypt accessible backups so restoration is impossible unless the ransom is paid.",
+    "evidence_quote": "Maintain offline, encrypted backups of critical data",
+    "evidence_page": 5,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SRG-03",
+    "doc": "StopRansomware-Guide 508.pdf",
+    "question": "Why may automated cloud backups not be sufficient against ransomware, according to the #StopRansomware Guide?",
+    "answer": "If local files are encrypted by an attacker, the encrypted files will be synced to the cloud, possibly overwriting unaffected data.",
+    "evidence_quote": "Automated cloud backups may not",
+    "evidence_page": 5,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SRG-04",
+    "doc": "StopRansomware-Guide 508.pdf",
+    "question": "What does the #StopRansomware Guide mean by maintaining golden images of critical systems?",
+    "answer": "Maintaining and regularly updating image templates with a preconfigured operating system and associated software applications that can be quickly deployed to rebuild a system, such as a virtual machine or server.",
+    "evidence_quote": "Maintain and regularly update “golden images” of critical systems.",
+    "evidence_page": 5,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SRG-05",
+    "doc": "StopRansomware-Guide 508.pdf",
+    "question": "What does the #StopRansomware Guide say about exposing services such as RDP on the web?",
+    "answer": "Do not expose such services on the web; if they must be exposed, apply compensating controls to prevent common forms of abuse and exploitation.",
+    "evidence_quote": "Do not expose services, such as remote desktop protocol, on the web.",
+    "evidence_page": 7,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SRG-06",
+    "doc": "StopRansomware-Guide 508.pdf",
+    "question": "Which TCP port is given as the example of RDP that should be disabled when not used for business purposes, per the #StopRansomware Guide?",
+    "answer": "TCP port 3389.",
+    "evidence_quote": "Remote Desktop Protocol [RDP]—Transmission Control Protocol [TCP] Port 3389",
+    "evidence_page": 7,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SRG-07",
+    "doc": "StopRansomware-Guide 508.pdf",
+    "question": "What retention period does the #StopRansomware Guide recommend for the PowerShell Windows Event log and the PowerShell Operational log?",
+    "answer": "At least 180 days.",
+    "evidence_quote": "turning on these two Windows Event Logs with a retention period of at least 180 days",
+    "evidence_page": 18,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SRG-08",
+    "doc": "StopRansomware-Guide 508.pdf",
+    "question": "Does the #StopRansomware Guide recommend paying a ransom?",
+    "answer": "No. Paying the ransom will not ensure data is decrypted, that systems will no longer be compromised, or that data will not be leaked, and it may pose sanctions risks.",
+    "evidence_quote": "The authoring organizations do not recommend paying ransom.",
+    "evidence_page": 21,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SRG-09",
+    "doc": "StopRansomware-Guide 508.pdf",
+    "question": "What does the response checklist in the #StopRansomware Guide suggest if several systems or subnets appear impacted?",
+    "answer": "Take the network offline at the switch level, because it may not be feasible to disconnect individual systems during an incident.",
+    "evidence_quote": "If several systems or subnets appear impacted, take the network offline at the switch level.",
+    "evidence_page": 21,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SRG-10",
+    "doc": "StopRansomware-Guide 508.pdf",
+    "question": "Which kinds of evidence does the #StopRansomware Guide say should be preserved during containment?",
+    "answer": "Evidence that is highly volatile or limited in retention, such as system memory, Windows Security logs, and data in firewall log buffers.",
+    "evidence_quote": "volatile in nature—or limited in retention—to prevent loss or tampering (e.g., system memory, Windows Security logs, data in firewall log buffers)",
+    "evidence_page": 25,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  }
+]

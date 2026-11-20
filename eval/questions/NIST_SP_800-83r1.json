@@ -1,0 +1,112 @@
+[
+  {
+    "id": "N83-01",
+    "doc": "NIST.SP.800-83r1.pdf",
+    "question": "How does NIST SP 800-83r1 define malware?",
+    "answer": "A program covertly inserted into another program with the intent to destroy data, run destructive or intrusive programs, or otherwise compromise the confidentiality, integrity, or availability of the victim's data, applications, or operating system.",
+    "evidence_quote": "Malware, also known as malicious code, refers to a program that is covertly inserted into another program with the intent to destroy data, run destructive or intrusive programs",
+    "evidence_page": 8,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N83-02",
+    "doc": "NIST.SP.800-83r1.pdf",
+    "question": "According to NIST SP 800-83r1, what is the most common external threat to most hosts?",
+    "answer": "Malware.",
+    "evidence_quote": "Malware is the most common external threat to most hosts",
+    "evidence_page": 8,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N83-03",
+    "doc": "NIST.SP.800-83r1.pdf",
+    "question": "How does NIST SP 800-83r1 define phishing?",
+    "answer": "Using deceptive computer-based means to trick individuals into disclosing sensitive information.",
+    "evidence_quote": "phishing, which is using deceptive computer-based means to trick individuals into disclosing sensitive information",
+    "evidence_page": 8,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N83-04",
+    "doc": "NIST.SP.800-83r1.pdf",
+    "question": "How have malware threats changed compared with several years before Revision 1 of NIST SP 800-83?",
+    "answer": "Many of today's threats are more stealthy and designed to spread quietly and slowly to other hosts, gathering information over extended periods, rather than fast-spreading and easy to notice.",
+    "evidence_quote": "many of today's malware threats are more stealthy, specifically designed to quietly, slowly spread to other hosts",
+    "evidence_page": 8,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N83-05",
+    "doc": "NIST.SP.800-83r1.pdf",
+    "question": "What is the most commonly used technical control for malware threat mitigation, according to NIST SP 800-83r1?",
+    "answer": "Antivirus software, which organizations should deploy on all hosts for which satisfactory antivirus software is available.",
+    "evidence_quote": "The most commonly used malware threat mitigation technical control is antivirus software",
+    "evidence_page": 9,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N83-06",
+    "doc": "NIST.SP.800-83r1.pdf",
+    "question": "How does NIST SP 800-83r1 describe sandboxing?",
+    "answer": "A security model where applications are run within a controlled environment that restricts what operations the applications can perform and isolates them from other applications.",
+    "evidence_quote": "sandboxing, which is a security model where applications are run within a controlled environment that restricts what operations the applications can perform",
+    "evidence_page": 9,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N83-07",
+    "doc": "NIST.SP.800-83r1.pdf",
+    "question": "What are the two major components of malware incident containment, according to NIST SP 800-83r1?",
+    "answer": "Stopping the spread of malware and preventing further damage to hosts.",
+    "evidence_quote": "Malware incident containment has two major components: stopping the spread of malware and preventing further damage to hosts.",
+    "evidence_page": 10,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N83-08",
+    "doc": "NIST.SP.800-83r1.pdf",
+    "question": "Should organizations rely primarily on users to contain malware incidents, according to NIST SP 800-83r1?",
+    "answer": "No. It can help to give users instructions on identifying infections, but organizations should not rely primarily on users for containing malware incidents.",
+    "evidence_quote": "organizations should not rely primarily on users for containing malware incidents",
+    "evidence_page": 10,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N83-09",
+    "doc": "NIST.SP.800-83r1.pdf",
+    "question": "Which preparatory actions does NIST SP 800-83r1 recommend for malware incident handling?",
+    "answer": "Building and maintaining malware-related skills within the incident response team, facilitating communication and coordination throughout the organization, and acquiring the necessary tools and resources.",
+    "evidence_quote": "Building and maintaining malware-related skills within the incident response team",
+    "evidence_page": 10,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "N83-10",
+    "doc": "NIST.SP.800-83r1.pdf",
+    "question": "What happens if an organization does not state malware prevention considerations clearly in its policies, according to NIST SP 800-83r1?",
+    "answer": "It is unlikely to perform malware prevention activities consistently and effectively throughout the organization.",
+    "evidence_quote": "If an organization does not state malware prevention considerations clearly in its policies, it is unlikely to perform malware prevention activities consistently and effectively throughout the organization.",
+    "evidence_page": 8,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  }
+]

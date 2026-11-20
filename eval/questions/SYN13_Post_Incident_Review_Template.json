@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SYN13-01",
+    "doc": "syn_13_post_incident_review_template.txt",
+    "question": "For which severities is a post-incident review mandatory, according to the AIT Post-Incident Review Template (AIT-IR-TPL-013)?",
+    "answer": "Severity 1 and Severity 2.",
+    "evidence_quote": "A PIR is mandatory for Severity 1 and Severity 2 incidents",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN13-02",
+    "doc": "syn_13_post_incident_review_template.txt",
+    "question": "When must the review meeting for a Severity 1 incident be held, according to the AIT Post-Incident Review Template (AIT-IR-TPL-013)?",
+    "answer": "Within 5 business days of incident closure.",
+    "evidence_quote": "For Severity 1 the review meeting is held within 5 business days of incident closure",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN13-03",
+    "doc": "syn_13_post_incident_review_template.txt",
+    "question": "Who may not facilitate the review meeting, according to the AIT Post-Incident Review Template (AIT-IR-TPL-013)?",
+    "answer": "The Incident Commander of the incident.",
+    "evidence_quote": "led by a facilitator who was not the Incident Commander",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN13-04",
+    "doc": "syn_13_post_incident_review_template.txt",
+    "question": "Which method is recommended for finding the root cause, according to the AIT Post-Incident Review Template (AIT-IR-TPL-013)?",
+    "answer": "The 5 Whys method.",
+    "evidence_quote": "the 5 Whys method is recommended",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN13-05",
+    "doc": "syn_13_post_incident_review_template.txt",
+    "question": "How is MTTC (mean time to contain) defined, according to the AIT Post-Incident Review Template (AIT-IR-TPL-013)?",
+    "answer": "Time from detection to containment.",
+    "evidence_quote": "time from detection to containment",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN13-06",
+    "doc": "syn_13_post_incident_review_template.txt",
+    "question": "By when must PIR action items be completed unless the SOC Manager approves otherwise, according to the AIT Post-Incident Review Template (AIT-IR-TPL-013)?",
+    "answer": "Within 30 days.",
+    "evidence_quote": "Action items must be due within 30 days",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN13-07",
+    "doc": "syn_13_post_incident_review_template.txt",
+    "question": "When is the final PIR report published, according to the AIT Post-Incident Review Template (AIT-IR-TPL-013)?",
+    "answer": "Within 15 business days of the meeting.",
+    "evidence_quote": "published within 15 business days of the meeting",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN13-08",
+    "doc": "syn_13_post_incident_review_template.txt",
+    "question": "How long is the PIR report retained, according to the AIT Post-Incident Review Template (AIT-IR-TPL-013)?",
+    "answer": "7 years.",
+    "evidence_quote": "It is stored in the restricted incident repository and retained for 7 years",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN13-09",
+    "doc": "syn_13_post_incident_review_template.txt",
+    "question": "Which time standard is used for the incident timeline, according to the AIT Post-Incident Review Template (AIT-IR-TPL-013)?",
+    "answer": "UTC.",
+    "evidence_quote": "key events in UTC, including first malicious activity, detection, declaration",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN13-10",
+    "doc": "syn_13_post_incident_review_template.txt",
+    "question": "What does the blameless rule say the review should examine, according to the AIT Post-Incident Review Template (AIT-IR-TPL-013)?",
+    "answer": "Processes, tools and decisions, not the personal fault of individuals.",
+    "evidence_quote": "never the personal fault of individuals",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  }
+]

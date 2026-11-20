@@ -1,0 +1,112 @@
+[
+  {
+    "id": "PHB-01",
+    "doc": "240229.pdf",
+    "question": "According to the Phobos advisory AA24-060A, what best practices should be applied if RDP is necessary?",
+    "answer": "Audit the network for systems using RDP, close unused RDP ports, enforce account lockouts after a specified number of attempts, apply phishing-resistant MFA, and log RDP login attempts.",
+    "evidence_quote": "Strictly limit the use of RDP and other remote desktop services.",
+    "evidence_page": 14,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PHB-02",
+    "doc": "240229.pdf",
+    "question": "Since when have Phobos ransomware incidents affecting SLTT governments been regularly reported to the MS-ISAC, according to AA24-060A?",
+    "answer": "Since May 2019.",
+    "evidence_quote": "Since May 2019, Phobos ransomware incidents impacting state, local, tribal, and territorial (SLTT) governments have been regularly reported to the MS-ISAC.",
+    "evidence_page": 1,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PHB-03",
+    "doc": "240229.pdf",
+    "question": "Which ransomware variants is Phobos likely connected to, according to open source reporting cited in AA24-060A?",
+    "answer": "Elking, Eight, Devos, Backmydata, and Faust.",
+    "evidence_quote": "Phobos ransomware is likely connected to numerous variants (including Elking, Eight, Devos, Backmydata, and Faust ransomware)",
+    "evidence_page": 2,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PHB-04",
+    "doc": "240229.pdf",
+    "question": "Which open source tools does Phobos ransomware operate in conjunction with, according to AA24-060A?",
+    "answer": "Smokeloader, Cobalt Strike, and Bloodhound.",
+    "evidence_quote": "Phobos ransomware operates in conjunction with various open source tools such as Smokeloader, Cobalt Strike, and Bloodhound.",
+    "evidence_page": 2,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PHB-05",
+    "doc": "240229.pdf",
+    "question": "How do Phobos actors typically gain initial access to vulnerable networks, according to AA24-060A?",
+    "answer": "Through phishing campaigns that drop hidden payloads, or by using IP scanning tools such as Angry IP Scanner to find vulnerable RDP ports, or by leveraging RDP on Windows environments.",
+    "evidence_quote": "using internet protocol (IP) scanning tools, such as Angry IP Scanner, to search for vulnerable Remote Desktop Protocol (RDP) ports",
+    "evidence_page": 2,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PHB-06",
+    "doc": "240229.pdf",
+    "question": "What do Phobos actors use to gain access once they discover an exposed RDP service?",
+    "answer": "Open source brute force tools.",
+    "evidence_quote": "Once they discover an exposed RDP service, the actors use open source brute force tools to gain access",
+    "evidence_page": 2,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PHB-07",
+    "doc": "240229.pdf",
+    "question": "Which tools have Phobos actors been observed using for file exfiltration, according to AA24-060A?",
+    "answer": "WinSCP and Mega.io.",
+    "evidence_quote": "Phobos actors have been observed using WinSCP and Mega.io for file exfiltration.",
+    "evidence_page": 4,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PHB-08",
+    "doc": "240229.pdf",
+    "question": "How do Phobos actors prevent victims from recovering files after encryption, according to AA24-060A?",
+    "answer": "They use vssadmin.exe and the WMIC utility to discover and delete volume shadow copies in Windows environments.",
+    "evidence_quote": "They use vssadmin.exe and Windows Management Instrumentation command-line utility (WMIC) to discover and delete volume shadow copies in Windows environments.",
+    "evidence_page": 4,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PHB-09",
+    "doc": "240229.pdf",
+    "question": "Through which channel does most Phobos extortion occur, according to AA24-060A?",
+    "answer": "Mostly via email; some affiliate groups have also used voice calls to contact victims.",
+    "evidence_quote": "Most extortion [T1657] occurs via email; however, some affiliate groups have used voice calls to contact victims.",
+    "evidence_page": 4,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PHB-10",
+    "doc": "240229.pdf",
+    "question": "What password length does the Phobos advisory AA24-060A recommend?",
+    "answer": "Passwords of at least 15 characters and no more than 64 characters.",
+    "evidence_quote": "Use longer passwords consisting of at least 15 characters and no more than 64 characters in length",
+    "evidence_page": 14,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "PAT-01",
+    "doc": "NIST.SP.800-40r4.pdf",
+    "question": "What four types of risk responses does NIST SP 800-40r4 reference?",
+    "answer": "Accept, mitigate, transfer and avoid.",
+    "evidence_quote": "This publication references four types of risk responses",
+    "evidence_page": 10,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PAT-02",
+    "doc": "NIST.SP.800-40r4.pdf",
+    "question": "What risk response does an organization take by default toward the risk of using its software?",
+    "answer": "It accepts the risk.",
+    "evidence_quote": "By default, an organization accepts the risk posed by using its software.",
+    "evidence_page": 10,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PAT-03",
+    "doc": "NIST.SP.800-40r4.pdf",
+    "question": "Which responses can completely eliminate vulnerabilities without removing functionality?",
+    "answer": "Installing a patch or update, or upgrading to a newer version without the vulnerabilities.",
+    "evidence_quote": "are the only forms of risk response that can completely eliminate the vulnerabilities without removing functionality",
+    "evidence_page": 10,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PAT-04",
+    "doc": "NIST.SP.800-40r4.pdf",
+    "question": "Why does the publication say planning must be done in advance?",
+    "answer": "So that when a new vulnerability becomes known, a decision can quickly be made about how to respond.",
+    "evidence_quote": "Planning needs to be done in advance so that when a new vulnerability becomes known, a decision can quickly be made about how to respond to it.",
+    "evidence_page": 16,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PAT-05",
+    "doc": "NIST.SP.800-40r4.pdf",
+    "question": "Why does the publication say automation is needed for patching?",
+    "answer": "There is no way to keep up with patching without it, because of the number of assets, software installations, vulnerabilities and patches.",
+    "evidence_quote": "There is no way that an organization can keep up with patching without automation",
+    "evidence_page": 16,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PAT-06",
+    "doc": "NIST.SP.800-40r4.pdf",
+    "question": "How does NIST SP 800-40r4 define a maintenance group?",
+    "answer": "A set of assets with similar characteristics that generally have the same software maintenance needs for each risk response scenario.",
+    "evidence_quote": "A maintenance group is a set of assets with similar characteristics that generally have the same software maintenance needs for each risk response scenario.",
+    "evidence_page": 19,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PAT-07",
+    "doc": "NIST.SP.800-40r4.pdf",
+    "question": "What deployment approach does the publication suggest for routine patching?",
+    "answer": "Phased deployments where a small subset of assets (canaries) receives the patch first.",
+    "evidence_quote": "phased deployments for routine patching in which a small subset of the assets to be patched receive the patch first",
+    "evidence_page": 21,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PAT-08",
+    "doc": "NIST.SP.800-40r4.pdf",
+    "question": "Within what time does CISA's BOD 22-01 require federal agencies to remediate vulnerabilities added to the Known Exploited Vulnerabilities Catalog?",
+    "answer": "Within two weeks.",
+    "evidence_quote": "requires federal agencies to remediate new vulnerabilities added to the catalog within two weeks",
+    "evidence_page": 21,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PAT-09",
+    "doc": "NIST.SP.800-40r4.pdf",
+    "question": "What should organizations plan to do with emergency mitigations once a permanent fix exists?",
+    "answer": "Replace them with permanent fixes.",
+    "evidence_quote": "Organizations should plan to replace emergency mitigations with permanent fixes.",
+    "evidence_page": 22,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PAT-10",
+    "doc": "NIST.SP.800-40r4.pdf",
+    "question": "Why does the publication call counting the percentage of patched vulnerabilities not actionable?",
+    "answer": "Overly simplistic metrics do not show relative importance or risk of the unpatched assets and vulnerabilities.",
+    "evidence_quote": "Overly simplistic metrics, such as counting the number of vulnerabilities that the entire organization had and what percentage of them were patched, are not actionable.",
+    "evidence_page": 23,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  }
+]

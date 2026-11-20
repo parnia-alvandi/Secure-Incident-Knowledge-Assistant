@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SYN08-01",
+    "doc": "syn_08_patch_management_policy.txt",
+    "question": "When is the routine monthly patch window in the AIT Patch Management Policy (AIT-IR-PM-008)?",
+    "answer": "The second Wednesday of each month between 01:00 and 05:00.",
+    "evidence_quote": "Routine patches are deployed in a monthly window on the second Wednesday of each month between 01:00 and 05:00.",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN08-02",
+    "doc": "syn_08_patch_management_policy.txt",
+    "question": "How large is the pilot group, and how long are patches observed there, in AIT-IR-PM-008?",
+    "answer": "50 test devices, observed for 72 hours.",
+    "evidence_quote": "Patches are first deployed to a pilot group of 50 test devices and observed for 72 hours before wider rollout.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN08-03",
+    "doc": "syn_08_patch_management_policy.txt",
+    "question": "Within how long are emergency patches for actively exploited vulnerabilities deployed under AIT-IR-PM-008?",
+    "answer": "Within 48 hours.",
+    "evidence_quote": "Emergency patches for actively exploited vulnerabilities are deployed within 48 hours.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN08-04",
+    "doc": "syn_08_patch_management_policy.txt",
+    "question": "Who approves emergency patches in AIT-IR-PM-008?",
+    "answer": "The Change Advisory Board chair.",
+    "evidence_quote": "Emergency patches need approval from the Change Advisory Board chair",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN08-05",
+    "doc": "syn_08_patch_management_policy.txt",
+    "question": "Within how long must rollback be possible before any deployment, per AIT-IR-PM-008?",
+    "answer": "Within 2 hours.",
+    "evidence_quote": "rollback must be possible within 2 hours",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN08-06",
+    "doc": "syn_08_patch_management_policy.txt",
+    "question": "How are domain controllers patched in AIT-IR-PM-008?",
+    "answer": "In two waves, with the second wave starting at least 24 hours after the first.",
+    "evidence_quote": "Domain controllers are patched in two waves, and the second wave starts at least 24 hours after the first wave",
+    "evidence_page": null,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN08-07",
+    "doc": "syn_08_patch_management_policy.txt",
+    "question": "How quickly are browsers and PDF readers updated according to AIT-IR-PM-008?",
+    "answer": "Automatically within 7 days of release.",
+    "evidence_quote": "Browsers and PDF readers are updated automatically within 7 days of release.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN08-08",
+    "doc": "syn_08_patch_management_policy.txt",
+    "question": "How many times may users postpone a required reboot in AIT-IR-PM-008?",
+    "answer": "At most 3 times, for a maximum of 24 hours in total.",
+    "evidence_quote": "Users may postpone a required reboot at most 3 times, for a maximum of 24 hours in total.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN08-09",
+    "doc": "syn_08_patch_management_policy.txt",
+    "question": "What must happen to systems running end-of-life software under AIT-IR-PM-008?",
+    "answer": "They must be isolated or retired within 90 days of the vendor's end-of-support date.",
+    "evidence_quote": "must be isolated or retired within 90 days of the vendor's end-of-support date",
+    "evidence_page": null,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN08-10",
+    "doc": "syn_08_patch_management_policy.txt",
+    "question": "What patch compliance target does AIT-IR-PM-008 set?",
+    "answer": "95 percent, reported on the 5th business day of each month.",
+    "evidence_quote": "Patch compliance is reported on the 5th business day of each month and the target is 95 percent.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SYN01-01",
+    "doc": "syn_01_phishing_response_procedure.docx",
+    "question": "By when must a Tier 1 analyst acknowledge a phishing report during business hours, according to the AIT Phishing Incident Response Procedure (AIT-IR-PR-001)?",
+    "answer": "Within 15 minutes.",
+    "evidence_quote": "must acknowledge each phishing report within 15 minutes during business hours",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN01-02",
+    "doc": "syn_01_phishing_response_procedure.docx",
+    "question": "What is the acknowledgement target for phishing reports outside business hours in AIT-IR-PR-001?",
+    "answer": "60 minutes.",
+    "evidence_quote": "Outside business hours the acknowledgement target is 60 minutes.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN01-03",
+    "doc": "syn_01_phishing_response_procedure.docx",
+    "question": "Into which categories does the analyst classify a phishing report within 30 minutes of acknowledgement in AIT-IR-PR-001?",
+    "answer": "Spam, phishing, spearphishing, or business email compromise.",
+    "evidence_quote": "classifies the report as spam, phishing, spearphishing, or business email compromise",
+    "evidence_page": null,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN01-04",
+    "doc": "syn_01_phishing_response_procedure.docx",
+    "question": "What is the sandbox timeout used to detonate attachments in the AIT phishing procedure?",
+    "answer": "180 seconds in the DetonateBox sandbox.",
+    "evidence_quote": "DetonateBox sandbox with a timeout of 180 seconds",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN01-05",
+    "doc": "syn_01_phishing_response_procedure.docx",
+    "question": "When does MailShield automatically remove a message from all mailboxes under AIT-IR-PR-001?",
+    "answer": "When five or more users report it within 20 minutes.",
+    "evidence_quote": "MailShield automatically removes a message from all mailboxes when five or more users report it within 20 minutes",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN01-06",
+    "doc": "syn_01_phishing_response_procedure.docx",
+    "question": "What must happen within 1 hour if a user entered credentials on a phishing page, according to AIT-IR-PR-001?",
+    "answer": "The password must be reset and all active sessions revoked.",
+    "evidence_quote": "the password must be reset and all active sessions revoked within 1 hour",
+    "evidence_page": null,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN01-07",
+    "doc": "syn_01_phishing_response_procedure.docx",
+    "question": "How quickly does Tier 2 add confirmed malicious domains to the proxy blocklist in the AIT phishing procedure?",
+    "answer": "Within 2 hours.",
+    "evidence_quote": "Tier 2 adds confirmed malicious domains to the proxy blocklist within 2 hours",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN01-08",
+    "doc": "syn_01_phishing_response_procedure.docx",
+    "question": "When does the CSIRT send a campaign advisory to all staff under AIT-IR-PR-001?",
+    "answer": "When a campaign reaches more than 25 recipients, within 4 hours.",
+    "evidence_quote": "If a campaign reaches more than 25 recipients, the CSIRT sends a campaign advisory to all staff within 4 hours",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN01-09",
+    "doc": "syn_01_phishing_response_procedure.docx",
+    "question": "Which ticket priority is assigned to confirmed credential submission in AIT-IR-PR-001?",
+    "answer": "Priority P2.",
+    "evidence_quote": "Confirmed credential submission is ticketed as priority P2",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN01-10",
+    "doc": "syn_01_phishing_response_procedure.docx",
+    "question": "How long is the original reported message stored as an .eml file according to AIT-IR-PR-001?",
+    "answer": "18 months.",
+    "evidence_quote": "The original message is stored as an .eml file for 18 months.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  }
+]

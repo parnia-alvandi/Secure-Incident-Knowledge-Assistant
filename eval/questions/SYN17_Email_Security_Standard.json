@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SYN17-01",
+    "doc": "syn_17_email_security_standard.docx",
+    "question": "Which DMARC policy must every AIT domain use, according to the Email Security Standard (AIT-SEC-STD-017)?",
+    "answer": "p=reject.",
+    "evidence_quote": "the policy for every AIT domain must be p=reject",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN17-02",
+    "doc": "syn_17_email_security_standard.docx",
+    "question": "How long may a new domain use p=quarantine before moving to p=reject, according to the Email Security Standard (AIT-SEC-STD-017)?",
+    "answer": "At most 90 days.",
+    "evidence_quote": "A new domain may use p=quarantine for at most 90 days before moving to p=reject",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN17-03",
+    "doc": "syn_17_email_security_standard.docx",
+    "question": "How are outbound emails signed and how often are the keys rotated, according to the Email Security Standard (AIT-SEC-STD-017)?",
+    "answer": "With 2048-bit DKIM keys, rotated every 12 months.",
+    "evidence_quote": "all outbound mail is signed with 2048-bit keys, and keys are rotated every 12 months",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN17-04",
+    "doc": "syn_17_email_security_standard.docx",
+    "question": "What tag do messages from outside AIT carry, according to the Email Security Standard (AIT-SEC-STD-017)?",
+    "answer": "[EXTERNAL] in the subject line.",
+    "evidence_quote": "carry the tag [EXTERNAL] in the subject line",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN17-05",
+    "doc": "syn_17_email_security_standard.docx",
+    "question": "Why are password-protected archive files quarantined, according to the Email Security Standard (AIT-SEC-STD-017)?",
+    "answer": "Because they cannot be scanned.",
+    "evidence_quote": "Archive files protected with a password are quarantined because they cannot be scanned",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN17-06",
+    "doc": "syn_17_email_security_standard.docx",
+    "question": "How long are quarantined messages kept, according to the Email Security Standard (AIT-SEC-STD-017)?",
+    "answer": "21 days, then deleted automatically.",
+    "evidence_quote": "Quarantined messages are kept for 21 days and then deleted automatically",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN17-07",
+    "doc": "syn_17_email_security_standard.docx",
+    "question": "Is automatic forwarding of mail to external addresses allowed, according to the Email Security Standard (AIT-SEC-STD-017)?",
+    "answer": "No, it is disabled for all mailboxes; exceptions need written CISO approval.",
+    "evidence_quote": "Automatic forwarding of mail to external addresses is disabled for all mailboxes",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN17-08",
+    "doc": "syn_17_email_security_standard.docx",
+    "question": "What happens to messages that use an executive's display name from an outside address, according to the Email Security Standard (AIT-SEC-STD-017)?",
+    "answer": "They are held for review by the Messaging Security Engineer.",
+    "evidence_quote": "that use the display name of an executive are held for review by the Messaging Security Engineer",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN17-09",
+    "doc": "syn_17_email_security_standard.docx",
+    "question": "How do users report suspicious email, according to the Email Security Standard (AIT-SEC-STD-017)?",
+    "answer": "With the Report Phishing button in the mail client.",
+    "evidence_quote": "Users report suspicious email with the Report Phishing button in the mail client",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN17-10",
+    "doc": "syn_17_email_security_standard.docx",
+    "question": "After how long do allow-list entries expire, according to the Email Security Standard (AIT-SEC-STD-017)?",
+    "answer": "180 days.",
+    "evidence_quote": "Allow-list entries need an owner and expire after 180 days",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  }
+]

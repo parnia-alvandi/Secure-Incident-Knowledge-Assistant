@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SYN04-01",
+    "doc": "syn_04_account_compromise_procedure.docx",
+    "question": "When is impossible travel flagged according to the AIT Account Compromise Response Procedure (AIT-IR-AC-004)?",
+    "answer": "When two sign-ins occur more than 500 kilometres apart within 60 minutes.",
+    "evidence_quote": "Impossible travel is flagged when two sign-ins occur more than 500 kilometres apart within 60 minutes.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN04-02",
+    "doc": "syn_04_account_compromise_procedure.docx",
+    "question": "When is MFA fatigue suspected in AIT-IR-AC-004?",
+    "answer": "When a user receives 10 or more push prompts within 5 minutes.",
+    "evidence_quote": "MFA fatigue is suspected when a user receives 10 or more push prompts within 5 minutes.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN04-03",
+    "doc": "syn_04_account_compromise_procedure.docx",
+    "question": "What is the account lockout rule in AIT-IR-AC-004?",
+    "answer": "Accounts are locked for 15 minutes after 5 failed sign-in attempts.",
+    "evidence_quote": "Accounts are locked for 15 minutes after 5 failed sign-in attempts.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN04-04",
+    "doc": "syn_04_account_compromise_procedure.docx",
+    "question": "What minimum password length does AIT require according to AIT-IR-AC-004?",
+    "answer": "14 characters.",
+    "evidence_quote": "AIT requires a minimum password length of 14 characters.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN04-05",
+    "doc": "syn_04_account_compromise_procedure.docx",
+    "question": "How quickly are confirmed compromised accounts disabled under AIT-IR-AC-004?",
+    "answer": "Within 15 minutes of confirmation.",
+    "evidence_quote": "Confirmed compromised accounts are disabled within 15 minutes of confirmation.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN04-06",
+    "doc": "syn_04_account_compromise_procedure.docx",
+    "question": "How is the compromise of a privileged account handled in AIT-IR-AC-004?",
+    "answer": "It is ticketed as priority P1 and the CISO is notified within 30 minutes.",
+    "evidence_quote": "Compromise of a privileged account is ticketed as priority P1 and the CISO is notified within 30 minutes.",
+    "evidence_page": null,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN04-07",
+    "doc": "syn_04_account_compromise_procedure.docx",
+    "question": "Within how long are secrets of compromised service accounts rotated according to the AIT account compromise procedure?",
+    "answer": "Within 4 hours, with approval of the service owner.",
+    "evidence_quote": "Secrets of compromised service accounts are rotated within 4 hours with approval of the service owner.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN04-08",
+    "doc": "syn_04_account_compromise_procedure.docx",
+    "question": "How far back do analysts review sign-in logs in AIT-IR-AC-004?",
+    "answer": "The preceding 30 days.",
+    "evidence_quote": "Analysts review sign-in logs for the preceding 30 days.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN04-09",
+    "doc": "syn_04_account_compromise_procedure.docx",
+    "question": "How are student accounts re-enabled after a compromise per AIT-IR-AC-004?",
+    "answer": "Only after identity verification at the Help Desk, in person or by video.",
+    "evidence_quote": "Student accounts are re-enabled only after identity verification at the Help Desk, in person or by video.",
+    "evidence_page": null,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN04-10",
+    "doc": "syn_04_account_compromise_procedure.docx",
+    "question": "What training must a user complete after an account compromise, and by when, in AIT-IR-AC-004?",
+    "answer": "The 20-minute Account Hygiene micro-training within 7 days.",
+    "evidence_quote": "The user completes the 20-minute Account Hygiene micro-training within 7 days.",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  }
+]

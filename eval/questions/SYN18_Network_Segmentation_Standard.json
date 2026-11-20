@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SYN18-01",
+    "doc": "syn_18_network_segmentation_standard.txt",
+    "question": "What is the default rule for traffic between network zones, according to the Network Segmentation Standard (AIT-SEC-STD-018)?",
+    "answer": "It is denied by default; only flows in the firewall rule base are allowed.",
+    "evidence_quote": "Traffic between zones is denied by default; only flows listed in the firewall rule base are allowed",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN18-02",
+    "doc": "syn_18_network_segmentation_standard.txt",
+    "question": "May DMZ servers initiate connections into the Corporate or Student zones, according to the Network Segmentation Standard (AIT-SEC-STD-018)?",
+    "answer": "No.",
+    "evidence_quote": "DMZ servers may not initiate connections into the Corporate or Student zones",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN18-03",
+    "doc": "syn_18_network_segmentation_standard.txt",
+    "question": "Does the Student zone have direct access to the Server zone, according to the Network Segmentation Standard (AIT-SEC-STD-018)?",
+    "answer": "No.",
+    "evidence_quote": "The Student zone has no direct access to the Server zone",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN18-04",
+    "doc": "syn_18_network_segmentation_standard.txt",
+    "question": "From where is the Management zone reachable, according to the Network Segmentation Standard (AIT-SEC-STD-018)?",
+    "answer": "Only from the jump hosts.",
+    "evidence_quote": "The Management zone is reachable only from the jump hosts",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN18-05",
+    "doc": "syn_18_network_segmentation_standard.txt",
+    "question": "What is required to log in to the jump hosts, according to the Network Segmentation Standard (AIT-SEC-STD-018)?",
+    "answer": "Multi-factor authentication.",
+    "evidence_quote": "jump host logins require multi-factor authentication",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN18-06",
+    "doc": "syn_18_network_segmentation_standard.txt",
+    "question": "What is the maximum lifetime of a temporary firewall rule, according to the Network Segmentation Standard (AIT-SEC-STD-018)?",
+    "answer": "30 days.",
+    "evidence_quote": "Temporary rules last at most 30 days",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN18-07",
+    "doc": "syn_18_network_segmentation_standard.txt",
+    "question": "How often are firewall rules reviewed, and what happens to rules not re-approved, according to the Network Segmentation Standard (AIT-SEC-STD-018)?",
+    "answer": "Every 6 months; rules not re-approved are removed.",
+    "evidence_quote": "All rules are reviewed every 6 months, and rules that are not re-approved at the review are removed",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN18-08",
+    "doc": "syn_18_network_segmentation_standard.txt",
+    "question": "How long may Research zone exceptions last, according to the Network Segmentation Standard (AIT-SEC-STD-018)?",
+    "answer": "At most 12 months.",
+    "evidence_quote": "Research zone exceptions last at most 12 months",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN18-09",
+    "doc": "syn_18_network_segmentation_standard.txt",
+    "question": "Which VLAN may the SOC move a host to during an incident, and is prior approval needed, according to the Network Segmentation Standard (AIT-SEC-STD-018)?",
+    "answer": "Quarantine VLAN 999, without prior approval.",
+    "evidence_quote": "the SOC may move a host to the quarantine VLAN, VLAN 999, without prior approval",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN18-10",
+    "doc": "syn_18_network_segmentation_standard.txt",
+    "question": "Where may servers initiate outbound internet connections, according to the Network Segmentation Standard (AIT-SEC-STD-018)?",
+    "answer": "Only to destinations on an approved allow list.",
+    "evidence_quote": "Servers may initiate outbound internet connections only to destinations on an approved allow list",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  }
+]

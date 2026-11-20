@@ -1,0 +1,70 @@
+AIT ON-CALL AND SHIFT HANDOVER PROCEDURE
+========================================
+
+Document ID: AIT-IR-PRC-015 | Version: 1.5 | Owner: SOC Manager | Effective date: 2 March 2026
+
+
+1. Purpose
+----------
+
+This procedure keeps the Security Operations Center (SOC) of the Aurelian Institute of Technology (AIT) staffed around the clock and makes sure no incident information is lost when responsibility changes hands.
+
+
+2. Shifts
+---------
+
+The SOC operates 24 hours a day in three 8-hour shifts: 08:00 to 16:00, 16:00 to 24:00 and 00:00 to 08:00 local time.
+
+
+3. On-Call Rota
+---------------
+
+- The on-call rota is weekly and changes on Monday at 09:00 local time.
+- Each week has a primary and a secondary on-call analyst.
+- On-call analysts must be able to reach a secure workstation within 45 minutes.
+- No analyst is on call for more than one week in three.
+- Rota swaps must be agreed at least 48 hours in advance and recorded in the rota.
+
+4. Paging
+---------
+
+Pages are sent only for Severity 1 and Severity 2 incidents. The on-call analyst must acknowledge a page within 15 minutes.
+
+If the primary does not acknowledge within 15 minutes, the paging system alerts the secondary automatically. If neither acknowledges within a further 10 minutes, the Duty Officer calls the SOC Manager.
+
+
+5. Rest After Call-Outs
+-----------------------
+
+After a call-out that lasts more than 4 hours between 22:00 and 06:00, the analyst receives at least 11 hours of rest before the next shift.
+
+
+6. Shift Handover
+-----------------
+
+The outgoing and incoming analysts hold a live handover of about 15 minutes at the start of every shift. A handover by message alone is not accepted.
+
+The handover note must list the following items:
+
+- all open incidents with their severity
+- pending actions with their owners
+- watch items, such as suspicious hosts under observation
+- tool outages
+- any access or credential problems
+The note is saved in the ticketing system in the Handover queue. The outgoing analyst may leave only after the incoming analyst replies Accepted in the ticket.
+
+
+7. On-Call Kit and Contacts
+---------------------------
+
+Each on-call analyst carries a company laptop, a phone with the paging application and a hardware security token. Passwords and recovery codes are never written in handover notes.
+
+Emergency contact numbers are kept in the on-call directory, which is reviewed on the first business day of each month.
+
+
+8. Version History
+------------------
+
+- 1.5 (2 March 2026): added the rest period after night call-outs.
+- 1.4 (6 November 2025): added the live handover requirement.
+- 1.0 (13 May 2024): first release.

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SYN11-01",
+    "doc": "syn_11_severity_and_escalation_matrix.docx",
+    "question": "How many severity levels does AIT use, and which number is the most serious, according to the AIT Incident Severity and Escalation Matrix (AIT-IR-STD-011)?",
+    "answer": "Four levels rated 1 to 4; Severity 1 is the most serious.",
+    "evidence_quote": "a rating from 1 to 4, where Severity 1 is the most serious",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN11-02",
+    "doc": "syn_11_severity_and_escalation_matrix.docx",
+    "question": "Within how long must a responder acknowledge a Severity 1 incident, according to the AIT Incident Severity and Escalation Matrix (AIT-IR-STD-011)?",
+    "answer": "Within 15 minutes.",
+    "evidence_quote": "A named responder must acknowledge within 15 minutes",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN11-03",
+    "doc": "syn_11_severity_and_escalation_matrix.docx",
+    "question": "How often are status updates posted for a Severity 2 incident, according to the AIT Incident Severity and Escalation Matrix (AIT-IR-STD-011)?",
+    "answer": "Every 2 hours.",
+    "evidence_quote": "status updates are posted every 2 hours",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN11-04",
+    "doc": "syn_11_severity_and_escalation_matrix.docx",
+    "question": "Who is allowed to approve a downgrade of an incident's severity, according to the AIT Incident Severity and Escalation Matrix (AIT-IR-STD-011)?",
+    "answer": "Only the Incident Commander.",
+    "evidence_quote": "Only the Incident Commander may approve a downgrade",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN11-05",
+    "doc": "syn_11_severity_and_escalation_matrix.docx",
+    "question": "What additional approval does a downgrade from Severity 1 need, according to the AIT Incident Severity and Escalation Matrix (AIT-IR-STD-011)?",
+    "answer": "The concurrence of the CISO.",
+    "evidence_quote": "a downgrade from Severity 1 also requires the concurrence of the CISO",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN11-06",
+    "doc": "syn_11_severity_and_escalation_matrix.docx",
+    "question": "Which severity applies when the evidence fits two levels equally well, according to the AIT Incident Severity and Escalation Matrix (AIT-IR-STD-011)?",
+    "answer": "The higher level, until evidence supports a lower one.",
+    "evidence_quote": "the higher level applies until the evidence supports a lower one",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN11-07",
+    "doc": "syn_11_severity_and_escalation_matrix.docx",
+    "question": "Who is paged if the SOC Manager does not acknowledge within 10 minutes, according to the AIT Incident Severity and Escalation Matrix (AIT-IR-STD-011)?",
+    "answer": "The Deputy SOC Manager.",
+    "evidence_quote": "the Duty Officer pages the Deputy SOC Manager",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN11-08",
+    "doc": "syn_11_severity_and_escalation_matrix.docx",
+    "question": "For which severities is a post-incident review mandatory, according to the AIT Incident Severity and Escalation Matrix (AIT-IR-STD-011)?",
+    "answer": "Severity 1 and Severity 2 (optional for 3 and 4).",
+    "evidence_quote": "mandatory for Severity 1 and Severity 2 incidents and optional for Severity 3 and 4",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN11-09",
+    "doc": "syn_11_severity_and_escalation_matrix.docx",
+    "question": "Within what time does the CISO inform the Vice President for Operations about a Severity 1 incident, according to the AIT Incident Severity and Escalation Matrix (AIT-IR-STD-011)?",
+    "answer": "Within 1 hour.",
+    "evidence_quote": "The CISO informs the Vice President for Operations within 1 hour",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN11-10",
+    "doc": "syn_11_severity_and_escalation_matrix.docx",
+    "question": "What reporting is done for Severity 3 incidents, according to the AIT Incident Severity and Escalation Matrix (AIT-IR-STD-011)?",
+    "answer": "The on-call analyst sends a weekly summary to the SOC Manager.",
+    "evidence_quote": "who sends a weekly summary to the SOC Manager",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  }
+]

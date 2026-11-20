@@ -1,0 +1,112 @@
+[
+  {
+    "id": "WCY-01",
+    "doc": "NCCIC ICS_FactSheet_WannaCry_Ransomware_S508C.pdf",
+    "question": "What does the NCCIC fact sheet say WannaCry attempts to exploit?",
+    "answer": "Vulnerabilities in the Windows SMBv1 server, in order to remotely compromise systems, encrypt files and spread to other hosts.",
+    "evidence_quote": "It attempts to exploit vulnerabilities in the Windows SMBv1 server",
+    "evidence_page": 1,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "WCY-02",
+    "doc": "NCCIC ICS_FactSheet_WannaCry_Ransomware_S508C.pdf",
+    "question": "Which Microsoft patch protects systems from the exploits used by WannaCry?",
+    "answer": "The patch for Microsoft Security Bulletin MS17-010.",
+    "evidence_quote": "Systems that have installed the MS17-010 patch are not vulnerable to the exploits used.",
+    "evidence_page": 1,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "WCY-03",
+    "doc": "NCCIC ICS_FactSheet_WannaCry_Ransomware_S508C.pdf",
+    "question": "What workaround does the WannaCry fact sheet give for systems that cannot be patched, regarding SMBv1?",
+    "answer": "Disable SMBv1 on every system connected to the network (and block port 445).",
+    "evidence_quote": "Disable SMBv1 on every system connected to the network.",
+    "evidence_page": 1,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "WCY-04",
+    "doc": "NCCIC ICS_FactSheet_WannaCry_Ransomware_S508C.pdf",
+    "question": "Which CVEs does the NCCIC WannaCry fact sheet associate with the WannaCry exploits?",
+    "answer": "CVE-2017-0143, CVE-2017-0144, CVE-2017-0145, CVE-2017-0146, CVE-2017-0147 and CVE-2017-0148.",
+    "evidence_quote": "CVE-2017-0143; CVE-2017-0144; CVE-2017-0145; CVE-2017-0146; CVE-2017-0147; and CVE-2017-0148",
+    "evidence_page": 2,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "WCY-05",
+    "doc": "NCCIC ICS_FactSheet_WannaCry_Ransomware_S508C.pdf",
+    "question": "What is the U.S. Government's position on paying the WannaCry ransom, according to the fact sheet?",
+    "answer": "It does not encourage paying a ransom; paying does not guarantee decryption or removal of the malware.",
+    "evidence_quote": "The U.S. Government does not encourage paying a ransom to criminal actors.",
+    "evidence_page": 1,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "WCY-06",
+    "doc": "NCCIC ICS_FactSheet_WannaCry_Ransomware_S508C.pdf",
+    "question": "How can a cyber security incident be reported to NCCIC according to the WannaCry fact sheet?",
+    "answer": "By email to NCCICCustomerService@hq.dhs.gov or by phone at (888) 282-0870, available 24/7/365.",
+    "evidence_quote": "A cyber security incident can be reported to the NCCIC 24/7/365",
+    "evidence_page": 1,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "WCY-07",
+    "doc": "NCCIC ICS_FactSheet_WannaCry_Ransomware_S508C.pdf",
+    "question": "What is the first action the NCCIC fact sheet recommends if a system has been infected with WannaCry?",
+    "answer": "Isolate the system to prevent the malware from compromising additional devices.",
+    "evidence_quote": "Isolate the system to prevent the malware from compromising additional devices.",
+    "evidence_page": 1,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "WCY-08",
+    "doc": "NCCIC ICS_FactSheet_WannaCry_Ransomware_S508C.pdf",
+    "question": "According to the NCCIC fact sheet, can files encrypted by WannaCry be decrypted without the private key?",
+    "answer": "No; there is currently no method of decrypting the encrypted files without the private key.",
+    "evidence_quote": "There is currently no method of decrypting encrypted",
+    "evidence_page": 2,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "WCY-09",
+    "doc": "NCCIC ICS_FactSheet_WannaCry_Ransomware_S508C.pdf",
+    "question": "What does the WannaCry fact sheet say should be done with vulnerable embedded systems that cannot be patched?",
+    "answer": "They should be isolated or protected from potential network exploitation.",
+    "evidence_quote": "Vulnerable embedded systems that cannot be patched should be isolated or protected from potential network exploitation.",
+    "evidence_page": 1,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "WCY-10",
+    "doc": "NCCIC ICS_FactSheet_WannaCry_Ransomware_S508C.pdf",
+    "question": "What network design measure does the WannaCry fact sheet recommend for preventing this kind of attack going forward?",
+    "answer": "Segregate networks based on functionality and the need to access resources.",
+    "evidence_quote": "Segregate networks based on functionality and the need to access resources.",
+    "evidence_page": 2,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  }
+]

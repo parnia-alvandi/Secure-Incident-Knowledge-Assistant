@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SYN10-01",
+    "doc": "syn_10_edr_alert_triage_procedure.docx",
+    "question": "How are SentryEDR risk scores mapped to severity in the AIT EDR Alert Triage Procedure (AIT-IR-ED-010)?",
+    "answer": "80 and above Critical, 60 to 79 High, 40 to 59 Medium, below 40 Low.",
+    "evidence_quote": "Scores of 80 and above are Critical, scores from 60 to 79 are High, scores from 40 to 59 are Medium, and scores below 40 are Low.",
+    "evidence_page": null,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN10-02",
+    "doc": "syn_10_edr_alert_triage_procedure.docx",
+    "question": "Within how long must Critical alerts be acknowledged in AIT-IR-ED-010?",
+    "answer": "Within 5 minutes.",
+    "evidence_quote": "Critical alerts must be acknowledged within 5 minutes",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN10-03",
+    "doc": "syn_10_edr_alert_triage_procedure.docx",
+    "question": "What are the acknowledgement targets for Medium and Low alerts in AIT-IR-ED-010?",
+    "answer": "Medium within 60 minutes and Low within 8 business hours.",
+    "evidence_quote": "Medium alerts within 60 minutes, and Low alerts within 8 business hours",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN10-04",
+    "doc": "syn_10_edr_alert_triage_procedure.docx",
+    "question": "Against what is the file hash checked during triage in AIT-IR-ED-010?",
+    "answer": "The internal allowlist and two threat intelligence feeds.",
+    "evidence_quote": "checked against the internal allowlist and two threat intelligence feeds",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN10-05",
+    "doc": "syn_10_edr_alert_triage_procedure.docx",
+    "question": "When may Tier 1 isolate a workstation without further approval under AIT-IR-ED-010?",
+    "answer": "When the risk score is 90 or higher.",
+    "evidence_quote": "Tier 1 may isolate a workstation without further approval when the risk score is 90 or higher.",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN10-06",
+    "doc": "syn_10_edr_alert_triage_procedure.docx",
+    "question": "When does Tier 1 escalate an alert to Tier 2 in AIT-IR-ED-010?",
+    "answer": "After 20 minutes without a confident verdict.",
+    "evidence_quote": "Tier 1 escalates to Tier 2 after 20 minutes without a confident verdict.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN10-07",
+    "doc": "syn_10_edr_alert_triage_procedure.docx",
+    "question": "What review is needed before closing a high-scoring alert as a false positive in AIT-IR-ED-010?",
+    "answer": "A second analyst must review it (for scores of 60 or higher).",
+    "evidence_quote": "may be closed as a false positive only after a second analyst reviews it",
+    "evidence_page": null,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN10-08",
+    "doc": "syn_10_edr_alert_triage_procedure.docx",
+    "question": "What must triage notes include according to AIT-IR-ED-010?",
+    "answer": "The alert ID, host name, user, and verdict.",
+    "evidence_quote": "Triage notes must include the alert ID, host name, user, and verdict.",
+    "evidence_page": null,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN10-09",
+    "doc": "syn_10_edr_alert_triage_procedure.docx",
+    "question": "For which rule set does SentryEDR terminate processes automatically in AIT-IR-ED-010?",
+    "answer": "Only the rule set named Block-Known-Bad.",
+    "evidence_quote": "terminates processes automatically only for the rule set named Block-Known-Bad",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN10-10",
+    "doc": "syn_10_edr_alert_triage_procedure.docx",
+    "question": "When are detection rules reviewed for tuning in AIT-IR-ED-010?",
+    "answer": "When the false-positive rate is above 30 percent over 14 days.",
+    "evidence_quote": "Detection rules with a false-positive rate above 30 percent over 14 days are reviewed for tuning.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  }
+]

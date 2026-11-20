@@ -1,0 +1,50 @@
+RANSOMWARE RESPONSE RUNBOOK (SYNTHETIC)
+=======================================
+
+SYNTHETIC DOCUMENT: This document is fictional and was created for the APA Secure Incident Knowledge Assistant project. The Aurelian Institute of Technology (AIT) does not exist.
+
+1. DOCUMENT CONTROL
+
+This runbook has document ID AIT-IR-RW-003 and is at version 3.0.
+
+2. DECISION AUTHORITY
+
+The CISO may approve isolation of the entire campus network when 50 or more hosts show encryption activity or when any domain controller is affected.
+
+No staff member may contact the attackers; any communication is handled only through legal counsel. A ransom payment requires written approval from both the Board Risk Committee and legal counsel.
+
+AIT-CSIRT notifies law enforcement within 24 hours of confirming a ransomware incident.
+
+3. EVIDENCE HANDLING
+
+Cloud volumes are snapshotted before they are isolated. Ransom notes are photographed and hashed before any cleanup.
+
+4. BACKUPS AND RECOVERY
+
+VaultSafe copies immutable backups to the offline vault every night at 02:00. Backups in the offline vault are retained for 35 days.
+
+Tier 0 identity services are restored first, with a recovery time objective of 12 hours. The ERP system is restored next, with a recovery time objective of 48 hours. Public decryptor repositories are checked before any restore decision.
+
+5. CREDENTIAL RESET
+
+All privileged credentials are rotated before systems are reconnected. The KRBTGT account password is reset twice, with at least 10 hours between the two resets.
+
+6. COORDINATION
+
+The war room is Room B-204 and the out-of-band bridge is extension 7000. An Incident Manager must hand over after 10 hours of continuous duty.
+
+7. ROLES
+
+The CISO is the decision maker for campus-wide actions. The Incident Manager runs the response and keeps the decision log. The Infrastructure Team performs isolation and restores systems in the agreed order, and legal counsel advises on law enforcement contact and on any communication with outsiders.
+
+8. DEFINITIONS
+
+A recovery time objective is the maximum acceptable time to restore a service. An immutable backup cannot be changed or deleted during its lock period. An out-of-band bridge is a communication channel that does not depend on the systems under attack. A decision log is a time-ordered record of the decisions made during the incident and the reasons for them.
+
+9. RELATED DOCUMENTS
+
+See also the Backup and Restore Standard (AIT-IR-BR-009) and the Account Compromise Response Procedure (AIT-IR-AC-004).
+
+10. REVISION HISTORY
+
+Version 2.0 (2025-08-12): introduced the Board Risk Committee approval rule. Version 3.0 (2026-05-19): added the credential reset section and the handover rule.

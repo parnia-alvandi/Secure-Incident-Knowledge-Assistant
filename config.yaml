@@ -1,0 +1,25 @@
+# Central configuration. No model names or paths should be hard-coded elsewhere.
+
+paths:
+  docs_dir: data/docs
+  vector_db_dir: vector_db
+  logs_dir: logs
+
+models:
+  embedding: BAAI/bge-small-en-v1.5
+  reranker: cross-encoder/ms-marco-MiniLM-L-6-v2
+
+llm:
+  provider: ollama
+  model: qwen2.5:3b-instruct
+  temperature: 0.0
+  num_ctx: 4096        # context window requested from Ollama
+  num_predict: 300     # max generated tokens (keeps CPU latency bounded)
+
+ingestion:
+  manifest_path: data/manifest.yaml
+  supported_extensions: [".pdf", ".docx", ".txt"]
+  min_chars_per_page: 50   # pages with fewer characters are flagged as suspicious (maybe scanned)
+
+logging:
+  level: INFO

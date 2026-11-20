@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+logs/
+vector_db/
+.env
+.idea/
+.vscode/
+*.egg-info/
+data/docs/*.pdf
+data/chroma/
+benchmark_out.txt

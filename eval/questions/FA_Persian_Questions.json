@@ -1,0 +1,538 @@
+[
+  {
+    "id": "FA-01",
+    "doc": "syn_11_severity_and_escalation_matrix.docx",
+    "question": "طبق ماتریس شدت و escalation حادثه‌ی AIT (AIT-IR-STD-011)، یک پاسخ‌دهنده حداکثر چه مدت بعد از حادثه‌ی Severity 1 باید آن را acknowledge کند؟",
+    "answer": "ظرف ۱۵ دقیقه.",
+    "evidence_quote": "A named responder must acknowledge within 15 minutes",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "SYN11-02"
+  },
+  {
+    "id": "FA-02",
+    "doc": "syn_11_severity_and_escalation_matrix.docx",
+    "question": "طبق ماتریس شدت و escalation حادثه‌ی AIT (AIT-IR-STD-011)، چه کسی مجاز است downgrade شدت یک حادثه را تأیید کند؟",
+    "answer": "فقط Incident Commander.",
+    "evidence_quote": "Only the Incident Commander may approve a downgrade",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "SYN11-04"
+  },
+  {
+    "id": "FA-03",
+    "doc": "syn_11_severity_and_escalation_matrix.docx",
+    "question": "طبق ماتریس شدت و escalation حادثه‌ی AIT (AIT-IR-STD-011)، وقتی شواهد به یک اندازه با دو سطح شدت جور درمی‌آید کدام سطح اعمال می‌شود؟",
+    "answer": "سطح بالاتر، تا زمانی که شواهد یک سطح پایین‌تر را پشتیبانی کنند.",
+    "evidence_quote": "the higher level applies until the evidence supports a lower one",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "SYN11-06"
+  },
+  {
+    "id": "FA-04",
+    "doc": "syn_12_incident_communications_plan.docx",
+    "question": "طبق طرح ارتباطات حادثه‌ی AIT (AIT-IR-PLN-012)، هر اعلان به کاربران آسیب‌دیده باید چه چهار عنصری داشته باشد؟",
+    "answer": "چه اتفاقی افتاده، چه چیزی تحت تأثیر قرار گرفته، کاربران چه کاری باید انجام دهند، و به‌روزرسانی بعدی چه زمانی ارسال می‌شود.",
+    "evidence_quote": "what happened, what is affected, what users should do and when the next update will be sent",
+    "evidence_page": null,
+    "type": "list",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "SYN12-03"
+  },
+  {
+    "id": "FA-05",
+    "doc": "syn_12_incident_communications_plan.docx",
+    "question": "طبق طرح ارتباطات حادثه‌ی AIT (AIT-IR-PLN-012)، نقض داده‌ی شخصی حداکثر چه مدت بعد باید به مرجع نظارتی (supervisory authority) اطلاع داده شود؟",
+    "answer": "ظرف ۷۲ ساعت از زمانی که AIT از وقوع نقض مطلع می‌شود.",
+    "evidence_quote": "within 72 hours of AIT becoming aware of the breach",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "SYN12-04"
+  },
+  {
+    "id": "FA-06",
+    "doc": "syn_13_post_incident_review_template.txt",
+    "question": "طبق قالب post-incident review در AIT (AIT-IR-TPL-013)، جلسه‌ی بازبینی یک حادثه‌ی Severity 1 چه زمانی باید برگزار شود؟",
+    "answer": "ظرف ۵ روز کاری پس از بسته شدن حادثه.",
+    "evidence_quote": "For Severity 1 the review meeting is held within 5 business days of incident closure",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "SYN13-02"
+  },
+  {
+    "id": "FA-07",
+    "doc": "syn_14_chain_of_custody_checklist.docx",
+    "question": "طبق چک‌لیست chain of custody و نگهداری شواهد در AIT (AIT-IR-CHK-014)، شواهد به چه ترتیبی جمع‌آوری می‌شوند؟",
+    "answer": "ابتدا حافظه (memory)، سپس اتصالات شبکه و پردازه‌های در حال اجرا، سپس دیسک، و در پایان لاگ‌ها و backupها.",
+    "evidence_quote": "memory first, then network connections and running processes, then disk, and finally logs and backups",
+    "evidence_page": null,
+    "type": "list",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "SYN14-03"
+  },
+  {
+    "id": "FA-08",
+    "doc": "syn_15_oncall_and_shift_handover_procedure.txt",
+    "question": "طبق رویه‌ی on-call و تحویل شیفت در AIT (AIT-IR-PRC-015)، آیا تحویل شیفت فقط با ارسال پیام پذیرفته می‌شود؟",
+    "answer": "خیر؛ یک تحویل زنده‌ی حدوداً ۱۵ دقیقه‌ای لازم است.",
+    "evidence_quote": "A handover by message alone is not accepted",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "SYN15-08"
+  },
+  {
+    "id": "FA-09",
+    "doc": "syn_16_web_server_compromise_playbook.docx",
+    "question": "طبق playbook پاسخ به هک وب‌سرور و webshell در AIT (AIT-IR-PBK-016)، وب‌سرور آلوده ظرف چه مدتی و چگونه باید ایزوله شود؟",
+    "answer": "ظرف ۶۰ دقیقه پس از تأیید، با حذف از pool مربوط به load balancer و انتقال به quarantine VLAN.",
+    "evidence_quote": "The web server is isolated within 60 minutes of confirmation by removing it from the load balancer pool and moving it to the quarantine VLAN",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "SYN16-04"
+  },
+  {
+    "id": "FA-10",
+    "doc": "syn_16_web_server_compromise_playbook.docx",
+    "question": "طبق playbook پاسخ به هک وب‌سرور و webshell در AIT (AIT-IR-PBK-016)، چرا وب‌سرور آلوده نباید خاموش شود؟",
+    "answer": "چون شواهد موجود در حافظه از بین می‌رود.",
+    "evidence_quote": "The server must not be powered off, because memory evidence would be lost",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "SYN16-05"
+  },
+  {
+    "id": "FA-11",
+    "doc": "syn_17_email_security_standard.docx",
+    "question": "طبق استاندارد امنیت ایمیل AIT (AIT-SEC-STD-017)، یک دامنه‌ی جدید حداکثر چه مدت می‌تواند از p=quarantine استفاده کند تا به p=reject برود؟",
+    "answer": "حداکثر ۹۰ روز.",
+    "evidence_quote": "A new domain may use p=quarantine for at most 90 days before moving to p=reject",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "SYN17-02"
+  },
+  {
+    "id": "FA-12",
+    "doc": "syn_18_network_segmentation_standard.txt",
+    "question": "طبق استاندارد segmentation شبکه‌ی AIT (AIT-SEC-STD-018)، SOC هنگام حادثه یک میزبان را به کدام VLAN می‌تواند منتقل کند و آیا تأیید قبلی لازم است؟",
+    "answer": "به quarantine VLAN با شماره‌ی ۹۹۹، بدون نیاز به تأیید قبلی.",
+    "evidence_quote": "the SOC may move a host to the quarantine VLAN, VLAN 999, without prior approval",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "SYN18-09"
+  },
+  {
+    "id": "FA-13",
+    "doc": "syn_19_supplier_incident_notification_standard.docx",
+    "question": "طبق استاندارد اطلاع‌رسانی حادثه‌ی تأمین‌کنندگان AIT (AIT-SEC-STD-019)، یک تأمین‌کننده‌ی Tier 1 ظرف چند ساعت باید AIT را از یک حادثه مطلع کند؟",
+    "answer": "ظرف ۱۲ ساعت از زمان آگاهی.",
+    "evidence_quote": "A Tier 1 supplier must notify AIT within 12 hours of becoming aware of an incident",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "SYN19-01"
+  },
+  {
+    "id": "FA-14",
+    "doc": "syn_20_security_awareness_training_program.docx",
+    "question": "طبق برنامه‌ی آموزش آگاهی امنیتی AIT (AIT-SEC-PRG-020)، برای کارکنانی که در ۱۲ ماه روی ۳ ایمیل phishing شبیه‌سازی‌شده کلیک کنند چه اتفاقی می‌افتد؟",
+    "answer": "از Security Awareness Manager مربی‌گری (coaching) یک‌به‌یک دریافت می‌کنند.",
+    "evidence_quote": "Staff who click on 3 simulated phishing emails within 12 months receive one-to-one coaching",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "SYN20-07"
+  },
+  {
+    "id": "FA-15",
+    "doc": "NCCIC ICS_FactSheet_WannaCry_Ransomware_S508C.pdf",
+    "question": "طبق فکت‌شیت NCCIC درباره‌ی WannaCry، کدام patch مایکروسافت در برابر اکسپلویت‌های WannaCry محافظت می‌کند؟",
+    "answer": "patch مربوط به Microsoft Security Bulletin MS17-010.",
+    "evidence_quote": "Systems that have installed the MS17-010 patch are not vulnerable to the exploits used.",
+    "evidence_page": 1,
+    "type": "factual",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "WCY-02"
+  },
+  {
+    "id": "FA-16",
+    "doc": "NCCIC ICS_FactSheet_WannaCry_Ransomware_S508C.pdf",
+    "question": "فکت‌شیت NCCIC درباره‌ی WannaCry برای سیستم‌هایی که نمی‌توان patch کرد، درباره‌ی SMBv1 چه راه‌حل موقتی پیشنهاد می‌دهد؟",
+    "answer": "غیرفعال کردن SMBv1 روی هر سیستم متصل به شبکه (و بستن پورت ۴۴۵).",
+    "evidence_quote": "Disable SMBv1 on every system connected to the network.",
+    "evidence_page": 1,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "WCY-03"
+  },
+  {
+    "id": "FA-17",
+    "doc": "NCCIC ICS_FactSheet_WannaCry_Ransomware_S508C.pdf",
+    "question": "طبق فکت‌شیت NCCIC درباره‌ی WannaCry، موضع دولت آمریکا درباره‌ی پرداخت باج چیست؟",
+    "answer": "پرداخت باج به مجرمان را تشویق نمی‌کند؛ پرداخت باج رمزگشایی یا حذف بدافزار را تضمین نمی‌کند.",
+    "evidence_quote": "The U.S. Government does not encourage paying a ransom to criminal actors.",
+    "evidence_page": 1,
+    "type": "factual",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "WCY-05"
+  },
+  {
+    "id": "FA-18",
+    "doc": "CSI-DETECT-AND-PREVENT-WEB-SHELL-MALWARE-20200422.PDF.pdf",
+    "question": "طبق برگه‌ی اطلاعاتی NSA/ASD درباره‌ی Web Shell، بهترین روش تشخیص webshellهایی که با ساخت یا تغییر فایل کار می‌کنند چیست؟",
+    "answer": "مقایسه‌ی نسخه‌ی سالم و تأییدشده‌ی برنامه‌ی وب (known-good) با نسخه‌ی production.",
+    "evidence_quote": "The best method of detecting these web shells is to compare a verified benign version of the web application",
+    "evidence_page": 1,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "WEB-03"
+  },
+  {
+    "id": "FA-19",
+    "doc": "CSI-DETECT-AND-PREVENT-WEB-SHELL-MALWARE-20200422.PDF.pdf",
+    "question": "طبق برگه‌ی اطلاعاتی NSA/ASD درباره‌ی Web Shell، مهاجمان گاهی چه مدت بعد از انتشار یک patch آسیب‌پذیری آن را هدف می‌گیرند؟",
+    "answer": "ظرف ۲۴ ساعت از انتشار patch.",
+    "evidence_quote": "Attackers sometimes target vulnerabilities in internet-facing and internal web applications within 24 hours of a patch release.",
+    "evidence_page": 3,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "WEB-06"
+  },
+  {
+    "id": "FA-20",
+    "doc": "CSI-DETECT-AND-PREVENT-WEB-SHELL-MALWARE-20200422.PDF.pdf",
+    "question": "طبق برگه‌ی اطلاعاتی NSA/ASD درباره‌ی Web Shell، پس از کشف یک web shell تمرکز اصلی باید روی چه چیزی باشد؟",
+    "answer": "اینکه مهاجم تا چه حد در شبکه نفوذ کرده است.",
+    "evidence_quote": "A critical focus once a web shell is discovered should be on how far the attacker penetrated within the network.",
+    "evidence_page": 4,
+    "type": "factual",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "WEB-09"
+  },
+  {
+    "id": "FA-21",
+    "doc": "Phishing_Guidance_Stopping_the_Attack_Cycle_at_Phase_One_508c.pdf",
+    "question": "طبق راهنمای phishing شرکت CISA/NSA/FBI/MS-ISAC، مهاجم در برابر MFA مبتنی بر push notification که number matching ندارد چه کاری می‌تواند بکند؟",
+    "answer": "تعداد زیادی درخواست approve یا deny می‌فرستد تا کاربر، اغلب اشتباهی یا از سر کلافگی، آن را تأیید کند.",
+    "evidence_quote": "Malicious actors can send a multitude of approve or deny",
+    "evidence_page": 4,
+    "type": "factual",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "PHI-03"
+  },
+  {
+    "id": "FA-22",
+    "doc": "Phishing_Guidance_Stopping_the_Attack_Cycle_at_Phase_One_508c.pdf",
+    "question": "راهنمای phishing شرکت CISA/NSA/FBI/MS-ISAC پیشنهاد می‌کند کدام پسوند فایل‌ها با denylist مسدود شوند؟",
+    "answer": "پسوندهایی مانند .scr، .exe، .pif و .cpl.",
+    "evidence_quote": "file extensions such as .scr, .exe, .pif, and .cpl",
+    "evidence_page": 7,
+    "type": "list",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "PHI-06"
+  },
+  {
+    "id": "FA-23",
+    "doc": "Phishing_Guidance_Stopping_the_Attack_Cycle_at_Phase_One_508c.pdf",
+    "question": "طبق راهنمای phishing شرکت CISA/NSA/FBI/MS-ISAC، رخدادهای phishing را چگونه باید به CISA گزارش داد؟",
+    "answer": "با ایمیل به report@cisa.gov یا تماس با خط پاسخ ۲۴/۷ به شماره‌ی (888) 282-0870.",
+    "evidence_quote": "CISA urges organizations to promptly report phishing incidents to CISA at report@cisa.gov or call the 24/7 response line at (888) 282-0870.",
+    "evidence_page": 12,
+    "type": "factual",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "PHI-10"
+  },
+  {
+    "id": "FA-24",
+    "doc": "understanding_and_responding_to_distributed_denial_of_service_attacks.pdf",
+    "question": "طبق راهنمای CISA/FBI/MS-ISAC درباره‌ی DDoS، حملات DDoS مبتنی بر پروتکل معمولاً کدام لایه‌های مدل OSI را هدف می‌گیرند؟",
+    "answer": "لایه‌های ۳ (شبکه) و ۴ (انتقال).",
+    "evidence_quote": "Protocol-based DDoS attacks typically target Layers 3 (network layer) and 4 (transport layer) of the Open Systems Interconnection (OSI) model.",
+    "evidence_page": 6,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "DDO-03"
+  },
+  {
+    "id": "FA-25",
+    "doc": "understanding_and_responding_to_distributed_denial_of_service_attacks.pdf",
+    "question": "طبق راهنمای CISA/FBI/MS-ISAC درباره‌ی DDoS، حوادث DDoS را چگونه باید به CISA گزارش داد؟",
+    "answer": "به دفتر محلی FBI (Field Office)، یا به CISA از طریق report@cisa.gov یا شماره‌ی (888) 282-0870.",
+    "evidence_quote": "CISA and FBI urge you to promptly report DDoS incidents to a local FBI Field Office, or to CISA at report@cisa.gov or (888) 282-0870.",
+    "evidence_page": 15,
+    "type": "factual",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "DDO-05"
+  },
+  {
+    "id": "FA-26",
+    "doc": "understanding_and_responding_to_distributed_denial_of_service_attacks.pdf",
+    "question": "راهنمای CISA/FBI/MS-ISAC درباره‌ی DDoS به‌عنوان یک اقدام فوری در ارتباط با ISP چه چیزی را فهرست می‌کند؟",
+    "answer": "ارائه‌ی IPهای مهاجم به ISP تا بتواند محدودیت‌هایی برای جلوگیری از ادامه‌ی ترافیک اعمال کند.",
+    "evidence_quote": "Provide attacking IP addresses to your ISP. They can implement restrictions to prevent further traffic.",
+    "evidence_page": 13,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "DDO-06"
+  },
+  {
+    "id": "FA-27",
+    "doc": "NIST.SP.800-40r4.pdf",
+    "question": "طبق NIST SP 800-40r4، یک سازمان به‌صورت پیش‌فرض در برابر ریسک استفاده از نرم‌افزارهایش چه پاسخ ریسکی اتخاذ می‌کند؟",
+    "answer": "ریسک را می‌پذیرد (accept).",
+    "evidence_quote": "By default, an organization accepts the risk posed by using its software.",
+    "evidence_page": 10,
+    "type": "factual",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "PAT-02"
+  },
+  {
+    "id": "FA-28",
+    "doc": "NIST.SP.800-40r4.pdf",
+    "question": "NIST SP 800-40r4 «maintenance group» را چگونه تعریف می‌کند؟",
+    "answer": "مجموعه‌ای از دارایی‌ها با ویژگی‌های مشابه که معمولاً برای هر سناریوی پاسخ به ریسک نیازهای نگهداری نرم‌افزاری یکسانی دارند.",
+    "evidence_quote": "A maintenance group is a set of assets with similar characteristics that generally have the same software maintenance needs for each risk response scenario.",
+    "evidence_page": 19,
+    "type": "factual",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "PAT-06"
+  },
+  {
+    "id": "FA-29",
+    "doc": "NIST.SP.800-40r4.pdf",
+    "question": "طبق NIST SP 800-40r4، دستور BOD 22-01 سازمان CISA آژانس‌های فدرال را ملزم می‌کند آسیب‌پذیری‌های جدیدِ اضافه‌شده به Known Exploited Vulnerabilities Catalog را ظرف چه مدتی رفع کنند؟",
+    "answer": "ظرف دو هفته.",
+    "evidence_quote": "requires federal agencies to remediate new vulnerabilities added to the catalog within two weeks",
+    "evidence_page": 21,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "PAT-08"
+  },
+  {
+    "id": "FA-30",
+    "doc": "nistspecialpublication800-92.pdf",
+    "question": "NIST SP 800-92 چه مشکل بنیادی در مدیریت لاگ را توصیف می‌کند؟",
+    "answer": "ایجاد تعادل بین منابع محدود مدیریت لاگ و جریان پیوسته‌ی داده‌ی لاگ.",
+    "evidence_quote": "effectively balancing a limited quantity of log management resources with a continuous supply of log data",
+    "evidence_page": 9,
+    "type": "factual",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "LOG-04"
+  },
+  {
+    "id": "FA-31",
+    "doc": "nistspecialpublication800-92.pdf",
+    "question": "طبق NIST SP 800-92، فرایندهای عملیاتی اصلی مدیریت لاگ کدامند؟",
+    "answer": "پیکربندی منابع لاگ، تحلیل لاگ، آغاز واکنش به رویدادهای شناسایی‌شده، و مدیریت ذخیره‌سازی بلندمدت.",
+    "evidence_quote": "configuring log sources, performing log analysis, initiating responses to identified events, and managing long-term storage",
+    "evidence_page": 10,
+    "type": "list",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "LOG-08"
+  },
+  {
+    "id": "FA-32",
+    "doc": "nistspecialpublication800-92.pdf",
+    "question": "NIST SP 800-92 درباره‌ی ساعت (clock) میزبان‌هایی که لاگ تولید می‌کنند چه می‌گوید؟",
+    "answer": "ساعت هر میزبان باید با یک منبع زمان مشترک همگام (sync) شود.",
+    "evidence_quote": "Ensuring that each logging host",
+    "evidence_page": 11,
+    "type": "factual",
+    "answerable": true,
+    "lang": "fa",
+    "paired_with": "LOG-10"
+  },
+  {
+    "id": "FA-33",
+    "doc": null,
+    "question": "کدام الگوریتم‌های رمزنگاری پساکوانتومی (post-quantum) را AIT باید برای محافظت از گزارش‌های بایگانی‌شده‌ی حوادث به کار بگیرد؟",
+    "answer": "در مجموعه‌ی اسناد ذکر نشده است (شواهد کافی وجود ندارد).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "fa",
+    "paired_with": "NEG-01",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "post-quantum",
+      "quantum computing",
+      "quantum-resistant"
+    ]
+  },
+  {
+    "id": "FA-34",
+    "doc": null,
+    "question": "طبق GDPR، یک دانشگاه که نقض داده‌ی شخصی را گزارش نکند با چه جریمه‌هایی روبه‌رو می‌شود؟",
+    "answer": "در مجموعه‌ی اسناد ذکر نشده است (شواهد کافی وجود ندارد).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "fa",
+    "paired_with": "NEG-04",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "gdpr fine",
+      "general data protection regulation"
+    ]
+  },
+  {
+    "id": "FA-35",
+    "doc": null,
+    "question": "AIT چگونه باید به یک کلاستر Kubernetes نفوذشده پاسخ دهد؟",
+    "answer": "در مجموعه‌ی اسناد ذکر نشده است (شواهد کافی وجود ندارد).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "fa",
+    "paired_with": "NEG-07",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "kubernetes",
+      "kubectl"
+    ]
+  },
+  {
+    "id": "FA-36",
+    "doc": null,
+    "question": "AIT چگونه باید یک چت‌بات مبتنی بر large language model را در برابر prompt injection محافظت کند؟",
+    "answer": "در مجموعه‌ی اسناد ذکر نشده است (شواهد کافی وجود ندارد).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "fa",
+    "paired_with": "NEG-11",
+    "category": "out_of_scope",
+    "absent_terms": [
+      "prompt injection",
+      "large language model"
+    ]
+  },
+  {
+    "id": "FA-37",
+    "doc": null,
+    "question": "طبق ماتریس شدت و escalation حادثه‌ی AIT، برای حوادث Severity 5 چه زمان acknowledge لازم است؟",
+    "answer": "در مجموعه‌ی اسناد ذکر نشده است (شواهد کافی وجود ندارد).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "fa",
+    "paired_with": "NEG-21",
+    "category": "near_miss",
+    "absent_terms": [
+      "severity 5",
+      "severity five"
+    ],
+    "related_docs": [
+      "syn_11_severity_and_escalation_matrix.docx"
+    ]
+  },
+  {
+    "id": "FA-38",
+    "doc": null,
+    "question": "وقتی یک تأمین‌کننده مهلت اطلاع‌رسانی حادثه را رعایت نکند، طبق استاندارد اطلاع‌رسانی حادثه‌ی تأمین‌کنندگان AIT چه جریمه‌ی مالی اعمال می‌شود؟",
+    "answer": "در مجموعه‌ی اسناد ذکر نشده است (شواهد کافی وجود ندارد).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "fa",
+    "paired_with": "NEG-29",
+    "category": "near_miss",
+    "absent_terms": [
+      "financial penalty",
+      "liquidated damages",
+      "service credit"
+    ],
+    "related_docs": [
+      "syn_19_supplier_incident_notification_standard.docx"
+    ]
+  },
+  {
+    "id": "FA-39",
+    "doc": null,
+    "question": "طبق NIST SP 800-92، لاگ‌های امنیتی باید دقیقاً چند روز نگهداری شوند؟",
+    "answer": "در مجموعه‌ی اسناد ذکر نشده است (شواهد کافی وجود ندارد).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "fa",
+    "paired_with": "NEG-38",
+    "category": "near_miss",
+    "absent_terms": [
+      "retained for 90 days",
+      "retained for one year",
+      "retained for 1 year"
+    ],
+    "related_docs": [
+      "nistspecialpublication800-92.pdf"
+    ]
+  },
+  {
+    "id": "FA-40",
+    "doc": null,
+    "question": "طبق فکت‌شیت NCCIC، WannaCry چه مبلغی به‌عنوان باج درخواست کرد؟",
+    "answer": "در مجموعه‌ی اسناد ذکر نشده است (شواهد کافی وجود ندارد).",
+    "evidence_quote": null,
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": false,
+    "lang": "fa",
+    "paired_with": "NEG-40",
+    "category": "near_miss",
+    "absent_terms": [
+      "300 in bitcoin",
+      "three hundred dollars",
+      "wannacry ransom note"
+    ],
+    "related_docs": [
+      "NCCIC ICS_FactSheet_WannaCry_Ransomware_S508C.pdf"
+    ]
+  }
+]

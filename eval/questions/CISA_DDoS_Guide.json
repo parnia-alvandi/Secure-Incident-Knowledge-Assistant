@@ -1,0 +1,112 @@
+[
+  {
+    "id": "DDO-01",
+    "doc": "understanding_and_responding_to_distributed_denial_of_service_attacks.pdf",
+    "question": "What distinguishes a DDoS attack from a DoS attack, according to the CISA/FBI/MS-ISAC guide?",
+    "answer": "A DDoS attack involves multiple sources, often a botnet, while a DoS attack uses a single source.",
+    "evidence_quote": "A DDoS attack involves multiple sources.",
+    "evidence_page": 4,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "DDO-02",
+    "doc": "understanding_and_responding_to_distributed_denial_of_service_attacks.pdf",
+    "question": "What do volume-based attacks aim to do?",
+    "answer": "Consume the available bandwidth or system resources of the target with a massive volume of traffic.",
+    "evidence_quote": "Volume-Based Attacks: These attacks aim to consume the available bandwidth or system resources of the target",
+    "evidence_page": 5,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "DDO-03",
+    "doc": "understanding_and_responding_to_distributed_denial_of_service_attacks.pdf",
+    "question": "Which OSI layers do protocol-based DDoS attacks typically target?",
+    "answer": "Layers 3 (network) and 4 (transport).",
+    "evidence_quote": "Protocol-based DDoS attacks typically target Layers 3 (network layer) and 4 (transport layer) of the Open Systems Interconnection (OSI) model.",
+    "evidence_page": 6,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "DDO-04",
+    "doc": "understanding_and_responding_to_distributed_denial_of_service_attacks.pdf",
+    "question": "Which OSI layer do application-based DDoS attacks target?",
+    "answer": "Layer 7, the application layer.",
+    "evidence_quote": "Application-based DDoS attacks target Layer 7, the application layer, of the OSI",
+    "evidence_page": 7,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "DDO-05",
+    "doc": "understanding_and_responding_to_distributed_denial_of_service_attacks.pdf",
+    "question": "How does the guide say DDoS incidents should be reported to CISA?",
+    "answer": "To a local FBI Field Office, or to CISA at report@cisa.gov or (888) 282-0870.",
+    "evidence_quote": "CISA and FBI urge you to promptly report DDoS incidents to a local FBI Field Office, or to CISA at report@cisa.gov or (888) 282-0870.",
+    "evidence_page": 15,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "DDO-06",
+    "doc": "understanding_and_responding_to_distributed_denial_of_service_attacks.pdf",
+    "question": "What immediate mitigation does the guide list involving the ISP?",
+    "answer": "Provide attacking IP addresses to the ISP so it can implement restrictions.",
+    "evidence_quote": "Provide attacking IP addresses to your ISP. They can implement restrictions to prevent further traffic.",
+    "evidence_page": 13,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "DDO-07",
+    "doc": "understanding_and_responding_to_distributed_denial_of_service_attacks.pdf",
+    "question": "Where does the guide say reflection DDoS attacks typically originate?",
+    "answer": "From legitimate public servers.",
+    "evidence_quote": "reflection DDoS attacks typically originate from legitimate public servers",
+    "evidence_page": 13,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "DDO-08",
+    "doc": "understanding_and_responding_to_distributed_denial_of_service_attacks.pdf",
+    "question": "What information should be gathered about a DDoS attack according to the guide?",
+    "answer": "As much information as possible, including timestamps, IP addresses, packet captures, and logs or alerts.",
+    "evidence_quote": "Document and collect as much information as possible about the attack, including timestamps, IP addresses, packet captures",
+    "evidence_page": 12,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "DDO-09",
+    "doc": "understanding_and_responding_to_distributed_denial_of_service_attacks.pdf",
+    "question": "What is the purpose of a Captcha challenge according to the guide?",
+    "answer": "To differentiate between human users and automated bots.",
+    "evidence_quote": "Integrating a Captcha challenge into a website or online service to help differentiate between human users and automated bots",
+    "evidence_page": 9,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "DDO-10",
+    "doc": "understanding_and_responding_to_distributed_denial_of_service_attacks.pdf",
+    "question": "Why does the guide recommend regular traffic analysis before an attack?",
+    "answer": "To establish a baseline of normal traffic patterns so deviations during an attack can be identified.",
+    "evidence_quote": "Regularly analyze your network traffic to establish a baseline of normal traffic patterns.",
+    "evidence_page": 9,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  }
+]

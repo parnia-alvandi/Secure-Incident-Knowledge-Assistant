@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SYN09-01",
+    "doc": "syn_09_backup_and_restore_standard.docx",
+    "question": "Which rule does the AIT Backup and Restore Standard (AIT-IR-BR-009) follow?",
+    "answer": "The 3-2-1 rule: three copies of data, on two media types, with one copy offsite.",
+    "evidence_quote": "It follows the 3-2-1 rule: three copies of data, on two different media types, with one copy kept offsite.",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN09-02",
+    "doc": "syn_09_backup_and_restore_standard.docx",
+    "question": "When do daily incremental and weekly full backups run in AIT-IR-BR-009?",
+    "answer": "Daily incremental at 23:00 and weekly full on Sundays at 01:00.",
+    "evidence_quote": "Daily incremental backups run at 23:00 and weekly full backups run on Sundays at 01:00.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN09-03",
+    "doc": "syn_09_backup_and_restore_standard.docx",
+    "question": "Which encryption is used for backups in AIT-IR-BR-009?",
+    "answer": "AES-256, in transit and at rest.",
+    "evidence_quote": "Backups are encrypted with AES-256",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN09-04",
+    "doc": "syn_09_backup_and_restore_standard.docx",
+    "question": "What are the backup retention periods in AIT-IR-BR-009?",
+    "answer": "Daily 35 days, weekly 12 weeks, monthly 12 months, yearly 7 years.",
+    "evidence_quote": "Daily backups are kept for 35 days, weekly backups for 12 weeks, monthly backups for 12 months, and yearly backups for 7 years.",
+    "evidence_page": null,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN09-05",
+    "doc": "syn_09_backup_and_restore_standard.docx",
+    "question": "How often are monthly tapes rotated offsite under AIT-IR-BR-009?",
+    "answer": "Every 30 days to a contracted offsite facility.",
+    "evidence_quote": "Monthly tapes are rotated to a contracted offsite facility every 30 days.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN09-06",
+    "doc": "syn_09_backup_and_restore_standard.docx",
+    "question": "For how long are backup repositories immutable in AIT-IR-BR-009?",
+    "answer": "30 days; earlier deletion requires two administrators.",
+    "evidence_quote": "Backup repositories are immutable for 30 days.",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN09-07",
+    "doc": "syn_09_backup_and_restore_standard.docx",
+    "question": "How are backup administrator accounts separated from the main directory in AIT-IR-BR-009?",
+    "answer": "They use a separate identity domain and hardware security tokens.",
+    "evidence_quote": "Backup administrators use a separate identity domain and hardware security tokens",
+    "evidence_page": null,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN09-08",
+    "doc": "syn_09_backup_and_restore_standard.docx",
+    "question": "What happens when a backup job fails according to AIT-IR-BR-009?",
+    "answer": "A ticket is created within 15 minutes; two consecutive failures raise it to priority P2.",
+    "evidence_quote": "A failed backup job creates a ticket within 15 minutes.",
+    "evidence_page": null,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN09-09",
+    "doc": "syn_09_backup_and_restore_standard.docx",
+    "question": "What are the RPO and RTO of Tier 1 systems in AIT-IR-BR-009?",
+    "answer": "RPO 4 hours and RTO 48 hours.",
+    "evidence_quote": "Tier 0 | 1 hour | 12 hours Tier 1 | 4 hours | 48 hours",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "SYN09-10",
+    "doc": "syn_09_backup_and_restore_standard.docx",
+    "question": "How many systems must be restored in each quarterly restore test under AIT-IR-BR-009?",
+    "answer": "At least 10 randomly selected systems.",
+    "evidence_quote": "at least 10 randomly selected systems must be restored",
+    "evidence_page": null,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  }
+]

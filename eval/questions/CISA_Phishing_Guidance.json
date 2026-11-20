@@ -1,0 +1,112 @@
+[
+  {
+    "id": "PHI-01",
+    "doc": "Phishing_Guidance_Stopping_the_Attack_Cycle_at_Phase_One_508c.pdf",
+    "question": "How does the CISA/NSA/FBI/MS-ISAC guide define phishing?",
+    "answer": "A form of social engineering where malicious actors lure victims, typically via email, to a malicious site or into providing login credentials.",
+    "evidence_quote": "Phishing is a form of social engineering where malicious actors lure victims (typically via email)",
+    "evidence_page": 3,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PHI-02",
+    "doc": "Phishing_Guidance_Stopping_the_Attack_Cycle_at_Phase_One_508c.pdf",
+    "question": "What does the guide say malicious actors primarily use phishing for?",
+    "answer": "Obtaining login credentials and deploying malware.",
+    "evidence_quote": "Malicious actors primarily leverage phishing",
+    "evidence_page": 3,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PHI-03",
+    "doc": "Phishing_Guidance_Stopping_the_Attack_Cycle_at_Phase_One_508c.pdf",
+    "question": "What can malicious actors do against push-notification MFA that lacks number matching?",
+    "answer": "Send many approve or deny push requests until the user accepts, often by accident or in frustration.",
+    "evidence_quote": "Malicious actors can send a multitude of approve or deny",
+    "evidence_page": 4,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PHI-04",
+    "doc": "Phishing_Guidance_Stopping_the_Attack_Cycle_at_Phase_One_508c.pdf",
+    "question": "What happens to spoofed emails when DMARC is set to reject for sent emails?",
+    "answer": "They are rejected at the mail server prior to delivery.",
+    "evidence_quote": "Spoofed emails are rejected at the mail server prior to delivery.",
+    "evidence_page": 6,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PHI-05",
+    "doc": "Phishing_Guidance_Stopping_the_Attack_Cycle_at_Phase_One_508c.pdf",
+    "question": "Which forms of MFA does the guide describe as phishing resistant?",
+    "answer": "FIDO or PKI-based MFA.",
+    "evidence_quote": "These forms of MFA are phishing resistant and resilient against the threats listed in previous sections.",
+    "evidence_page": 6,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PHI-06",
+    "doc": "Phishing_Guidance_Stopping_the_Attack_Cycle_at_Phase_One_508c.pdf",
+    "question": "Which file extensions does the guide suggest blocking with denylists?",
+    "answer": "Extensions such as .scr, .exe, .pif and .cpl.",
+    "evidence_quote": "file extensions such as .scr, .exe, .pif, and .cpl",
+    "evidence_page": 7,
+    "type": "list",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PHI-07",
+    "doc": "Phishing_Guidance_Stopping_the_Attack_Cycle_at_Phase_One_508c.pdf",
+    "question": "What does the guide recommend about macros?",
+    "answer": "Block macros by default.",
+    "evidence_quote": "Block macros by default [CPG 2.N].",
+    "evidence_page": 8,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PHI-08",
+    "doc": "Phishing_Guidance_Stopping_the_Attack_Cycle_at_Phase_One_508c.pdf",
+    "question": "How often does the guide say small and medium-sized businesses should have employees review phishing training material?",
+    "answer": "Annually.",
+    "evidence_quote": "require employees to review phishing training material annually",
+    "evidence_page": 8,
+    "type": "numeric",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PHI-09",
+    "doc": "Phishing_Guidance_Stopping_the_Attack_Cycle_at_Phase_One_508c.pdf",
+    "question": "What is the first remediation step listed in the guide's incident response section?",
+    "answer": "Re-provisioning suspected or confirmed compromised user accounts.",
+    "evidence_quote": "Re-provisioning suspected or confirmed compromised user accounts",
+    "evidence_page": 11,
+    "type": "procedure",
+    "answerable": true,
+    "lang": "en"
+  },
+  {
+    "id": "PHI-10",
+    "doc": "Phishing_Guidance_Stopping_the_Attack_Cycle_at_Phase_One_508c.pdf",
+    "question": "How does the guide say phishing incidents should be reported to CISA?",
+    "answer": "By email to report@cisa.gov or by calling the 24/7 response line at (888) 282-0870.",
+    "evidence_quote": "CISA urges organizations to promptly report phishing incidents to CISA at report@cisa.gov or call the 24/7 response line at (888) 282-0870.",
+    "evidence_page": 12,
+    "type": "factual",
+    "answerable": true,
+    "lang": "en"
+  }
+]
