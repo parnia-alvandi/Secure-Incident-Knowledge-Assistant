@@ -24,6 +24,7 @@ def test_old_config_without_new_sections_gets_defaults():
     s = _load("")
     assert (s.chunking.chunk_tokens, s.chunking.overlap_tokens, s.chunking.min_tokens) == (256, 40, 40)
     assert s.embedding.batch_size == 32 and s.index.collection_name == "sia_chunks"
+    assert s.embedding.offline is False
 
 
 def test_overrides_are_applied():

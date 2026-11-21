@@ -31,7 +31,9 @@ class Embedder:
 
     @property
     def dim(self) -> int:
-        return int(self.model.get_sentence_embedding_dimension())
+        getter = (getattr(self.model, "get_embedding_dimension", None)          # newer versions
+                  or self.model.get_sentence_embedding_dimension)               # older versions
+        return int(getter())
 
     def embed_passages(self, texts: list[str], show_progress: bool = False) -> np.ndarray:
         """(n, dim) float32 array, rows L2-normalised."""

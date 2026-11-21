@@ -32,6 +32,7 @@ chunking:
 embedding:
   batch_size: 32
   max_seq_length: 512
+  offline: true         # use only the locally cached model (set false for the very first download)
   query_instruction: "Represent this sentence for searching relevant passages: "
 
 index:

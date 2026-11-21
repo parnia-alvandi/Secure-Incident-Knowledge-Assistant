@@ -60,6 +60,7 @@ class ChunkingSettings:
 class EmbeddingSettings:
     batch_size: int = 32
     max_seq_length: int = 512
+    offline: bool = False      # True = never contact the Hugging Face Hub (model must be cached)
     # BGE v1.5 retrieval prefix for QUERIES only (passages are embedded without it)
     query_instruction: str = "Represent this sentence for searching relevant passages: "
 

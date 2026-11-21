@@ -76,3 +76,10 @@ def test_section_is_none_without_headings_and_location_labels():
     docx = chunk_document(_meta("docx"), [PageText(None, "Body text.")], ChunkingConfig(5, 0, 0), wc)[0]
     docx.section, docx.doc_chunk_count = "Roles", 3
     assert docx.location() == "section: Roles (part 1 of 3)"
+
+
+def test_footnotes_and_code_paths_are_not_headings():
+    # regression from the NSA web-shell document
+    text = ("\n5 Zeek is a trademark of the Zeek Project\n9 OWASP is a trademark of the OWASP Foundation\n"
+            "\nC:\\inetput\\wwwroot\\index2.aspx\n\n3 Introduction\n3.1 Background and Scope")
+    assert _texts(text) == ["3 Introduction", "3.1 Background and Scope"]

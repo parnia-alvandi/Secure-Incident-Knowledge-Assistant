@@ -23,6 +23,7 @@ from sia.indexing.builder import build_index, collect_chunks     # noqa: E402
 from sia.ingestion.pipeline import ingest_directory              # noqa: E402
 from sia.processing.chunker import ChunkingConfig               # noqa: E402
 from sia.processing.tokens import make_hf_counter               # noqa: E402
+from sia.runtime import apply_offline_mode, quiet_noisy_loggers  # noqa: E402
 
 
 def main() -> int:
@@ -40,8 +41,10 @@ def main() -> int:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     s = load_settings(args.config)
+    apply_offline_mode(s.embedding.offline)       # before any Hugging Face import
     logging.basicConfig(level=getattr(logging, s.logging.level, logging.INFO),
                         format="%(asctime)s %(levelname)s %(name)s: %(message)s")
+    quiet_noisy_loggers()
 
     cfg = ChunkingConfig(args.chunk_tokens or s.chunking.chunk_tokens,
                          args.overlap if args.overlap is not None else s.chunking.overlap_tokens,

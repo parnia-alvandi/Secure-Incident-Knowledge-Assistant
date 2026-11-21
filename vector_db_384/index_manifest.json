@@ -1,0 +1,544 @@
+{
+  "created_at": "2026-11-21T18:03:23+00:00",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "embedding_dim": 384,
+  "query_instruction": "Represent this sentence for searching relevant passages: ",
+  "chunking": {
+    "chunk_tokens": 384,
+    "overlap_tokens": 60,
+    "min_tokens": 60
+  },
+  "cleaning": {
+    "min_pages": 4,
+    "zone_lines": 3,
+    "min_page_fraction": 0.5,
+    "max_line_chars": 100
+  },
+  "collection": "sia_chunks",
+  "n_documents": 35,
+  "n_chunks": 1033,
+  "documents": [
+    {
+      "filename": "240229.pdf",
+      "doc_id": "3304bfed6451",
+      "title": "#StopRansomware: Phobos Ransomware",
+      "doc_kind": "public",
+      "n_pages": 18,
+      "n_chunks": 31,
+      "header_lines_removed": 52,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 31
+      },
+      "chunks_with_section": 30
+    },
+    {
+      "filename": "240829.pdf",
+      "doc_id": "e4bb30bf789a",
+      "title": "#StopRansomware: RansomHub Ransomware",
+      "doc_kind": "public",
+      "n_pages": 24,
+      "n_chunks": 45,
+      "header_lines_removed": 69,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 41,
+        "code": 4
+      },
+      "chunks_with_section": 8
+    },
+    {
+      "filename": "AA21_356A_Joint_CSA_Mitigating_Log4Shell_and_Other_Log4j_Related.pdf",
+      "doc_id": "c6fef5f63789",
+      "title": "AA21-356A: Mitigating Log4Shell and Other Log4j-Related Vulnerabilities",
+      "doc_kind": "public",
+      "n_pages": 11,
+      "n_chunks": 21,
+      "header_lines_removed": 31,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 21
+      },
+      "chunks_with_section": 21
+    },
+    {
+      "filename": "CSI-DETECT-AND-PREVENT-WEB-SHELL-MALWARE-20200422.PDF.pdf",
+      "doc_id": "64eb2ceb63bc",
+      "title": "Detect and Prevent Web Shell Malware",
+      "doc_kind": "public",
+      "n_pages": 17,
+      "n_chunks": 50,
+      "header_lines_removed": 49,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 46,
+        "code": 4
+      },
+      "chunks_with_section": 50
+    },
+    {
+      "filename": "Darkside CSA.pdf",
+      "doc_id": "ba52fe15e4bb",
+      "title": "Darkside Ransomware: Best Practices for Preventing Business Disruption from Ransomware Attacks",
+      "doc_kind": "public",
+      "n_pages": 6,
+      "n_chunks": 12,
+      "header_lines_removed": 15,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 12
+      },
+      "chunks_with_section": 12
+    },
+    {
+      "filename": "Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response.pdf",
+      "doc_id": "2277247542d8",
+      "title": "Cybersecurity Incident & Vulnerability Response Playbooks",
+      "doc_kind": "public",
+      "n_pages": 44,
+      "n_chunks": 76,
+      "header_lines_removed": 127,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 76
+      },
+      "chunks_with_section": 76
+    },
+    {
+      "filename": "NCCIC ICS_FactSheet_WannaCry_Ransomware_S508C.pdf",
+      "doc_id": "69f9c05937cd",
+      "title": "What Is WannaCry/WanaCrypt0r?",
+      "doc_kind": "public",
+      "n_pages": 2,
+      "n_chunks": 3,
+      "header_lines_removed": 0,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 3
+      },
+      "chunks_with_section": 0
+    },
+    {
+      "filename": "NIST.SP.800-40r4.pdf",
+      "doc_id": "351f4a828d6c",
+      "title": "Guide to Enterprise Patch Management Planning: Preventive Maintenance for Technology",
+      "doc_kind": "public",
+      "n_pages": 28,
+      "n_chunks": 54,
+      "header_lines_removed": 71,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 54
+      },
+      "chunks_with_section": 54
+    },
+    {
+      "filename": "NIST.SP.800-61r3.pdf",
+      "doc_id": "e5593d6bb85d",
+      "title": "Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile",
+      "doc_kind": "public",
+      "n_pages": 48,
+      "n_chunks": 77,
+      "header_lines_removed": 132,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 77
+      },
+      "chunks_with_section": 77
+    },
+    {
+      "filename": "NIST.SP.800-83r1.pdf",
+      "doc_id": "c9fbc3e92aab",
+      "title": "Guide to Malware Incident Prevention and Handling for Desktops and Laptops",
+      "doc_kind": "public",
+      "n_pages": 47,
+      "n_chunks": 106,
+      "header_lines_removed": 76,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 106
+      },
+      "chunks_with_section": 106
+    },
+    {
+      "filename": "nistspecialpublication800-86.pdf",
+      "doc_id": "ea7eb645bcd3",
+      "title": "Guide to Integrating Forensic Techniques into Incident Response",
+      "doc_kind": "public",
+      "n_pages": 121,
+      "n_chunks": 282,
+      "header_lines_removed": 111,
+      "blank_pages": [
+        12,
+        24,
+        80,
+        108,
+        112,
+        114,
+        118
+      ],
+      "content_types": {
+        "prose": 282
+      },
+      "chunks_with_section": 282
+    },
+    {
+      "filename": "nistspecialpublication800-92.pdf",
+      "doc_id": "466c3ab1580b",
+      "title": "Guide to Computer Security Log Management",
+      "doc_kind": "public",
+      "n_pages": 72,
+      "n_chunks": 132,
+      "header_lines_removed": 58,
+      "blank_pages": [
+        8,
+        12,
+        26,
+        70
+      ],
+      "content_types": {
+        "prose": 132
+      },
+      "chunks_with_section": 132
+    },
+    {
+      "filename": "Phishing_Guidance_Stopping_the_Attack_Cycle_at_Phase_One_508c.pdf",
+      "doc_id": "07f4a53bb3a6",
+      "title": "Phishing Guidance: Stopping the Attack Cycle at Phase One",
+      "doc_kind": "public",
+      "n_pages": 14,
+      "n_chunks": 24,
+      "header_lines_removed": 26,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 24
+      },
+      "chunks_with_section": 23
+    },
+    {
+      "filename": "StopRansomware-Guide 508.pdf",
+      "doc_id": "7f81f8f81a0a",
+      "title": "#StopRansomware Guide",
+      "doc_kind": "public",
+      "n_pages": 31,
+      "n_chunks": 54,
+      "header_lines_removed": 61,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 54
+      },
+      "chunks_with_section": 53
+    },
+    {
+      "filename": "syn_01_phishing_response_procedure.docx",
+      "doc_id": "1a1c8cb30a34",
+      "title": "Phishing Incident Response Procedure (SYNTHETIC)",
+      "doc_kind": "synthetic",
+      "n_pages": 1,
+      "n_chunks": 2,
+      "header_lines_removed": 0,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 2
+      },
+      "chunks_with_section": 1
+    },
+    {
+      "filename": "syn_02_malware_outbreak_playbook.docx",
+      "doc_id": "7306e33323af",
+      "title": "Malware Outbreak Playbook (SYNTHETIC)",
+      "doc_kind": "synthetic",
+      "n_pages": 1,
+      "n_chunks": 2,
+      "header_lines_removed": 0,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 1,
+        "table": 1
+      },
+      "chunks_with_section": 1
+    },
+    {
+      "filename": "syn_03_ransomware_response_runbook.txt",
+      "doc_id": "3a67a2321da4",
+      "title": "Ransomware Response Runbook (SYNTHETIC)",
+      "doc_kind": "synthetic",
+      "n_pages": 1,
+      "n_chunks": 2,
+      "header_lines_removed": 0,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 2
+      },
+      "chunks_with_section": 1
+    },
+    {
+      "filename": "syn_04_account_compromise_procedure.docx",
+      "doc_id": "d1ce25cb50a3",
+      "title": "Account Compromise Response Procedure (SYNTHETIC)",
+      "doc_kind": "synthetic",
+      "n_pages": 1,
+      "n_chunks": 2,
+      "header_lines_removed": 0,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 2
+      },
+      "chunks_with_section": 1
+    },
+    {
+      "filename": "syn_05_ddos_response_procedure.txt",
+      "doc_id": "ba83f78ca0de",
+      "title": "DDoS Response Procedure (SYNTHETIC)",
+      "doc_kind": "synthetic",
+      "n_pages": 1,
+      "n_chunks": 2,
+      "header_lines_removed": 0,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 2
+      },
+      "chunks_with_section": 1
+    },
+    {
+      "filename": "syn_06_log_management_policy.docx",
+      "doc_id": "c14d537f022e",
+      "title": "Log Management and Retention Policy (SYNTHETIC)",
+      "doc_kind": "synthetic",
+      "n_pages": 1,
+      "n_chunks": 3,
+      "header_lines_removed": 0,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 3
+      },
+      "chunks_with_section": 2
+    },
+    {
+      "filename": "syn_07_vulnerability_management_standard.docx",
+      "doc_id": "f54983285eb4",
+      "title": "Vulnerability Management Standard (SYNTHETIC)",
+      "doc_kind": "synthetic",
+      "n_pages": 1,
+      "n_chunks": 2,
+      "header_lines_removed": 0,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 2
+      },
+      "chunks_with_section": 1
+    },
+    {
+      "filename": "syn_08_patch_management_policy.txt",
+      "doc_id": "9aa2af1b2384",
+      "title": "Patch Management Policy (SYNTHETIC)",
+      "doc_kind": "synthetic",
+      "n_pages": 1,
+      "n_chunks": 2,
+      "header_lines_removed": 0,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 2
+      },
+      "chunks_with_section": 1
+    },
+    {
+      "filename": "syn_09_backup_and_restore_standard.docx",
+      "doc_id": "6f1d448c5fb3",
+      "title": "Backup and Restore Standard (SYNTHETIC)",
+      "doc_kind": "synthetic",
+      "n_pages": 1,
+      "n_chunks": 2,
+      "header_lines_removed": 0,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 2
+      },
+      "chunks_with_section": 1
+    },
+    {
+      "filename": "syn_10_edr_alert_triage_procedure.docx",
+      "doc_id": "3f41d75d47bd",
+      "title": "EDR Alert Triage Procedure (SYNTHETIC)",
+      "doc_kind": "synthetic",
+      "n_pages": 1,
+      "n_chunks": 2,
+      "header_lines_removed": 0,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 2
+      },
+      "chunks_with_section": 1
+    },
+    {
+      "filename": "syn_11_severity_and_escalation_matrix.docx",
+      "doc_id": "272bae372707",
+      "title": "Incident Severity and Escalation Matrix (SYNTHETIC)",
+      "doc_kind": "synthetic",
+      "n_pages": 1,
+      "n_chunks": 2,
+      "header_lines_removed": 0,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 2
+      },
+      "chunks_with_section": 2
+    },
+    {
+      "filename": "syn_12_incident_communications_plan.docx",
+      "doc_id": "95b3d61c8672",
+      "title": "Incident Communications Plan (SYNTHETIC)",
+      "doc_kind": "synthetic",
+      "n_pages": 1,
+      "n_chunks": 2,
+      "header_lines_removed": 0,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 2
+      },
+      "chunks_with_section": 2
+    },
+    {
+      "filename": "syn_13_post_incident_review_template.txt",
+      "doc_id": "18e162e0a071",
+      "title": "Post-Incident Review Template (SYNTHETIC)",
+      "doc_kind": "synthetic",
+      "n_pages": 1,
+      "n_chunks": 2,
+      "header_lines_removed": 0,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 2
+      },
+      "chunks_with_section": 2
+    },
+    {
+      "filename": "syn_14_chain_of_custody_checklist.docx",
+      "doc_id": "d15e04c20c65",
+      "title": "Chain of Custody and Evidence Handling Checklist (SYNTHETIC)",
+      "doc_kind": "synthetic",
+      "n_pages": 1,
+      "n_chunks": 2,
+      "header_lines_removed": 0,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 2
+      },
+      "chunks_with_section": 2
+    },
+    {
+      "filename": "syn_15_oncall_and_shift_handover_procedure.txt",
+      "doc_id": "189219c6fd8a",
+      "title": "On-Call and Shift Handover Procedure (SYNTHETIC)",
+      "doc_kind": "synthetic",
+      "n_pages": 1,
+      "n_chunks": 2,
+      "header_lines_removed": 0,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 2
+      },
+      "chunks_with_section": 2
+    },
+    {
+      "filename": "syn_16_web_server_compromise_playbook.docx",
+      "doc_id": "714dab03d304",
+      "title": "Web Server Compromise and Webshell Response Playbook (SYNTHETIC)",
+      "doc_kind": "synthetic",
+      "n_pages": 1,
+      "n_chunks": 2,
+      "header_lines_removed": 0,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 2
+      },
+      "chunks_with_section": 2
+    },
+    {
+      "filename": "syn_17_email_security_standard.docx",
+      "doc_id": "7ba3371c7a3e",
+      "title": "Email Security Standard (SYNTHETIC)",
+      "doc_kind": "synthetic",
+      "n_pages": 1,
+      "n_chunks": 2,
+      "header_lines_removed": 0,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 2
+      },
+      "chunks_with_section": 2
+    },
+    {
+      "filename": "syn_18_network_segmentation_standard.txt",
+      "doc_id": "b60543a6f334",
+      "title": "Network Segmentation Standard (SYNTHETIC)",
+      "doc_kind": "synthetic",
+      "n_pages": 1,
+      "n_chunks": 3,
+      "header_lines_removed": 0,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 3
+      },
+      "chunks_with_section": 3
+    },
+    {
+      "filename": "syn_19_supplier_incident_notification_standard.docx",
+      "doc_id": "5c3ff8621f0d",
+      "title": "Supplier Incident Notification Standard (SYNTHETIC)",
+      "doc_kind": "synthetic",
+      "n_pages": 1,
+      "n_chunks": 2,
+      "header_lines_removed": 0,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 2
+      },
+      "chunks_with_section": 2
+    },
+    {
+      "filename": "syn_20_security_awareness_training_program.docx",
+      "doc_id": "d1250f457a41",
+      "title": "Security Awareness Training Program (SYNTHETIC)",
+      "doc_kind": "synthetic",
+      "n_pages": 1,
+      "n_chunks": 2,
+      "header_lines_removed": 0,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 2
+      },
+      "chunks_with_section": 2
+    },
+    {
+      "filename": "understanding_and_responding_to_distributed_denial_of_service_attacks.pdf",
+      "doc_id": "ab8b18c6ed70",
+      "title": "Understanding and Responding to Distributed Denial-of-Service Attacks",
+      "doc_kind": "public",
+      "n_pages": 16,
+      "n_chunks": 24,
+      "header_lines_removed": 45,
+      "blank_pages": [],
+      "content_types": {
+        "prose": 24
+      },
+      "chunks_with_section": 23
+    }
+  ],
+  "skipped_documents": [],
+  "timings": {
+    "chunking_s": 1.1,
+    "embedding_s": 106.03,
+    "store_s": 0.9,
+    "embedding_chunks_per_s": 9.7
+  },
+  "libraries": {
+    "python": "3.11.9",
+    "sentence-transformers": "5.7.0",
+    "chromadb": "1.5.9",
+    "numpy": "2.4.6",
+    "pypdf": "7.1.0",
+    "python-docx": "1.2.0"
+  },
+  "schema_version": 1
+}

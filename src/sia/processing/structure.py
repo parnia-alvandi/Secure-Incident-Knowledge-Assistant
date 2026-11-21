@@ -33,6 +33,9 @@ _APPENDIX = re.compile(r"^(appendix|section|chapter|part)\s+[A-Z0-9]", re.I)
 _CAPTION = re.compile(r"^(figure|table)\s+[\dA-Z]", re.I)
 _BULLET = ("•", "●", "▪", "◦", "■", "- ", "* ", "– ")
 _TERMINAL = ".,;:!?)"
+# words that signal a sentence (a footnote like "5 Zeek is a trademark of ..."), not a heading
+_SENTENCE_WORDS = {"is", "are", "was", "were", "has", "have", "should", "must", "can", "will", "may"}
+_CODE_CHARS_IN_LINE = set("\\{}=;<>$")
 
 
 class Heading(NamedTuple):
@@ -52,12 +55,26 @@ def _is_candidate(line: str) -> bool:
         return False
     if "TLP:" in line.upper():                       # TLP:CLEAR style banners
         return False
+    if any(ch in _CODE_CHARS_IN_LINE for ch in line):    # file paths, code
+        return False
     return True
+
+
+def _is_numbered_heading(line: str) -> bool:
+    """"3.2 Containment" / "3. Scope" always; a bare "5 Foo" only if short and not a sentence."""
+    if not _NUMBERED.match(line):
+        return False
+    words = line.split()
+    if "." in words[0]:
+        return True
+    return len(words) <= 8 and not any(w in _SENTENCE_WORDS for w in words[1:])
 
 
 def _is_title_case(line: str) -> bool:
     words = line.split()
     if len(words) > 8 or not line[0].isupper() or words[-1].lower() in _STOP:
+        return False
+    if any(w in _SENTENCE_WORDS for w in words):     # lower-case "is", "are": a sentence
         return False
     content = [w for w in words if w.lower() not in _STOP]
     return bool(content) and sum(w[0].isupper() for w in content) / len(content) >= 0.6
@@ -77,7 +94,7 @@ def find_headings(text: str, file_type: str) -> list[Heading]:
         if not _is_candidate(line):
             continue
         is_heading = (
-            bool(_NUMBERED.match(line) or _APPENDIX.match(line))
+            _is_numbered_heading(line) or bool(_APPENDIX.match(line))
             or (sum(ch.isalpha() for ch in line) >= 4 and line.upper() == line
                 and len(line.split()) <= 10)
             or (file_type == "docx" and was_blank)

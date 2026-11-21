@@ -28,6 +28,7 @@ import numpy as np                                                    # noqa: E4
 
 from sia.config import load_settings                                  # noqa: E402
 from sia.evaluation.dataset import answerable, load_questions, squash  # noqa: E402
+from sia.runtime import apply_offline_mode, quiet_noisy_loggers      # noqa: E402
 from sia.storage.chunk_store import (CHUNKS_FILE, MANIFEST_FILE, load_manifest,  # noqa: E402
                                      read_chunks)
 
@@ -43,7 +44,7 @@ def check(ok: bool, label: str, detail: str = "") -> bool:
 
 def retrieval_smoke(embedder, store, chunks_by_id, doc_kind, questions, use_instruction, ks, max_miss):
     max_k = max(ks)
-    ranks_chunk, ranks_doc, t_embed, t_query = [], [], [], []
+    ranks_chunk, ranks_doc, ranks_page, t_embed, t_query = [], [], [], [], []
     by_kind: dict[str, list[int | None]] = {}
     misses = []
     for q in questions:
@@ -54,16 +55,19 @@ def retrieval_smoke(embedder, store, chunks_by_id, doc_kind, questions, use_inst
         t2 = time.perf_counter()
         t_embed.append(t1 - t0)
         t_query.append(t2 - t1)
-        rank_chunk = rank_doc = None
+        rank_chunk = rank_doc = rank_page = None
         for h in hits:
             c = chunks_by_id[h.chunk_id]
             if rank_doc is None and c.filename == q["doc"]:
                 rank_doc = h.rank
-            if (rank_chunk is None and c.filename == q["doc"] and c.page == q.get("evidence_page")
-                    and q["sq"] in squash(c.text)):
+            same_page = c.filename == q["doc"] and c.page == q.get("evidence_page")
+            if rank_page is None and same_page:
+                rank_page = h.rank
+            if rank_chunk is None and same_page and q["sq"] in squash(c.text):
                 rank_chunk = h.rank
         ranks_chunk.append(rank_chunk)
         ranks_doc.append(rank_doc)
+        ranks_page.append(rank_page)
         by_kind.setdefault(doc_kind.get(q["doc"], "?"), []).append(rank_chunk)
         if rank_chunk is None and len(misses) < max_miss:
             top = chunks_by_id[hits[0].chunk_id]
@@ -80,6 +84,8 @@ def retrieval_smoke(embedder, store, chunks_by_id, doc_kind, questions, use_inst
           f"chroma query {np.mean(t_query)*1000:.0f} ms (mean)")
     print("    chunk-level Hit@k : " + "  ".join(f"@{k}={hit(ranks_chunk, k):.1%}" for k in ks)
           + f"  MRR@{max_k}={mrr:.3f}")
+    print("    page-level  Hit@k : " + "  ".join(f"@{k}={hit(ranks_page, k):.1%}" for k in ks)
+          + "   (right document and page, any chunk)")
     print("    doc-level   Hit@k : " + "  ".join(f"@{k}={hit(ranks_doc, k):.1%}" for k in ks))
     for kind, ranks in sorted(by_kind.items()):
         ok5 = sum(1 for r in ranks if r is not None and r <= 5) / len(ranks)
@@ -103,6 +109,8 @@ def main() -> int:
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
     s = load_settings(args.config)
+    apply_offline_mode(s.embedding.offline)
+    quiet_noisy_loggers()
     index_dir = args.index_dir or s.paths.vector_db_dir
     if not index_dir.is_absolute():
         index_dir = ROOT / index_dir
