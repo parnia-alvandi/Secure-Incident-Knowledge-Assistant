@@ -23,3 +23,16 @@ ingestion:
 
 logging:
   level: INFO
+
+chunking:
+  chunk_tokens: 256     # target/maximum chunk size in tokens (BGE tokenizer)
+  overlap_tokens: 40    # sentence-aligned overlap between consecutive chunks
+  min_tokens: 40        # tails smaller than this are merged into the previous chunk
+
+embedding:
+  batch_size: 32
+  max_seq_length: 512
+  query_instruction: "Represent this sentence for searching relevant passages: "
+
+index:
+  collection_name: sia_chunks   # files go to paths.vector_db_dir (chunks.jsonl, index_manifest.json, chroma/)

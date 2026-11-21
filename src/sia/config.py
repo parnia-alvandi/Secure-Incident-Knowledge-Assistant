@@ -5,7 +5,7 @@ This is the ONLY module that reads config.yaml. Other modules receive a
 """
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 
 import yaml
@@ -49,12 +49,37 @@ class LoggingConfig:
 
 
 @dataclass(frozen=True)
+class ChunkingSettings:
+    """Chunking parameters (tokens are counted with the embedding model's tokenizer)."""
+    chunk_tokens: int = 256
+    overlap_tokens: int = 40
+    min_tokens: int = 40
+
+
+@dataclass(frozen=True)
+class EmbeddingSettings:
+    batch_size: int = 32
+    max_seq_length: int = 512
+    # BGE v1.5 retrieval prefix for QUERIES only (passages are embedded without it)
+    query_instruction: str = "Represent this sentence for searching relevant passages: "
+
+
+@dataclass(frozen=True)
+class IndexSettings:
+    collection_name: str = "sia_chunks"
+
+
+@dataclass(frozen=True)
 class Settings:
     paths: PathsConfig
     models: ModelsConfig
     llm: LLMConfig
     ingestion: IngestionConfig
     logging: LoggingConfig
+    # Phase 3 sections are optional in config.yaml: defaults apply when absent.
+    chunking: ChunkingSettings = field(default_factory=ChunkingSettings)
+    embedding: EmbeddingSettings = field(default_factory=EmbeddingSettings)
+    index: IndexSettings = field(default_factory=IndexSettings)
 
 
 def load_settings(config_path: Path | str | None = None) -> Settings:
@@ -94,8 +119,28 @@ def load_settings(config_path: Path | str | None = None) -> Settings:
     except KeyError as exc:
         raise ValueError(f"Missing required config key: {exc}") from exc
 
-    return Settings(paths=paths, models=models, llm=llm,
-                    ingestion=ingestion, logging=logging_cfg)
+    chunking = ChunkingSettings(**_section(raw, "chunking", ChunkingSettings))
+    embedding = EmbeddingSettings(**_section(raw, "embedding", EmbeddingSettings))
+    index = IndexSettings(**_section(raw, "index", IndexSettings))
+    if not 0 <= chunking.overlap_tokens < chunking.chunk_tokens:
+        raise ValueError("chunking.overlap_tokens must be >= 0 and < chunking.chunk_tokens")
+    if chunking.chunk_tokens <= 0 or chunking.min_tokens < 0:
+        raise ValueError("chunking.chunk_tokens must be > 0 and chunking.min_tokens >= 0")
+
+    return Settings(paths=paths, models=models, llm=llm, ingestion=ingestion,
+                    logging=logging_cfg, chunking=chunking, embedding=embedding, index=index)
+
+
+def _section(raw: dict, name: str, cls: type) -> dict:
+    """Optional YAML section -> kwargs. Unknown keys are an error (typo protection)."""
+    values = raw.get(name) or {}
+    if not isinstance(values, dict):
+        raise ValueError(f"Config section '{name}' must be a mapping")
+    allowed = set(cls.__dataclass_fields__)
+    unknown = set(values) - allowed
+    if unknown:
+        raise ValueError(f"Unknown key(s) in config section '{name}': {sorted(unknown)}")
+    return dict(values)
 
 
 def _resolve(value: str) -> Path:
