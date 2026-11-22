@@ -34,6 +34,8 @@ class LLMConfig:
     temperature: float
     num_ctx: int
     num_predict: int
+    keep_alive: str = "30m"     # how long Ollama keeps the model in RAM after a request
+    timeout_s: float = 300.0    # client timeout for one generation
 
 
 @dataclass(frozen=True)
@@ -71,6 +73,20 @@ class IndexSettings:
 
 
 @dataclass(frozen=True)
+class RetrievalSettings:
+    top_k: int = 5
+    # Insufficient-evidence gate: if the best cosine score is below this value the
+    # LLM is not called. None = gate disabled (until calibrated in phase 4c).
+    min_score: float | None = None
+    use_query_instruction: bool = True
+
+
+@dataclass(frozen=True)
+class AnsweringSettings:
+    excerpt_chars: int = 350
+
+
+@dataclass(frozen=True)
 class Settings:
     paths: PathsConfig
     models: ModelsConfig
@@ -81,6 +97,8 @@ class Settings:
     chunking: ChunkingSettings = field(default_factory=ChunkingSettings)
     embedding: EmbeddingSettings = field(default_factory=EmbeddingSettings)
     index: IndexSettings = field(default_factory=IndexSettings)
+    retrieval: RetrievalSettings = field(default_factory=RetrievalSettings)
+    answering: AnsweringSettings = field(default_factory=AnsweringSettings)
 
 
 def load_settings(config_path: Path | str | None = None) -> Settings:
@@ -109,6 +127,8 @@ def load_settings(config_path: Path | str | None = None) -> Settings:
             temperature=float(raw["llm"]["temperature"]),
             num_ctx=int(raw["llm"]["num_ctx"]),
             num_predict=int(raw["llm"]["num_predict"]),
+            keep_alive=str(raw["llm"].get("keep_alive", "30m")),
+            timeout_s=float(raw["llm"].get("timeout_s", 300.0)),
         )
         ing = raw["ingestion"]
         ingestion = IngestionConfig(
@@ -123,13 +143,22 @@ def load_settings(config_path: Path | str | None = None) -> Settings:
     chunking = ChunkingSettings(**_section(raw, "chunking", ChunkingSettings))
     embedding = EmbeddingSettings(**_section(raw, "embedding", EmbeddingSettings))
     index = IndexSettings(**_section(raw, "index", IndexSettings))
+    retrieval = RetrievalSettings(**_section(raw, "retrieval", RetrievalSettings))
+    answering = AnsweringSettings(**_section(raw, "answering", AnsweringSettings))
+    if retrieval.top_k < 1:
+        raise ValueError("retrieval.top_k must be >= 1")
+    if retrieval.min_score is not None and not -1.0 <= retrieval.min_score <= 1.0:
+        raise ValueError("retrieval.min_score must be None or between -1 and 1")
+    if answering.excerpt_chars < 50:
+        raise ValueError("answering.excerpt_chars must be >= 50")
     if not 0 <= chunking.overlap_tokens < chunking.chunk_tokens:
         raise ValueError("chunking.overlap_tokens must be >= 0 and < chunking.chunk_tokens")
     if chunking.chunk_tokens <= 0 or chunking.min_tokens < 0:
         raise ValueError("chunking.chunk_tokens must be > 0 and chunking.min_tokens >= 0")
 
     return Settings(paths=paths, models=models, llm=llm, ingestion=ingestion,
-                    logging=logging_cfg, chunking=chunking, embedding=embedding, index=index)
+                    logging=logging_cfg, chunking=chunking, embedding=embedding, index=index,
+                    retrieval=retrieval, answering=answering)
 
 
 def _section(raw: dict, name: str, cls: type) -> dict:

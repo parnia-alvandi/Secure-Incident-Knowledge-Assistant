@@ -60,14 +60,29 @@ def _is_candidate(line: str) -> bool:
     return True
 
 
+def _title_like(words: list[str]) -> bool:
+    """Most content words are capitalised and the last word is not a connector."""
+    if not words or words[-1].lower() in _STOP:
+        return False
+    if any(w in _SENTENCE_WORDS for w in words):
+        return False
+    content = [w for w in words if w.lower() not in _STOP]
+    return bool(content) and sum(w[0].isupper() for w in content) / len(content) >= 0.6
+
+
 def _is_numbered_heading(line: str) -> bool:
-    """"3.2 Containment" / "3. Scope" always; a bare "5 Foo" only if short and not a sentence."""
+    """"3.2 Containment" always; "4. Foo" / "5 Foo" only if they look like a short title.
+
+    "4. Collect and review artifacts such as running processes ..." is a list item,
+    not a heading, so single-level numbers need a Title-Case, short remainder.
+    """
     if not _NUMBERED.match(line):
         return False
     words = line.split()
-    if "." in words[0]:
+    label, rest = words[0].rstrip("."), words[1:]
+    if "." in label:                                  # multi-level: 2.1, 3.2.4
         return True
-    return len(words) <= 8 and not any(w in _SENTENCE_WORDS for w in words[1:])
+    return len(rest) <= 10 and _title_like(rest)
 
 
 def _is_title_case(line: str) -> bool:

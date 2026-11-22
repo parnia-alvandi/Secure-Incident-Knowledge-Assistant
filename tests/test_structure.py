@@ -83,3 +83,13 @@ def test_footnotes_and_code_paths_are_not_headings():
     text = ("\n5 Zeek is a trademark of the Zeek Project\n9 OWASP is a trademark of the OWASP Foundation\n"
             "\nC:\\inetput\\wwwroot\\index2.aspx\n\n3 Introduction\n3.1 Background and Scope")
     assert _texts(text) == ["3 Introduction", "3.1 Background and Scope"]
+
+
+def test_numbered_list_items_are_not_headings():
+    # regression: RansomHub guide, a wrapped list item was labelled as a section
+    text = ("\n4. Collect and review artifacts such as running processes/services, unusual authentications, and\n"
+            "11. Research trusted guidance published by sources such as the Government for the variant\n"
+            "2. Incident Response as Part of Cybersecurity Risk Management\n2.1. Incident Response Life Cycle Model\n"
+            "1. Purpose")
+    assert _texts(text) == ["2. Incident Response as Part of Cybersecurity Risk Management",
+                            "2.1. Incident Response Life Cycle Model", "1. Purpose"]
