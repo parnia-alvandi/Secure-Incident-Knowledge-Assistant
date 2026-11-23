@@ -83,3 +83,10 @@ def test_check_for_dict_and_object_responses_and_missing_model():
     msg = OllamaClient("other:7b", client=FakeClient(models=dict_style)).check()
     assert "ollama pull other:7b" in msg
     assert "ollama serve" in OllamaClient("m", client=FakeClient(error=ConnectionError("x"))).check()
+
+
+def test_history_turns_are_appended_after_the_user_message():
+    fake = FakeClient(final=FINAL)
+    OllamaClient("m", client=fake).generate("sys", "usr", history=[("assistant", "[1]"), ("user", "again")])
+    assert [(m["role"], m["content"]) for m in fake.kwargs["messages"]] == [
+        ("system", "sys"), ("user", "usr"), ("assistant", "[1]"), ("user", "again")]

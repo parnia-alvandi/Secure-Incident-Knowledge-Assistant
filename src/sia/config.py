@@ -84,6 +84,8 @@ class RetrievalSettings:
 @dataclass(frozen=True)
 class AnsweringSettings:
     excerpt_chars: int = 350
+    prompt_version: int = 2     # 1 = inline [n] citations; 2 = ANSWER:/SOURCES: format
+    max_retries: int = 1        # repair attempts when the model returns no answer text
 
 
 @dataclass(frozen=True)
@@ -151,6 +153,10 @@ def load_settings(config_path: Path | str | None = None) -> Settings:
         raise ValueError("retrieval.min_score must be None or between -1 and 1")
     if answering.excerpt_chars < 50:
         raise ValueError("answering.excerpt_chars must be >= 50")
+    if answering.prompt_version not in (1, 2):
+        raise ValueError("answering.prompt_version must be 1 or 2")
+    if not 0 <= answering.max_retries <= 3:
+        raise ValueError("answering.max_retries must be between 0 and 3")
     if not 0 <= chunking.overlap_tokens < chunking.chunk_tokens:
         raise ValueError("chunking.overlap_tokens must be >= 0 and < chunking.chunk_tokens")
     if chunking.chunk_tokens <= 0 or chunking.min_tokens < 0:

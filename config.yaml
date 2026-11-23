@@ -47,3 +47,5 @@ retrieval:
 
 answering:
   excerpt_chars: 350          # length of the excerpt shown with each source
+  prompt_version: 2           # 1 = inline [n] citations (kept for comparison); 2 = ANSWER:/SOURCES:
+  max_retries: 1              # repair attempts if the model replies with citation markers only

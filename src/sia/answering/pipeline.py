@@ -10,7 +10,6 @@ Grounding guarantees of this baseline (see the phase 4 design):
 """
 from __future__ import annotations
 
-import re
 import time
 from dataclasses import asdict, dataclass, field
 from typing import Callable, Protocol
@@ -19,15 +18,17 @@ from sia.llm.ollama_client import LLMError, LLMResult
 from sia.retrieval.vector_retriever import RetrievedChunk
 
 from .excerpts import best_excerpt
-from .prompt import SENTINEL, build_prompt
+from .parse import CITATION as _CITATION                       # noqa: F401  (re-exported)
+from .parse import has_answer_text, parse_citations, split_structured  # noqa: F401
+from .prompt import REPAIR_MESSAGE, SENTINEL, build_prompt
 
 INSUFFICIENT_TEXT = "Not stated in the document collection (insufficient evidence)."
-_CITATION = re.compile(r"\[(\d+(?:\s*[,;]\s*\d+)*)\]")
 
 STATUS_ANSWERED = "answered"
 STATUS_INSUFFICIENT = "insufficient_evidence"
 STATUS_UNVERIFIED = "unverified"
 STATUS_ERROR = "error"
+STATUS_NO_ANSWER = "no_answer"      # the model returned no usable text (only citation markers / empty)
 
 
 class _Retriever(Protocol):
@@ -69,23 +70,10 @@ class AnswerResult:
         return asdict(self)
 
 
-def parse_citations(text: str, n_passages: int) -> tuple[list[int], list[int]]:
-    """(valid numbers in order of first use, invalid numbers)."""
-    valid: list[int] = []
-    invalid: list[int] = []
-    for m in _CITATION.finditer(text):
-        for num in re.split(r"[,;]", m.group(1)):
-            n = int(num)
-            bucket = valid if 1 <= n <= n_passages else invalid
-            if n not in bucket:
-                bucket.append(n)
-    return valid, invalid
-
-
 class RAGPipeline:
     def __init__(self, retriever: _Retriever, llm: _LLM, *, num_ctx: int, num_predict: int,
                  min_score: float | None = None, excerpt_chars: int = 350,
-                 closest_n: int = 3) -> None:
+                 closest_n: int = 3, prompt_version: int = 2, max_retries: int = 1) -> None:
         self.retriever = retriever
         self.llm = llm
         self.num_ctx = num_ctx
@@ -93,13 +81,17 @@ class RAGPipeline:
         self.min_score = min_score
         self.excerpt_chars = excerpt_chars
         self.closest_n = closest_n
+        self.prompt_version = prompt_version
+        self.max_retries = max_retries
 
     @classmethod
     def from_settings(cls, retriever, llm, settings) -> "RAGPipeline":
         return cls(retriever, llm, num_ctx=settings.llm.num_ctx,
                    num_predict=settings.llm.num_predict,
                    min_score=settings.retrieval.min_score,
-                   excerpt_chars=settings.answering.excerpt_chars)
+                   excerpt_chars=settings.answering.excerpt_chars,
+                   prompt_version=settings.answering.prompt_version,
+                   max_retries=settings.answering.max_retries)
 
     # ------------------------------------------------------------------
     def _ref(self, r: RetrievedChunk, focus: str, n: int | None = None) -> SourceRef:
@@ -136,7 +128,7 @@ class RAGPipeline:
                 reason=(f"best match score {results[0].score:.3f} is below the relevance "
                         f"threshold {self.min_score:.3f}; the LLM was not called")))
 
-        bundle = build_prompt(question, results, self.num_ctx, self.num_predict)
+        bundle = build_prompt(question, results, self.num_ctx, self.num_predict, self.prompt_version)
         warnings: list[str] = []
         if bundle.dropped:
             warnings.append(f"{len(bundle.dropped)} retrieved passage(s) did not fit the "
@@ -148,31 +140,57 @@ class RAGPipeline:
                 "no retrieved passage fits the context window; "
                 "increase llm.num_ctx or lower llm.num_predict"), warnings=warnings))
 
-        try:
-            llm = self.llm.generate(bundle.system, bundle.user, on_token)
-        except LLMError as exc:
-            return finish(AnswerResult(question, STATUS_ERROR, "", reason=str(exc),
-                                       warnings=warnings))
-        timings.update({
-            "llm_total_s": round(llm.total_s, 2), "llm_load_s": round(llm.load_s, 2),
-            "prompt_eval_s": round(llm.prompt_eval_s, 2), "eval_s": round(llm.eval_s, 2),
-            "prompt_tokens": llm.prompt_tokens, "completion_tokens": llm.completion_tokens,
-            "prompt_tokens_per_s": round(llm.prompt_tokens / llm.prompt_eval_s, 1) if llm.prompt_eval_s else None,
-            "gen_tokens_per_s": round(llm.completion_tokens / llm.eval_s, 1) if llm.eval_s else None,
-        })
-        if llm.truncated:
-            warnings.append("the answer was cut off at the generation limit (llm.num_predict)")
+        history: list[tuple[str, str]] | None = None
+        attempts = 0
+        llm_total = 0.0
+        while True:
+            try:
+                llm = (self.llm.generate(bundle.system, bundle.user, on_token, history=history)
+                       if history else self.llm.generate(bundle.system, bundle.user, on_token))
+            except LLMError as exc:
+                return finish(AnswerResult(question, STATUS_ERROR, "", reason=str(exc),
+                                           warnings=warnings, timings={"retries": attempts}))
+            llm_total += llm.total_s
+            timings.update({
+                "llm_total_s": round(llm_total, 2), "llm_load_s": round(llm.load_s, 2),
+                "prompt_eval_s": round(llm.prompt_eval_s, 2), "eval_s": round(llm.eval_s, 2),
+                "prompt_tokens": llm.prompt_tokens, "completion_tokens": llm.completion_tokens,
+                "prompt_tokens_per_s": round(llm.prompt_tokens / llm.prompt_eval_s, 1) if llm.prompt_eval_s else None,
+                "gen_tokens_per_s": round(llm.completion_tokens / llm.eval_s, 1) if llm.eval_s else None,
+                "retries": attempts, "prompt_version": self.prompt_version,
+            })
+            if llm.truncated and "the answer was cut off at the generation limit (llm.num_predict)" not in warnings:
+                warnings.append("the answer was cut off at the generation limit (llm.num_predict)")
 
-        text = llm.text
-        if SENTINEL in text.upper():
+            text = llm.text
+            if SENTINEL in text.upper():
+                return finish(AnswerResult(
+                    question, STATUS_INSUFFICIENT, INSUFFICIENT_TEXT,
+                    closest=closest(bundle.used), warnings=warnings,
+                    reason="the model found no answer in the retrieved passages"))
+
+            answer_text, source_numbers = split_structured(text)
+            if has_answer_text(answer_text):
+                break
+            if attempts < self.max_retries:                    # one repair attempt, then give up
+                attempts += 1
+                history = [("assistant", text), ("user", REPAIR_MESSAGE)]
+                continue
+            warnings.append(f"the model replied with citation markers only ({text!r})")
             return finish(AnswerResult(
-                question, STATUS_INSUFFICIENT, INSUFFICIENT_TEXT,
-                closest=closest(bundle.used), warnings=warnings,
-                reason="the model found no answer in the retrieved passages"))
+                question, STATUS_NO_ANSWER, "", closest=closest(bundle.used), warnings=warnings,
+                reason=f"the model returned no answer text after {attempts} repair attempt(s)"))
 
-        valid, invalid = parse_citations(text, len(bundle.used))
+        valid, invalid = parse_citations(answer_text, len(bundle.used))
+        for n in source_numbers or []:
+            if 1 <= n <= len(bundle.used):
+                if n not in valid:
+                    valid.append(n)
+            elif n not in invalid:
+                invalid.append(n)
         if invalid:
             warnings.append(f"ignored citation number(s) {invalid}: no such passage")
+        text = answer_text
         if not valid:
             warnings.append("the answer has no valid citation, so it is not verified "
                             "against any passage")

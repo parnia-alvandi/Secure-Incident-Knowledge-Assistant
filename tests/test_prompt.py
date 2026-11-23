@@ -41,3 +41,25 @@ def test_context_budget_drops_lowest_ranked_chunks_and_reports_them():
 def test_default_settings_fit_five_chunks():
     b = build_prompt("What is containment?", make_results(5, n_tokens=256), 4096, 300)
     assert len(b.used) == 5 and b.estimated_tokens < 4096 - 300
+
+
+def test_prompt_version_2_demands_the_answer_format_and_specific_details():
+    from sia.answering.prompt import REPAIR_MESSAGE, SYSTEM_PROMPT_V2
+    b = build_prompt("How long?", make_results(3), 4096, 300, version=2)
+    assert b.system == SYSTEM_PROMPT_V2 and b.version == 2
+    for needle in ("ANSWER:", "SOURCES:", "full sentences", "specific detail", SENTINEL, "untrusted"):
+        assert needle in b.system
+    assert "ANSWER: ... then SOURCES: ..." in b.user and "Question: How long?" in b.user
+    assert "ANSWER:" in REPAIR_MESSAGE and SENTINEL in REPAIR_MESSAGE
+    assert build_prompt("q", make_results(3), 4096, 300).version == 1          # v1 stays the default
+
+
+def test_prompt_v2_still_fits_five_chunks_and_rejects_unknown_versions():
+    b = build_prompt("What is containment?", make_results(5, n_tokens=256), 4096, 300, version=2)
+    assert len(b.used) == 5 and b.estimated_tokens < 4096 - 300
+    try:
+        build_prompt("q", make_results(1), 4096, 300, version=3)
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("unknown version accepted")

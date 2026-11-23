@@ -28,7 +28,8 @@ from sia.retrieval.vector_retriever import (IndexNotReadyError, RetrievedChunk, 
 from sia.runtime import apply_offline_mode, quiet_noisy_loggers                          # noqa: E402
 
 STATUS_LABEL = {STATUS_ANSWERED: "ANSWERED", STATUS_INSUFFICIENT: "INSUFFICIENT EVIDENCE",
-                STATUS_UNVERIFIED: "UNVERIFIED (no valid citation)", STATUS_ERROR: "ERROR"}
+                STATUS_UNVERIFIED: "UNVERIFIED (no valid citation)", STATUS_ERROR: "ERROR",
+                "no_answer": "NO ANSWER (the model returned no text)"}
 
 
 def format_results(results: list[RetrievedChunk], excerpt_chars: int) -> str:
@@ -74,6 +75,8 @@ def format_answer(res: AnswerResult) -> str:
         parts.append(f"LLM {t['llm_total_s']:.1f}s (load {t['llm_load_s']:.1f}s; prompt "
                      f"{t['prompt_tokens']} tok @ {t.get('prompt_tokens_per_s')} tok/s; generated "
                      f"{t['completion_tokens']} tok @ {t.get('gen_tokens_per_s')} tok/s)")
+    if t.get("retries"):
+        parts.append(f"repair retries {t['retries']}")
     parts.append(f"total {t.get('total_s', 0):.1f}s | best score {t.get('best_score')}")
     lines.append("Timing: " + " | ".join(parts))
     return "\n".join(lines)

@@ -39,3 +39,16 @@ def test_overrides_and_validation():
 def test_shipped_config_yaml_loads():
     s = load_settings(Path(__file__).resolve().parents[1] / "config.yaml")
     assert s.retrieval.top_k == 5 and s.retrieval.min_score is None
+
+
+def test_answering_prompt_version_and_retries():
+    s = _load()
+    assert s.answering.prompt_version == 2 and s.answering.max_retries == 1
+    s = _load("answering: {prompt_version: 1, max_retries: 0}\n")
+    assert s.answering.prompt_version == 1 and s.answering.max_retries == 0
+    for extra in ("answering: {prompt_version: 3}\n", "answering: {max_retries: 9}\n"):
+        try:
+            _load(extra)
+        except ValueError:
+            continue
+        raise AssertionError(f"accepted {extra}")

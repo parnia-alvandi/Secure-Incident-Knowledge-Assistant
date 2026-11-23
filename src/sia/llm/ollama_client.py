@@ -93,8 +93,11 @@ class OllamaClient:
 
     # -- generation ----------------------------------------------------------
     def generate(self, system: str, user: str,
-                 on_token: Callable[[str], None] | None = None) -> LLMResult:
+                 on_token: Callable[[str], None] | None = None,
+                 history: list[tuple[str, str]] | None = None) -> LLMResult:
+        """`history`: extra (role, content) turns after the user message (used for one repair retry)."""
         messages = [{"role": "system", "content": system}, {"role": "user", "content": user}]
+        messages += [{"role": role, "content": content} for role, content in (history or [])]
         parts: list[str] = []
         final: Any = None
         t0 = time.perf_counter()
