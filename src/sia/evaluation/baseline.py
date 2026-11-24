@@ -123,7 +123,9 @@ def summarize(rows: list[dict]) -> dict:
     with_text = [r for r in answered_ans if not no_text(r)]
     s["answerable"]["answered_with_text"] = len(with_text)
     s["answerable"]["cited_gold_with_text"] = sum(1 for r in with_text if r.get("cited_gold"))
-    s["retries"] = sum(1 for r in rows if r.get("timings", {}).get("retries"))
+    retried = [r for r in rows if r.get("timings", {}).get("retries")]
+    s["retries"] = len(retried)
+    s["retried_status"] = dict(Counter(r["status"] for r in retried))
 
     totals = [r["timings"]["total_s"] for r in rows if r.get("timings", {}).get("total_s") is not None]
     llm_rows = [r for r in rows if "prompt_tokens_per_s" in r.get("timings", {})
@@ -167,7 +169,8 @@ def format_summary(s: dict) -> str:
                  f"(with real text: {_pct(a['cited_gold_with_text'], a['answered_with_text'])}); "
                  f"numbers not found in the passages {_pct(a['answered_with_unsupported_numbers'], a['answered'])}")
     if s.get("retries"):
-        lines.append(f"   repair retries used on {s['retries']} question(s)")
+        outcome = ", ".join(f"{k} {v}" for k, v in sorted(s["retried_status"].items()))
+        lines.append(f"   repair retries used on {s['retries']} question(s); their final status: {outcome}")
     lat = s["latency"]
     lines += ["", f"LATENCY (s, whole question): mean {lat['mean_s']}  p50 {lat['p50_s']}  p90 {lat['p90_s']} "
                   f"| LLM calls {lat['llm_calls']} | prefill {lat['prompt_tok_per_s']} tok/s",

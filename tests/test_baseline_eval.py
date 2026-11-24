@@ -158,5 +158,5 @@ def test_summary_separates_real_answers_from_citation_only_replies():
 def test_retries_are_counted_and_old_rows_without_the_field_still_work():
     rows = [_row(1, True, "answered", answer="Real text here.", timings={"total_s": 60.0, "retries": 1}),
             _row(2, True, "answered", answer="Other real text.", timings={"total_s": 30.0})]
-    assert summarize(rows)["retries"] == 1
-    assert "repair retries used on 1 question(s)" in format_summary(summarize(rows))
+    assert summarize(rows)["retries"] == 1 and summarize(rows)["retried_status"] == {"answered": 1}
+    assert "repair retries used on 1 question(s); their final status: answered 1" in format_summary(summarize(rows))

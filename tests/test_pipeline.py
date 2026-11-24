@@ -196,3 +196,20 @@ def test_refusal_works_in_the_structured_format_too():
 def test_refusal_after_a_repair_attempt_is_respected():
     res = _pipe(FakeLLM(["[1]", "INSUFFICIENT_EVIDENCE"]), max_retries=1).ask("q")
     assert res.status == STATUS_INSUFFICIENT
+
+
+def test_repair_message_matches_the_prompt_version():
+    from sia.answering.prompt import REPAIR_MESSAGE, REPAIR_MESSAGE_V1, repair_message
+    assert repair_message(2) == REPAIR_MESSAGE and repair_message(1) == REPAIR_MESSAGE_V1
+    assert "ANSWER:" not in REPAIR_MESSAGE_V1 and "[n]" in REPAIR_MESSAGE_V1
+    for version in (1, 2):
+        llm = FakeLLM(["[1]", "Isolate the hosts [1]."])
+        res = _pipe(llm, prompt_version=version, max_retries=1).ask("q")
+        assert res.status == STATUS_ANSWERED
+        assert llm.histories[1][1][1] == repair_message(version)
+
+
+def test_pipeline_defaults_to_prompt_version_1():
+    llm = FakeLLM("Isolate hosts [1].")
+    _pipe(llm).ask("q")
+    assert "ANSWER:" not in llm.calls[0][0]                  # v1 system prompt

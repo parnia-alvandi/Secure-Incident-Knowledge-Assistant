@@ -84,7 +84,7 @@ class RetrievalSettings:
 @dataclass(frozen=True)
 class AnsweringSettings:
     excerpt_chars: int = 350
-    prompt_version: int = 2     # 1 = inline [n] citations; 2 = ANSWER:/SOURCES: format
+    prompt_version: int = 1     # 1 = inline [n] citations (safer refusals); 2 = ANSWER:/SOURCES: (rejected, see docs)
     max_retries: int = 1        # repair attempts when the model returns no answer text
 
 

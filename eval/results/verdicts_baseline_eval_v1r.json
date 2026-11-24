@@ -1,0 +1,8 @@
+{
+  "DDO-08":   {"verdict": "correct", "note": "Matches the reference (timestamps, IP addresses, packet captures, logs/alerts). An extra item about contacting ISPs is not in the reference."},
+  "SYN11-09": {"verdict": "wrong",   "note": "Wrongly refused: the right passage was in the prompt, the model answered INSUFFICIENT_EVIDENCE."},
+  "SYN03-04": {"verdict": "correct", "note": "Within 24 hours, as in the reference."},
+  "SYN16-05": {"verdict": "correct", "note": "Memory evidence would be lost, as in the reference. The cited passage is not the chunk that holds the reference sentence."},
+  "FGP-04":   {"verdict": "correct", "note": "Vulnerabilities actively exploited in the wild, as in the reference."},
+  "NEG-30":   {"verdict": "correct", "note": "Correct refusal: the pass mark is not in the collection."}
+}

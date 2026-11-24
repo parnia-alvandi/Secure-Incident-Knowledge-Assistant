@@ -43,9 +43,9 @@ def test_shipped_config_yaml_loads():
 
 def test_answering_prompt_version_and_retries():
     s = _load()
-    assert s.answering.prompt_version == 2 and s.answering.max_retries == 1
-    s = _load("answering: {prompt_version: 1, max_retries: 0}\n")
-    assert s.answering.prompt_version == 1 and s.answering.max_retries == 0
+    assert s.answering.prompt_version == 1 and s.answering.max_retries == 1
+    s = _load("answering: {prompt_version: 2, max_retries: 0}\n")
+    assert s.answering.prompt_version == 2 and s.answering.max_retries == 0
     for extra in ("answering: {prompt_version: 3}\n", "answering: {max_retries: 9}\n"):
         try:
             _load(extra)

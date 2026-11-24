@@ -1,0 +1,53 @@
+{
+  "n": 80,
+  "n_unanswerable": 40,
+  "n_answerable": 40,
+  "unanswerable": {
+    "status": {
+      "answered": 29,
+      "insufficient_evidence": 10,
+      "unverified": 1
+    },
+    "by_category": {
+      "near_miss": {
+        "n": 20,
+        "status": {
+          "answered": 13,
+          "insufficient_evidence": 6,
+          "unverified": 1
+        }
+      },
+      "out_of_scope": {
+        "n": 20,
+        "status": {
+          "answered": 16,
+          "insufficient_evidence": 4
+        }
+      }
+    },
+    "answered_with_unsupported_numbers": 2,
+    "without_text": 0,
+    "answered_with_text": 29
+  },
+  "answerable": {
+    "status": {
+      "answered": 37,
+      "unverified": 3
+    },
+    "gold_in_prompt": 32,
+    "answered": 37,
+    "cited_gold": 24,
+    "answered_with_unsupported_numbers": 9,
+    "without_text": 0,
+    "answered_with_text": 37,
+    "cited_gold_with_text": 24
+  },
+  "retries": 0,
+  "latency": {
+    "mean_s": 30.8,
+    "p50_s": 31.5,
+    "p90_s": 36.0,
+    "llm_calls": 80,
+    "prompt_tok_per_s": 254.0
+  }
+}

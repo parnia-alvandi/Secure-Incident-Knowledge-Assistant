@@ -20,7 +20,7 @@ from sia.retrieval.vector_retriever import RetrievedChunk
 from .excerpts import best_excerpt
 from .parse import CITATION as _CITATION                       # noqa: F401  (re-exported)
 from .parse import has_answer_text, parse_citations, split_structured  # noqa: F401
-from .prompt import REPAIR_MESSAGE, SENTINEL, build_prompt
+from .prompt import SENTINEL, build_prompt, repair_message
 
 INSUFFICIENT_TEXT = "Not stated in the document collection (insufficient evidence)."
 
@@ -73,7 +73,7 @@ class AnswerResult:
 class RAGPipeline:
     def __init__(self, retriever: _Retriever, llm: _LLM, *, num_ctx: int, num_predict: int,
                  min_score: float | None = None, excerpt_chars: int = 350,
-                 closest_n: int = 3, prompt_version: int = 2, max_retries: int = 1) -> None:
+                 closest_n: int = 3, prompt_version: int = 1, max_retries: int = 1) -> None:
         self.retriever = retriever
         self.llm = llm
         self.num_ctx = num_ctx
@@ -174,7 +174,7 @@ class RAGPipeline:
                 break
             if attempts < self.max_retries:                    # one repair attempt, then give up
                 attempts += 1
-                history = [("assistant", text), ("user", REPAIR_MESSAGE)]
+                history = [("assistant", text), ("user", repair_message(self.prompt_version))]
                 continue
             warnings.append(f"the model replied with citation markers only ({text!r})")
             return finish(AnswerResult(
