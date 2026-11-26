@@ -1,94 +1,225 @@
-Secure Incident Knowledge Assistant
+# Secure Incident Knowledge Assistant
 
-A local question-answering assistant for computer-security incident documents (PDF, DOCX, TXT). It retrieves the relevant passages, asks a local LLM to answer only from those passages, and shows the source document, page and excerpt for every answer. If the documents do not contain enough evidence, it says so instead of guessing.
+A local RAG-based assistant for answering questions about cybersecurity incident documents (PDF, DOCX, TXT).
 
-question -> retrieval (embeddings + Chroma) -> evidence gate -> local LLM (Ollama) -> answer + sources
+The system uses local embeddings, ChromaDB, and Ollama to retrieve relevant information and generate answers based on document evidence. Each answer includes its source and relevant excerpt. If sufficient evidence is unavailable, the system reports it instead of guessing.
 
-Everything runs on your machine (CPU only). No document text is sent to an external service.
+## Requirements
 
-Requirements
-Windows 11 (developed and tested there), 16 GB RAM recommended, no GPU needed
-Python 3.10 or newer
-Ollama installed and running
-Setup (PowerShell)
-powershell
-git clone <repo-url>
-cd <repo-folder>
+- Windows 11
+- Python 3.10+
+- Ollama
+- 16 GB RAM recommended
+- CPU only (no GPU required)
+
+## Installation
+
+```powershell
+git clone <repository-url>
+cd <repository-folder>
 
 python -m venv venv
 .\venv\Scripts\Activate.ps1
 
-pip install torch --index-url https://download.pytorch.org/whl/cpu    # CPU-only PyTorch
 pip install -r requirements.txt
+```
 
-ollama pull qwen2.5:3b-instruct                                       # the local LLM (about 2 GB)
-Documents
+Install CPU-only PyTorch if required:
 
-The document collection is not part of this repository. Copy the course documents into data/docs/ (keep the original file names; data/manifest.yaml describes them).
+```powershell
+pip install torch --index-url https://download.pytorch.org/whl/cpu
+```
 
-Build the index (once)
+Download the local LLM:
 
-The embedding model (BAAI/bge-small-en-v1.5) must be downloaded on the first run. config.yaml runs offline by default, so allow the download once:
+```powershell
+ollama pull qwen2.5:3b-instruct
+```
 
-In config.yaml set embedding.offline: false.
-Run:
-powershell
+## Documents and Indexing
+
+Copy the project documents into:
+
+```text
+data/docs/
+```
+
+Update `data/manifest.yaml` if necessary.
+
+For the initial embedding model download, set the following option in `config.yaml`:
+
+```yaml
+embedding:
+  offline: false
+```
+
+Build and verify the index:
+
+```powershell
 python scripts/build_index.py
-python scripts/verify_index.py        # optional: checks that the index is complete and consistent
-Set embedding.offline: true again. From now on no internet connection is needed.
-Run
-powershell
-python scripts/ask.py --question "Which earlier NIST publication does SP 800-61r3 supersede?"
-python scripts/ask.py                       # interactive; an empty line or "exit" quits
-python scripts/ask.py --question "..." --no-llm   # retrieval only (Ollama not needed)
-python scripts/ask.py --question "..." --json     # machine-readable output
+python scripts/verify_index.py
+```
 
-Ollama must be running (it starts with Windows after installation; otherwise open the Ollama app). On a laptop CPU one answer takes roughly 30-45 seconds; the first one is slower while the model loads.
+After downloading the embedding model, set `embedding.offline` back to `true`.
 
-How to read the output
-Field	Meaning
-Status: ANSWERED	The answer is grounded in the retrieved passages; every claim is cited as [n].
-Status: INSUFFICIENT EVIDENCE	The collection does not contain enough information. No answer is invented.
-Status: UNVERIFIED	The model replied without a valid citation, so the answer is not trusted.
-Sources (cited)	Document title, file, page and the exact excerpt the answer relies on.
-Closest passages	Shown for transparency when nothing could be cited.
-Test run: 5 questions + 1 unanswerable question
+## Running
 
-Run each command and keep the output (the files in docs/demo/ are the documented results):
+Ask a question:
 
-powershell
-mkdir docs\demo
-python scripts/ask.py --question "<question 1>" | Out-File -Encoding utf8 docs\demo\q1.txt
-python scripts/ask.py --question "<question 2>" | Out-File -Encoding utf8 docs\demo\q2.txt
-python scripts/ask.py --question "<question 3>" | Out-File -Encoding utf8 docs\demo\q3.txt
-python scripts/ask.py --question "<question 4>" | Out-File -Encoding utf8 docs\demo\q4.txt
-python scripts/ask.py --question "<question 5>" | Out-File -Encoding utf8 docs\demo\q5.txt
-python scripts/ask.py --question "<a question the documents cannot answer>" | Out-File -Encoding utf8 docs\demo\q6_unanswerable.txt
+```powershell
+python scripts/ask.py --question "Your question here"
+```
 
-Expected behaviour: questions 1-5 return ANSWERED with sources whose excerpts support the answer; question 6 returns INSUFFICIENT EVIDENCE. Check the excerpts yourself: the assistant can be wrong.
+Interactive mode:
 
-Configuration
+```powershell
+python scripts/ask.py
+```
 
-All settings are in config.yaml (no model names or paths are hard-coded elsewhere):
+Retrieval only (without Ollama):
 
-Key	Default	Purpose
-models.embedding	BAAI/bge-small-en-v1.5	embedding model (CPU friendly)
-llm.model	qwen2.5:3b-instruct	local model served by Ollama
-chunking.chunk_tokens / overlap_tokens	256 / 40	chunk size and overlap
-retrieval.top_k	5	passages sent to the LLM
-embedding.offline	true	use only locally cached models
-Tests
-powershell
+```powershell
+python scripts/ask.py --question "Your question here" --no-llm
+```
+
+JSON output:
+
+```powershell
+python scripts/ask.py --question "Your question here" --json
+```
+
+## Testing
+
+```powershell
 pytest -q
-Project layout
-src/sia/        ingestion, cleaning, chunking, embeddings, vector store, retrieval, answering, LLM client
-scripts/        build_index.py, ask.py, verify_index.py and the evaluation tools
-tests/          unit tests
-data/           manifest.yaml (documents go in data/docs/, not committed)
-config.yaml     central configuration
-Known limitations
-Documents and questions are English; the embedding model is English-only.
-Answers are only as good as the retrieved passages. Retrieval finds the right passage in the top 5 for most, not all, questions, and the 3B model is sometimes too cautious and answers INSUFFICIENT EVIDENCE although the evidence is present.
-Scanned PDFs without a text layer are flagged during ingestion and cannot be answered from.
-This is a read-only knowledge assistant: it does not scan networks, run commands or modify anything.
-Work in progress: hybrid search (BM25 + RRF) and cross-encoder re-ranking are being evaluated (scripts/eval_retrieval.py) and are not used by ask.py yet.
+```
+
+Evaluation results for five answerable questions and one unanswerable question are stored in `docs/demo/`.
+
+## Response Statuses
+
+- **ANSWERED:** Answer supported by retrieved evidence and valid citations.
+- **INSUFFICIENT EVIDENCE:** Available documents do not contain sufficient evidence.
+- **UNVERIFIED:** The answer does not contain a valid citation.
+
+## Notes
+
+- Document processing, embeddings, retrieval, and LLM inference run locally.
+- Initial model downloads require an internet connection.
+- English documents and questions are currently supported.
+- Scanned PDFs without a text layer are not supported.
+- Hybrid search and Cross-Encoder re-ranking are under evaluation and are not part of the current baseline pipeline.
+
+---
+
+# دستیار دانش اسناد رخدادهای امنیتی
+
+یک سیستم محلی مبتنی بر معماری RAG برای پاسخ‌گویی به سؤالات مرتبط با اسناد رخدادهای امنیت سایبری (PDF، DOCX و TXT).
+
+این سیستم با استفاده از Embedding محلی، پایگاه داده ChromaDB و مدل زبانی Ollama، اطلاعات مرتبط را بازیابی کرده و بر اساس شواهد موجود در اسناد پاسخ تولید می‌کند. هر پاسخ شامل منبع و بخش مرتبط از متن سند است. در صورت نبود شواهد کافی، سیستم از حدس زدن خودداری می‌کند.
+
+## پیش‌نیازها
+
+- ویندوز ۱۱
+- Python نسخه 3.10 یا بالاتر
+- Ollama
+- حداقل ۱۶ گیگابایت RAM توصیه می‌شود.
+- پردازنده CPU (بدون نیاز به GPU)
+
+## نصب پروژه
+
+```powershell
+git clone <repository-url>
+cd <repository-folder>
+
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+
+pip install -r requirements.txt
+```
+
+در صورت نیاز، نسخه CPU کتابخانه PyTorch را نصب کنید:
+
+```powershell
+pip install torch --index-url https://download.pytorch.org/whl/cpu
+```
+
+دریافت مدل زبانی:
+
+```powershell
+ollama pull qwen2.5:3b-instruct
+```
+
+## آماده‌سازی اسناد و ساخت ایندکس
+
+اسناد موردنظر را در مسیر زیر قرار دهید:
+
+```text
+data/docs/
+```
+
+در صورت نیاز، فایل `data/manifest.yaml` را به‌روزرسانی کنید.
+
+برای دانلود اولیه مدل Embedding، مقدار زیر را در `config.yaml` تنظیم کنید:
+
+```yaml
+embedding:
+  offline: false
+```
+
+سپس دستورات زیر را اجرا کنید:
+
+```powershell
+python scripts/build_index.py
+python scripts/verify_index.py
+```
+
+پس از دانلود مدل، مقدار `embedding.offline` را مجدداً روی `true` قرار دهید.
+
+## اجرای پروژه
+
+پرسیدن سؤال:
+
+```powershell
+python scripts/ask.py --question "سؤال موردنظر"
+```
+
+حالت تعاملی:
+
+```powershell
+python scripts/ask.py
+```
+
+بازیابی اطلاعات بدون استفاده از Ollama:
+
+```powershell
+python scripts/ask.py --question "سؤال موردنظر" --no-llm
+```
+
+دریافت خروجی JSON:
+
+```powershell
+python scripts/ask.py --question "سؤال موردنظر" --json
+```
+
+## اجرای تست‌ها
+
+```powershell
+pytest -q
+```
+
+نتایج ارزیابی پنج سؤال دارای پاسخ و یک سؤال بدون پاسخ در مسیر `docs/demo/` ذخیره می‌شوند.
+
+## وضعیت پاسخ‌ها
+
+- **ANSWERED:** پاسخ دارای شواهد بازیابی‌شده و ارجاع معتبر است.
+- **INSUFFICIENT EVIDENCE:** اسناد موجود شواهد کافی برای پاسخ‌گویی ندارند.
+- **UNVERIFIED:** پاسخ فاقد ارجاع معتبر است.
+
+## توضیحات
+
+- پردازش اسناد، تولید Embedding، بازیابی اطلاعات و اجرای مدل زبانی به‌صورت محلی انجام می‌شود.
+- دانلود اولیه مدل‌ها به اینترنت نیاز دارد.
+- در حال حاضر اسناد و سؤالات انگلیسی پشتیبانی می‌شوند.
+- فایل‌های PDF اسکن‌شده که متن قابل استخراج ندارند، پشتیبانی نمی‌شوند.
+- قابلیت Hybrid Search و Cross-Encoder در حال ارزیابی هستند و هنوز در مسیر اصلی Baseline RAG استفاده نمی‌شوند.
