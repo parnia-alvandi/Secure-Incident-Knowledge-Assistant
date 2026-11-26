@@ -15,6 +15,8 @@ import time
 from dataclasses import dataclass, field
 from typing import Protocol, Sequence
 
+import numpy as np
+
 from sia.evaluation.baseline import gold_chunk_ids
 from sia.evaluation.dataset import answerable
 from sia.retrieval.tokenizer import is_identifier, tokenize
@@ -140,3 +142,42 @@ def split_indices(items: Sequence[EvalItem], seed: int = 0) -> tuple[list[int], 
     random.Random(seed).shuffle(order)
     mid = len(order) // 2
     return sorted(order[:mid]), sorted(order[mid:])
+
+
+# ---------------------------------------------------------------------- paired document bootstrap
+def per_question(run: SystemRun, metric: str, k: int) -> np.ndarray:
+    """Per-question metric values: metric is 'hit' (0/1 gold chunk within k) or 'rr' (reciprocal rank)."""
+    out = np.zeros(len(run.chunk_ranks))
+    for i, r in enumerate(run.chunk_ranks):
+        if r is not None and r <= k:
+            out[i] = 1.0 if metric == "hit" else 1.0 / r
+    return out
+
+
+def paired_bootstrap(a: np.ndarray, b: np.ndarray, docs: Sequence[str], n_boot: int = 2000,
+                     seed: int = 0) -> dict:
+    """95% interval for mean(a) - mean(b), resampling whole DOCUMENTS (not single questions).
+
+    Questions about the same document are not independent (they share its wording and its
+    difficulty), so resampling questions would make the interval too narrow. `a` and `b` are
+    per-question values of two systems on the same questions (paired).
+    """
+    a, b = np.asarray(a, float), np.asarray(b, float)
+    if len(a) != len(b) or len(a) != len(docs):
+        raise ValueError("a, b and docs must have the same length")
+    if len(a) == 0:
+        return {"diff": float("nan"), "lo": float("nan"), "hi": float("nan"), "p_better": float("nan"),
+                "n_docs": 0}
+    names = sorted(set(docs))
+    pos = {d: i for i, d in enumerate(names)}
+    diff_sum = np.zeros(len(names))
+    count = np.zeros(len(names))
+    for x, y, d in zip(a, b, docs):
+        diff_sum[pos[d]] += x - y
+        count[pos[d]] += 1
+    rng = np.random.default_rng(seed)
+    draw = rng.integers(0, len(names), size=(n_boot, len(names)))
+    boot = diff_sum[draw].sum(axis=1) / count[draw].sum(axis=1)
+    return {"diff": float((a - b).mean()), "lo": float(np.percentile(boot, 2.5)),
+            "hi": float(np.percentile(boot, 97.5)), "p_better": float((boot > 0).mean()),
+            "n_docs": len(names)}

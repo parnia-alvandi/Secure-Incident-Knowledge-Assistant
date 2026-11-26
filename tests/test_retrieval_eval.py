@@ -1,9 +1,13 @@
 """Retrieval evaluation helpers (phase 5): gold ranks, metrics, rescue analysis, splits."""
 import math
 
+import pytest
+
+import numpy as np
+
 from sia.evaluation.retrieval_eval import (EvalItem, SystemRun, build_items, evaluate_system,
-                                           has_identifier, hit_at, mrr_at, rescue_stats,
-                                           split_indices, summarize)
+                                           has_identifier, hit_at, mrr_at, paired_bootstrap,
+                                           per_question, rescue_stats, split_indices, summarize)
 from sia.processing.models import Chunk
 from sia.retrieval.vector_retriever import RetrievedChunk
 
@@ -107,3 +111,47 @@ def test_split_indices_is_deterministic_and_disjoint():
     assert (a1, b1) == (a2, b2)
     assert set(a1).isdisjoint(b1) and sorted(a1 + b1) == list(range(11))
     assert split_indices(items, seed=4) != (a1, b1)
+
+
+def test_per_question_values():
+    run = SystemRun("x", [1, 4, None, 12], [1] * 4, [1] * 4)
+    assert list(per_question(run, "hit", 5)) == [1, 1, 0, 0]
+    assert list(per_question(run, "rr", 10)) == [1.0, 0.25, 0.0, 0.0]
+
+
+def test_bootstrap_identical_systems_have_zero_difference():
+    a = np.array([1.0, 0.0, 1.0, 1.0, 0.0, 1.0])
+    r = paired_bootstrap(a, a, ["d1", "d1", "d2", "d2", "d3", "d3"], n_boot=500, seed=1)
+    assert r["diff"] == 0 and r["lo"] == 0 and r["hi"] == 0 and r["n_docs"] == 3
+
+
+def test_bootstrap_consistent_improvement_excludes_zero():
+    docs = [f"d{i // 4}" for i in range(40)]                  # 10 documents, 4 questions each
+    base = np.zeros(40)
+    better = np.ones(40)
+    r = paired_bootstrap(better, base, docs, n_boot=500, seed=1)
+    assert r["diff"] == 1.0 and r["lo"] == 1.0 and r["p_better"] == 1.0
+
+
+def test_bootstrap_mixed_result_includes_zero_and_is_repeatable():
+    rng = np.random.default_rng(5)
+    docs = [f"d{i // 4}" for i in range(80)]
+    a, b = rng.integers(0, 2, 80).astype(float), rng.integers(0, 2, 80).astype(float)
+    r1 = paired_bootstrap(a, b, docs, n_boot=800, seed=3)
+    r2 = paired_bootstrap(a, b, docs, n_boot=800, seed=3)
+    assert r1 == r2 and r1["lo"] < 0 < r1["hi"]
+
+
+def test_bootstrap_resamples_documents_so_interval_is_wider_than_per_question():
+    # all questions of a document behave the same way: effective sample size = number of documents
+    docs = [f"d{i // 10}" for i in range(100)]
+    diff = np.repeat([1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0], 10)
+    clustered = paired_bootstrap(diff, np.zeros(100), docs, n_boot=1000, seed=0)
+    iid = paired_bootstrap(diff, np.zeros(100), [f"q{i}" for i in range(100)], n_boot=1000, seed=0)
+    assert (clustered["hi"] - clustered["lo"]) > (iid["hi"] - iid["lo"])
+
+
+def test_bootstrap_validation_and_empty():
+    with pytest.raises(ValueError):
+        paired_bootstrap(np.zeros(2), np.zeros(3), ["a", "b"])
+    assert paired_bootstrap(np.zeros(0), np.zeros(0), [])["n_docs"] == 0
